@@ -7,8 +7,7 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
     entry: {
-        main: ['@babel/polyfill', './script.js'],
-        // analytics: './analytics.js'
+        index: ['@babel/polyfill', './index.js']
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -24,13 +23,9 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
-            template: './ui-kit/colors-and-type.pug',
-            filename: './ui-kit/colors-and-type.html'
+            template: './pages/colors-type/colors-type.pug',
+            filename: './pages/colors-type.html'
         }),
-        // new HTMLWebpackPlugin({
-        //     template: './colors-and-type.pug',
-        //     filename: 'ui-kit/colors-and-type.html'
-        // }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
@@ -64,21 +59,21 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
+                test: /(?<!\/fonts\/.*)\.(png|jpg|svg|gif)$/,
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'images/[name].[contenthash].[ext]',
+                        name: 'images/[name].[ext]',
                     }
                 }
                 // use: ['file-loader']
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
+                test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                 loader: {
                     loader: 'file-loader',
                     options: {
-                        name: 'fonts/[name].[contenthash].[ext]',
+                        name: '[path][name].[ext]',
                     }
                 }
                 // use: ['file-loader']

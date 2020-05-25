@@ -1,0 +1,40 @@
+.colors-type__logo {
+    width: 48px;
+    height: 48px;
+    background-image: url("/images/logo.svg");
+    margin-top: 2.0833%;
+    margin-left: 2.0833%;
+}
+
+.colors-type {
+    width: auto;
+    max-width: 1920px;
+    min-width: 320px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 10.0694%;
+}
+
+.colors-type__leftwrap {
+    margin-top: 4.6527%;
+    margin-left: 10.42%;
+}
+
+.colors-type__rightwrap {
+    margin-top: 4.6527%;
+    margin-right: 13.26%;
+}
+
+@media (max-width: 1000px) {
+    .colors-type__rightwrap {
+        margin-left: 10.42%;
+        margin-right: 5%;
+        margin-top: 8%;
+    }
+    .logo {
+        width: 36px;
+        height: 36px;
+        background-size: cover;
+    }
+}

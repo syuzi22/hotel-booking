@@ -1,0 +1,15 @@
+mixin colorDemo(colorname, colorcode, modeClassName)
+    div(class=`color-demo__square ${modeClassName}`)
+    div(class="color-demo__description")
+            div(class="color-demo__colorname")= colorname
+            div(class="color-demo__colorcode")= colorcode
+
+
+div(class="color-demo")
+    +colorDemo('Dark Shade 100%', '#1F2041', 'color-demo__square_dark100')
+    +colorDemo('Dark Shade 75%', '#1F2041', 'color-demo__square_dark75')
+    +colorDemo('Dark Shade 50%', '#1F2041', 'color-demo__square_dark50')
+    +colorDemo('Dark Shade 25%', '#1F2041', 'color-demo__square_dark25')
+    +colorDemo('Dark Shade 5%', '#1F2041', 'color-demo__square_dark5')
+    +colorDemo('Purple', '#BC9CFF', 'color-demo__square_purple')
+    +colorDemo('Green', '#6FCF97 ', 'color-demo__square_green')

@@ -1,0 +1,65 @@
+.color-demo {
+    display: grid;
+    grid-template-columns: 70px 160px;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    justify-items: start;
+    align-items: center;
+}
+
+.color-demo__square {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.color-demo__description {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    // line-height: 29px;
+    // line-height: 35px;
+    color: $dark100;
+}
+
+.color-demo__colorname {
+    line-height: 29px;
+    // white-space: nowrap;
+}
+
+.color-demo__colorcode {
+    line-height: 29px;
+    font-weight: normal;
+}
+
+.color-demo__square_dark100 {
+    background-color: $dark100;
+}
+
+.color-demo__square_dark75 {
+    background-color: $dark75;
+}
+
+.color-demo__square_dark50 {
+    background-color: $dark50;
+}
+
+.color-demo__square_dark25 {
+    background-color: $dark25;
+}
+
+.color-demo__square_dark5 {
+    background-color: $dark5;
+}
+
+.color-demo__square_purple{
+    background-color: $purple;
+}
+
+.color-demo__square_green{
+    background-color: $green;
+}
+
+
+
