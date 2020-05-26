@@ -15,7 +15,7 @@
 
 .form-elements__first{
     flex: 1 1 38.534482%;
-    background-color: green;
+    // background-color: green;
 }
 
 .form-elements__second{
@@ -45,3 +45,6 @@
     background-color:lightblue
 }
 
+.form-elements__inputwrap {
+    padding-bottom: 20px;
+}

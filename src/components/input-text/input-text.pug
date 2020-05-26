@@ -1,0 +1,8 @@
+mixin inputText(type="text", placeholder="", label, state)
+    div(class="input-text")
+        div(class="input-text__info heading3")
+            div(class="input-text__name")
+                label(for="input-text__inp")= label
+            div(class="input-text__state")= state
+        div(class="input-text__field")
+            input(type=type placeholder=placeholder class="input-text__inp")
