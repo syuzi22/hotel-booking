@@ -1,0 +1,47 @@
+.form-elements {
+    box-sizing: border-box;
+    width: 1440px;
+    height: 1853px;
+    padding-top: 140px;
+    padding-left: 140px;
+    padding-right: 140px;
+    padding-bottom: 130px;
+}
+
+.form-elements__wrap1 {
+    display: flex;
+    height: 500px;
+}
+
+.form-elements__first{
+    flex: 1 1 38.534482%;
+    background-color: green;
+}
+
+.form-elements__second{
+    flex: 1 1 30.732759%;
+    background-color: red;
+}
+
+.form-elements__third{
+    flex: 1 1 30.732759%;
+    background-color:yellow;
+}
+
+
+.form-elements__wrap2 {
+    display: flex;
+    height: 200px;
+    
+}
+
+.form-elements__info {
+    flex: 1 1 38.534482%;
+    background-color: rgb(238, 223, 223);
+}
+
+.form-elements__reviews {
+    flex: 1 1 61.465518%;
+    background-color:lightblue
+}
+

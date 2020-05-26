@@ -8,3 +8,8 @@
 @import './components/heading2/heading2.scss';
 @import './components/heading3/heading3.scss';
 
+@import './pages/form-elements/form-elements.scss';
+
+::placeholder {
+    color: gray;
+  }

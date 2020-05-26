@@ -1,95 +1,131 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require("path");
+const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const autoprefixer = require("autoprefixer")({});
+
+const isDev = process.env.NODE_ENV === "development";
+
+let plugins = [
+    new HTMLWebpackPlugin({
+        template: "./pages/colors-type/colors-type.pug",
+        filename: "./pages/colors-type.html",
+    }),
+    new HTMLWebpackPlugin({
+        template: "./pages/form-elements/form-elements.pug",
+        filename: "./pages/form-elements.html",
+    }),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+        filename: "[name].[contenthash].css",
+    }),
+];
+if (isDev) {
+    plugins.push(
+        new webpack.SourceMapDevToolPlugin({
+            filename: "[file].map",
+        })
+    );
+}
+
+function getCssPlugins() {
+    return [
+        {
+            loader: MiniCssExtractPlugin.loader,
+            options: {},
+        },
+        {
+            loader: "css-loader",
+            options: { sourceMap: isDev },
+        },
+        {
+            loader: "postcss-loader",
+            options: {
+                sourceMap: isDev,
+                indent: "postcss",
+                plugins: [autoprefixer],
+            },
+        },
+    ];
+}
+
+function getScssPlugins() {
+    let entries = getCssPlugins();
+
+    entries.push({
+        loader: "sass-loader",
+        options: { sourceMap: isDev },
+    });
+
+    return entries;
+}
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
-    mode: 'development',
+    context: path.resolve(__dirname, "./src"),
+    mode: isDev ? "development" : "production",
     entry: {
-        index: ['@babel/polyfill', './index.js']
+        index: ["@babel/polyfill", "./index.js"],
     },
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist')
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "dist"),
     },
     optimization: {
         splitChunks: {
-            chunks: 'all'
-        }
+            chunks: "all",
+        },
     },
     devServer: {
-        port: 4200
+        port: 4200,
+        index: "./pages/form-elements.html",
     },
-    plugins: [
-        new HTMLWebpackPlugin({
-            template: './pages/colors-type/colors-type.pug',
-            filename: './pages/colors-type.html'
-        }),
-        new CleanWebpackPlugin(),
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
-        })
-    ],
+    devtool: false, // use webpack.SourceMapDevToolPlugin,
+    plugins: plugins,
     module: {
         rules: [
             {
                 test: /\.pug$/,
-                use: ['pug-loader?pretty=true'],
+                use: ["pug-loader?pretty=true"],
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {},
-                    },
-                    'css-loader'
-                ]
+                use: getCssPlugins()
             },
             {
                 test: /\.s[ac]ss$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {},
-                    },
-                    'css-loader',
-                    'sass-loader'
-                ]
+                use: getScssPlugins()
             },
             {
                 test: /(?<!\/fonts\/.*)\.(png|jpg|svg|gif)$/,
                 loader: {
-                    loader: 'file-loader',
+                    loader: "file-loader",
                     options: {
-                        name: 'images/[name].[ext]',
-                    }
-                }
+                        name: "images/[name].[ext]",
+                    },
+                },
                 // use: ['file-loader']
             },
             {
                 test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                 loader: {
-                    loader: 'file-loader',
+                    loader: "file-loader",
                     options: {
-                        name: '[path][name].[ext]',
-                    }
-                }
+                        name: "[path][name].[ext]",
+                    },
+                },
                 // use: ['file-loader']
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: [
-                            '@babel/preset-env'
-                        ]
-                    }
-                }
-            }
-        ]
-    }
-}
+                        presets: ["@babel/preset-env"],
+                    },
+                },
+            },
+        ],
+    },
+};
