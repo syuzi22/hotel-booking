@@ -18,6 +18,8 @@
     color: $dark50;
 }
 
+// default
+
 .input-text__inp {
     display: block;
     width: 100%;
@@ -27,26 +29,26 @@
     background: #FFFFFF;
     padding-left: 15px;
 }
-
-
-.input-text__inp:hover {
-    border-color: $dark50;
-}
-.input-text__inp:focus {
-    border-color: $dark50;
-}
-
-
-
 .input-text__inp::placeholder {
     color: $dark25;
 }
 
-.input-text__inp:hover::placeholder {
+// hover/focus
+
+.input-text__inp:hover{
+    border-color: $dark50;
+}
+
+.input-text__inp:focus, .input-text__inp_focus {
+    border-color: $dark50;
+    outline: none;
+}
+
+.input-text__inp:hover::placeholder{
     color: $dark75;
 }
 
-.input-text__inp:focus::placeholder {
+.input-text__inp:focus::placeholder,  .input-text__inp_focus::placeholder{
     color: $dark75;
 }
 

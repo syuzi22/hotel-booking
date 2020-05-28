@@ -20,6 +20,10 @@ let plugins = [
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
     }),
+    new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+    })
 ];
 if (isDev) {
     plugins.push(
@@ -82,6 +86,11 @@ module.exports = {
     },
     devtool: false, // use webpack.SourceMapDevToolPlugin,
     plugins: plugins,
+    resolve: {
+        alias: {
+            '@item-quantity-dropdown': path.join(__dirname, 'node_modules', 'item-quantity-dropdown', 'lib'),
+        }
+    },
     module: {
         rules: [
             {
