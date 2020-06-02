@@ -95,3 +95,13 @@
 }
 
 
+// Material Icons
+
+@font-face {
+    font-family: 'Material Icons';
+    src: url('fonts/material-icons/MaterialIcons-Regular.woff') format('woff'),
+         url('fonts/material-icons/MaterialIcons-Regular.ttf') format('truetype'),
+         url('fonts/material-icons/MaterialIcons-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+  }

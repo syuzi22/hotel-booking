@@ -14,13 +14,31 @@ html(lang="en")
                         +inputText('email', 'Email', 'text field', 'default')
                     div(class="form-elements__inputwrap")
                         +inputText('text', 'This is pretty awesome', 'text field','hover/focus')(class="input-text__inp_focus")
+                    div(class="form-elements__guest-dropdownwrap")
+                        include ../../components/guest-dropdown/guest-dropdown.pug
+                        +guestDropdown('Dropdown', 'Default')
 
                 div(class="form-elements__second")
                 div(class="form-elements__third")
-
+            
             div(class="form-elements__wrap2")
+                div(class="form-elements__2-1")
+                div(class="form-elements__2-2")
+                    div
+                        include ../../components/guest-dropdown/guest-dropdown.pug
+                        +guestDropdown('Dropdown', ' ', 'menu-open')
+                    div 
+                        //- include ../../components/guest-dropdown/test.pug
+                        //- +testPug('TestName')
+                div(class="form-elements__2-3")
+                    div
+                        include ../../components/guest-dropdown/guest-dropdown.pug
+                        +guestDropdown('Dropdown', ' ', 'menu-open', 2, 1)
+            div(class="form-elements__wrap3")
                 div(class="form-elements__info")
                 div(class="form-elements__reviews")
 
-            div
-                include ../../components/item-quantity-dropdown/item-quantity-dropdown.pug
+            //- div
+            //-     include ../../components/guest-dropdown/guest-dropdown.pug
+            //- div
+            //-     include ../../components/room-dropdown/room-dropdown.pug
