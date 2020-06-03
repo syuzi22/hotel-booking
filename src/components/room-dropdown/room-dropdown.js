@@ -62,7 +62,7 @@ $(document).ready(function () {
         return result.join(", ");
     }
 
-    $(".room-custom-message").iqDropdown({
+    $(".room-dropdown__message").iqDropdown({
         setSelectionText: setSelectionText,
     });
 });

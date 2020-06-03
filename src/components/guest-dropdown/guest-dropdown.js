@@ -18,6 +18,8 @@ $(document).ready(function () {
 
     function setSelectionText(itemCount, totalItems) {
         if (totalItems === 0) {
+            let reset = document.querySelector('.iqdropdown-reset');
+            reset.style.display = 'hidden';
             return "Сколько гостей";
         }
 
@@ -39,10 +41,20 @@ $(document).ready(function () {
         return result.join(", ");
     }
 
-    $(".guest-custom-message").iqDropdown({
-        setSelectionText: setSelectionText,
-        onChange: function(id, count, totalItems) {
-            console.log(id, count, totalItems);   
+    let resetCls = 'iqdropdown-reset';
+
+    $(".guest-dropdown__message").iqDropdown({
+        controls: {
+            resetCls: resetCls
         },
+        setSelectionText: setSelectionText,
+        onUpdateDisplay: ($this, totalItems) => {
+            if (totalItems > 0) {
+                $this.find(`.${resetCls}`).css("visibility", "visible");
+              } else {
+                $this.find(`.${resetCls}`).css("visibility", "hidden");
+              }
+        }
     });
 });
+

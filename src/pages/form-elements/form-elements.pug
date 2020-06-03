@@ -23,6 +23,12 @@ html(lang="en")
             
             div(class="form-elements__wrap2")
                 div(class="form-elements__2-1")
+                    div(class="form-elements__wr2")
+                        include ../../components/room-dropdown/room-dropdown.pug
+                        +roomDropdown('Dropdown', 'Default', ' ', 2, 2)
+                    div
+                        include ../../components/room-dropdown/room-dropdown.pug
+                        +roomDropdown('Dropdown', 'Expanded', 'menu-open', 2, 2)                       
                 div(class="form-elements__2-2")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
@@ -42,3 +48,4 @@ html(lang="en")
             //-     include ../../components/guest-dropdown/guest-dropdown.pug
             //- div
             //-     include ../../components/room-dropdown/room-dropdown.pug
+

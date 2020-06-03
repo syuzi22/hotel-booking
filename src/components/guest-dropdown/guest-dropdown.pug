@@ -4,9 +4,9 @@ mixin guestDropdown(label, state, className, adult='0', minor='0', infant='0')
             div(class="guest-dropdown__name")
                 label(for="guest-dropdown__inp")= label 
             div(class="guest-dropdown__state")= state 
-        div(class=`guest-custom-message iqdropdown ${className}`)
+        div(class=`guest-dropdown__message iqdropdown ${className}`)
             p(class="iqdropdown-selection")
-            span(class="material-icons") 
+            span(class="guest-dropdown__micons") 
             div(class="iqdropdown-menu")
                 div(class="iqdropdown-menu-option" data-id="adult" data-defaultcount=`${adult}`)
                     div
@@ -18,8 +18,9 @@ mixin guestDropdown(label, state, className, adult='0', minor='0', infant='0')
                     div
                         p(class="iqdropdown-item") Младенцы
                 div(class="guest-dropdown__buttons")
-                    button(class="iqdropdown-reset") Очистить
+                    button(class="iqdropdown-reset heading3") Очистить
                     button(class="iqdropdown-menu-close") Применить
+
 
 
 
