@@ -89,6 +89,7 @@ module.exports = {
     resolve: {
         alias: {
             '@item-quantity-dropdown': path.join(__dirname, 'node_modules', 'item-quantity-dropdown', 'lib'),
+            '@inputmask': path.join(__dirname, 'node_modules', 'inputmask', 'dist', 'jquery.inputmask.min.js'),
         }
     },
     module: {

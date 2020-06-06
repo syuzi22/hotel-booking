@@ -73,15 +73,16 @@
 
 
 
+
 .form-elements__inputwrap {
-    padding-bottom: 20px;
+    padding-bottom: 17px;
 }
 
 
 
 
 
-.form-elements__wr2 {
+.form-elements__room-dropdown {
     padding-bottom: 16px;
 
 }
@@ -89,6 +90,11 @@
 
 
 .form-elements__date-dropdownwrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form-elements__masked-input {
     padding-top: 20px;
     padding-bottom: 20px;
 }

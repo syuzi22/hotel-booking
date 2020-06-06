@@ -9,25 +9,30 @@ html(lang="en")
             div(class="form-elements__wrap1")
 
                 div(class="form-elements__first")
-                    include ../../components/input-text/input-text.pug
                     div(class="form-elements__inputwrap")
+                        include ../../components/input-text/input-text.pug
                         +inputText('email', 'Email', 'text field', 'default')
-                    div(class="form-elements__inputwrap")
+                    div(class="form-elements__inputwrap2")
                         +inputText('text', 'This is pretty awesome', 'text field','hover/focus')(class="input-text__inp_focus")
                     div(class="form-elements__guest-dropdownwrap")
                         include ../../components/guest-dropdown/guest-dropdown.pug
                         +guestDropdown('Dropdown', 'Default')
+                    div(class="form-elements__masked-input")
+                        include ../../components/masked-input/masked-input.pug
+                        +maskedInput('text', 'ДД.ММ.ГГГГ', 'masked text field', 'default')
                     div(class="form-elements__date-dropdownwrap")
                         include ../../components/date-dropdown/date-dropdown.pug
                     div
                         include ../../components/filterdate-dropdown/filterdate-dropdown.pug
+                    div
+                    
 
                 div(class="form-elements__second")
                 div(class="form-elements__third")
             
             div(class="form-elements__wrap2")
                 div(class="form-elements__2-1")
-                    div(class="form-elements__wr2")
+                    div(class="form-elements__room-dropdown")
                         include ../../components/room-dropdown/room-dropdown.pug
                         +roomDropdown('Dropdown', 'Default', ' ', 2, 2)
                     div
