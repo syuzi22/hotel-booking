@@ -22,9 +22,14 @@ html(lang="en")
                         +maskedInput('text', 'ДД.ММ.ГГГГ', 'masked text field', 'default')
                     div(class="form-elements__date-dropdownwrap")
                         include ../../components/date-dropdown/date-dropdown.pug
-                    div
+                        +dateDropdown('date dropdown', 'date dropdown')
+                    div(class="form-elements__filterwrap")
                         include ../../components/filterdate-dropdown/filterdate-dropdown.pug
-                    div
+                        +filterDateDropdown('filter date dropdown')
+                    div(class="form-elements__subscription")
+                        include ../../components/subscription/subscription.pug
+                        +subscription('subscription text field')
+                    
                     
 
                 div(class="form-elements__second")
@@ -49,6 +54,8 @@ html(lang="en")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
                         +guestDropdown('Dropdown', ' ', 'menu-open', 2, 1)
+
+                        
             div(class="form-elements__wrap3")
                 div(class="form-elements__info")
                 div(class="form-elements__reviews")

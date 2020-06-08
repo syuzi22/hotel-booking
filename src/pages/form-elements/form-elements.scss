@@ -10,12 +10,13 @@
 
 .form-elements__wrap1 {
     display: flex;
-    height: 500px;
 }
 
 .form-elements__first{
     flex: 1 1 38.534482%;
-    // background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .form-elements__second{
@@ -32,7 +33,8 @@
 
 .form-elements__wrap2 {
     display: flex;
-    height: 500px;
+    height: 300px;
+    align-items: flex-end;
 }
 
 .form-elements__2-1 {
@@ -72,9 +74,34 @@
 
 
 
-
+//компоненты
 
 .form-elements__inputwrap {
+    padding-bottom: 17px;
+}
+
+.form-elements__inputwrap2 {
+    padding-bottom: 17px;
+}
+
+.form-elements__guest-dropdownwrap {
+    padding-bottom: 17px;
+}
+
+.form-elements__masked-input {
+    padding-bottom: 17px;
+}
+
+.form-elements__date-dropdownwrap {
+    padding-top: 22px;
+    padding-bottom: 17px;
+}
+
+.form-elements__filterwrap {
+    padding-bottom: 17px;
+}
+
+.form-elements__subscription {
     padding-bottom: 17px;
 }
 
@@ -83,18 +110,7 @@
 
 
 .form-elements__room-dropdown {
-    padding-bottom: 16px;
-
+    padding-bottom: 17px;
 }
 
 
-
-.form-elements__date-dropdownwrap {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.form-elements__masked-input {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
