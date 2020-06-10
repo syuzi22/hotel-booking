@@ -33,6 +33,9 @@ html(lang="en")
                     
 
                 div(class="form-elements__second")
+                    div(class="form-elements__checkbutwrap")
+                        include ../../components/checkbox-buttons/checkbox-buttons.pug
+                        +checkboxButtons('Checkbox Buttons', 'Можно курить', 'Можно с питомцами', ' Можно пригласить гостей (до 10 человек)')
                 div(class="form-elements__third")
             
             div(class="form-elements__wrap2")
@@ -42,14 +45,14 @@ html(lang="en")
                         +roomDropdown('Dropdown', 'Default', ' ', 2, 2)
                     div
                         include ../../components/room-dropdown/room-dropdown.pug
-                        +roomDropdown('Dropdown', 'Expanded', 'menu-open', 2, 2)                       
+                        +roomDropdown('Dropdown', 'Expanded', 'menu-open', 2, 2) 
+                    div(class="form-elements__expcheckwrap")
+                        include ../../components/expand-checkbox/expand-checkbox.pug 
+                        +expandCheckbox('expandable checkbox list', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
                 div(class="form-elements__2-2")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
                         +guestDropdown('Dropdown', ' ', 'menu-open')
-                    div 
-                        //- include ../../components/guest-dropdown/test.pug
-                        //- +testPug('TestName')
                 div(class="form-elements__2-3")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
