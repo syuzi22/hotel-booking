@@ -53,6 +53,9 @@ html(lang="en")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
                         +guestDropdown('Dropdown', ' ', 'menu-open')
+                    div(class="form-elements__richcheckwrap")
+                        include ../../components/rich-checkbox/rich-checkbox.pug
+                        +richCheckbox('Rich Checkbox Buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
                 div(class="form-elements__2-3")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug
