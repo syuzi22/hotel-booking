@@ -15,5 +15,6 @@ import './components/date-dropdown/date-dropdown.js'
 import './components/filterdate-dropdown/filterdate-dropdown.js'
 import './components/masked-input/masked-input.js'
 import './components/expand-checkbox/expand-checkbox.js'
+import './components/like-button/like-button.js'
 
 import './pages/form-elements/form-elements.js'

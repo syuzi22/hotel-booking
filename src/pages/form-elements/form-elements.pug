@@ -43,6 +43,11 @@ html(lang="en")
                     div(class="form-elements__toggle")
                         include ../../components/toggle/toggle.pug
                         +toggle('Получать спецпредложения')
+                    div.heading3 like button
+                    div(class="form-elements__like-button")
+                        include ../../components/like-button/like-button.pug
+                        +likeButton
+                        +likeButton("like-button_clicked")
                 div(class="form-elements__third")
 
             
