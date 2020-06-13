@@ -39,7 +39,12 @@ html(lang="en")
                     div(class="form-elements__radiowrap")
                         include ../../components/radio-buttons/radio-buttons.pug
                         +radioButtons('Radio Buttons', 'Мужчина', 'Женщина')
+                    div.heading3 toggle
+                    div(class="form-elements__toggle")
+                        include ../../components/toggle/toggle.pug
+                        +toggle('Получать спецпредложения')
                 div(class="form-elements__third")
+
             
             div(class="form-elements__wrap2")
                 div(class="form-elements__2-1")
