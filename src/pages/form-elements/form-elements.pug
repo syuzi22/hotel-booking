@@ -54,6 +54,26 @@ html(lang="en")
                         +rateButton(3.5)
 
                 div(class="form-elements__third")
+                    div(class="form-elements__range-slider")
+                        include ../../components/range-slider/range-slider.pug
+                        +rangeSlider('range slider')
+                    div(class="form-elements__buttons")
+                        div(class="form-elements__filled-button")
+                            include ../../components/filled-button/filled-button.pug
+                            +filledButton('click me')
+                            +filledButton('click me')(class='filled-button_hover')
+                        div(class="form-elements__empty-button")
+                            include ../../components/empty-button/empty-button.pug
+                            +emptyButton('click me')      
+                            +emptyButton('click me')(class='empty-button_hover')            
+                        div(class="form-elements__icon-link")
+                            include ../../components/icon-link/icon-link.pug
+                            +iconLink('click me', 'purple')
+                            +iconLink('click me', 'dark')
+                        div(class="form-elements__arrow-button")
+                            include ../../components/arrow-button/arrow-button.pug
+                            +arrowButton('Перейти к оплате')
+
 
             
             div(class="form-elements__wrap2")
@@ -66,10 +86,10 @@ html(lang="en")
                         +roomDropdown('Dropdown', 'Expanded', 'menu-open', 2, 2) 
                     div(class="form-elements__expcheckwrap")
                         include ../../components/expand-checkbox/expand-checkbox.pug 
-                        +expandCheckbox('expandable checkbox list', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
+                        +expandCheckbox('expandable checkbox list', 1, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
                     div(class="form-elements__expcheckwrap")
                         include ../../components/expand-checkbox/expand-checkbox.pug 
-                        +expandCheckbox('expandable checkbox list', 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
+                        +expandCheckbox('expandable checkbox list', 2, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
                 div(class="form-elements__2-2")
                     div
                         include ../../components/guest-dropdown/guest-dropdown.pug

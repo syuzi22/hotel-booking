@@ -41,6 +41,7 @@
     "@babel/polyfill": "^7.10.1",
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.3",
+    "ion-rangeslider": "^2.3.1",
     "item-quantity-dropdown": "git+https://github.com/syuzi22/item-quantity-dropdown.git",
     "jquery": "^3.5.1",
     "material-design-icons": "^3.0.1",

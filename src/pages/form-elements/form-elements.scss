@@ -25,7 +25,6 @@
 
 .form-elements__third{
     flex: 1 1 30.732759%;
-    background-color: #ebebeb;
 }
 
 
@@ -146,4 +145,28 @@
 
 .form-elements__rate-button {
     padding-top: 16px;   
+}
+
+.form-elements__range-slider {
+    width: 266px;
+}
+
+
+.form-elements__filled-button {
+    padding-top: 16px;
+}
+
+.form-elements__empty-button {
+    padding-top: 16px;
+    width: 218px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.form-elements__icon-link {
+    padding-top: 16px;
+}
+
+.form-elements__arrow-button {
+    padding-top: 16px;
 }
