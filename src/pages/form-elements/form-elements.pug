@@ -59,17 +59,20 @@ html(lang="en")
                         +rangeSlider('range slider')
                     div(class="form-elements__buttons")
                         div(class="form-elements__filled-button")
-                            include ../../components/filled-button/filled-button.pug
-                            +filledButton('click me')
-                            +filledButton('click me')(class='filled-button_hover')
-                        div(class="form-elements__empty-button")
-                            include ../../components/empty-button/empty-button.pug
-                            +emptyButton('click me')      
-                            +emptyButton('click me')(class='empty-button_hover')            
-                        div(class="form-elements__icon-link")
-                            include ../../components/icon-link/icon-link.pug
-                            +iconLink('click me', 'purple')
-                            +iconLink('click me', 'dark')
+                            include ../../components/button/button.pug
+                            +button
+                        div(class="form-elements__filled-button")
+                            include ../../components/button/button.pug
+                            +button({name: 'link_purple'})
+                        div(class="form-elements__filled-button")
+                            include ../../components/button/button.pug
+                            +button({name: 'link_dark'})
+                        div(class="form-elements__filled-button")
+                            include ../../components/button/button.pug
+                            +button({name: 'filled'})
+                        div(class="form-elements__filled-button")
+                            include ../../components/button/button.pug
+                            +button({name: 'empty'})
                         div(class="form-elements__arrow-button")
                             include ../../components/arrow-button/arrow-button.pug
                             +arrowButton('Перейти к оплате')
@@ -77,7 +80,7 @@ html(lang="en")
                     div(class="form-elements__pagination")
                             
                             include ../../components/pagination/pagination.pug
-                            +pagination
+                            +pagination(15, 1)
 
 
             

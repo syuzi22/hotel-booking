@@ -5,3 +5,9 @@ $dark25: rgba(31, 32, 65, 0.25);
 $dark5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff; //primary color
 $green: #6fcf97; //secondary color
+$white: #ffffff;
+
+$primary: $purple;
+$primary-gradient: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+$secondary: $green;
+$secondary-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
