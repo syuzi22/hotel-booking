@@ -1,0 +1,12 @@
+mixin richCheckbox(title, label1, descript1, label2, descript2 )
+    div(class="rich-checkbox")
+        div(class="rich-checkbox__title heading3")= title
+        div(class="rich-checkbox__list")
+            div(class="rich-checkbox__item")
+                input(class="rich-checkbox__input" type="checkbox" id="rich-checkbox1" name="rich-checkbox1" value="wide-corridor")
+                label(for="rich-checkbox1")= label1
+                div(class="rich-checkbox__descript")= descript1 
+            div(class="rich-checkbox__item")
+                input(class="rich-checkbox__input" type="checkbox" id="rich-checkbox2" name="rich-checkbox2" value="assistent")
+                label(for="rich-checkbox2")= label2
+                div(class="rich-checkbox__descript")= descript2

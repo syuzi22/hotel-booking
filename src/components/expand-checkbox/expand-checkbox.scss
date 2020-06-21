@@ -1,0 +1,105 @@
+.expand-checkbox {
+    width: 266px;
+    line-height: 18px;
+    color: $dark50;   
+}
+
+.expand-checkbox__heading {
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+    cursor: pointer;
+}
+
+.expand-checkbox__title {
+    line-height: 40px;
+}
+
+.expand-checkbox__micons {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark50;
+    width: 40px;
+    height: 40px;
+}
+
+.expand-checkbox__micons::after {
+    content: 'expand_more';
+}
+
+.expand-checkbox__heading--open .expand-checkbox__micons::after {
+    content: 'expand_less';
+}
+
+.expand-checkbox__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.expand-checkbox__input + label {
+    display: inline-flex;
+    align-items: flex-start;
+    user-select: none;
+    padding-bottom: 10px;
+}
+
+.expand-checkbox__input + label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background: #ffffff;
+    border: 1px solid $dark25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.expand-checkbox__input:not(:disabled):not(:checked)+label:hover::before {
+    border-color: $dark50;
+}
+
+.expand-checkbox___input:not(:disabled):active+label::before {
+    background-color: $dark5;
+    border-color: $dark5;
+}
+
+.expand-checkbox___input:focus:not(:checked)+label::before {
+    border-color: $dark50;
+}
+
+.expand-checkbox___input:focus+label::before {
+    border-color: $purple;
+}
+
+.expand-checkbox__input:checked + label::before {
+    background-image: url("/images/checkbox.svg");
+}
+
+.expand-checkbox__input:disabled+label::before {
+    background-color: $dark5;
+}
+
+.expand-checkbox__list {
+    position: absolute;
+    width: inherit;
+    background: #FFFFFF;
+    z-index: 999;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.expand-checkbox__list--open {
+    opacity: 1;
+}

@@ -1,0 +1,13 @@
+mixin checkboxButtons(title, label1, label2, label3 )
+    div(class="checkbox-buttons")
+        div(class="checkbox-buttons__title heading3")= title
+        div(class="checkbox-buttons__list")
+            div(class="checkbox-buttons__item")
+                input(class="checkbox-buttons__input" type="checkbox" id="checkbox1" name="checkbox1" value="smoke")
+                label(for="checkbox1")= label1
+            div(class="checkbox-buttons__item")
+                input(class="checkbox-buttons__input" type="checkbox" id="checkbox2" name="checkbox2" value="pets")
+                label(for="checkbox2")= label2
+            div(class="checkbox-buttons__item")
+                input(class="checkbox-buttons__input" type="checkbox" id="checkbox3" name="checkbox3" value="guests")
+                label(for="checkbox3")= label3

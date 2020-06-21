@@ -1,0 +1,32 @@
+.rate-button {
+    position: relative;
+    width: 120px;
+    height: 24px;
+    user-select: none;
+}
+
+.rate-button__lower {
+    position: absolute;
+}
+
+.rate-button__upper {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 1
+}
+
+.rate-button__star {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $purple;
+}

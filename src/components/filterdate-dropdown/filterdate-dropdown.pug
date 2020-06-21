@@ -1,0 +1,6 @@
+mixin filterDateDropdown(name)
+    div(class="filterdate-dropdown")
+        div(class="filterdate-dropdown__info heading3")= name
+        div(class="filterdate-dropdown__field")
+            input(type="text" class="datepicker-here filterdate-dropdown__input" data-range="true" data-multiple-dates-separator=" - " readonly)
+            span(class="filterdate-dropdown__micons") 

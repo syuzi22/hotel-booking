@@ -1,0 +1,10 @@
+mixin pagination
+    .pagination
+        .pagination__list
+            each val in [1, 2, 3, '...', 15]
+                if val == 1
+                    span.pagination__item.pagination__selected= val
+                else
+                    span.pagination__item= val
+            span.pagination__item.pagination__micons arrow_forward
+        .pagination__descript 1 – 12 из 100+ вариантов аренды

@@ -1,0 +1,68 @@
+.toggle {
+    padding-bottom: 13px;
+}
+
+.toggle__input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+
+.toggle__input + label {
+	position: relative;
+	padding: 0 0 0 50px;
+    cursor: pointer;
+}
+
+.toggle__input + label:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 40px;
+    height: 20px;
+    border: 1px solid $dark25;
+	border-radius: 10px;
+	background: #FFFFFF;
+	transition: .2s;
+}
+.toggle__input + label:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: $dark25;
+    border-radius: 10px;
+	transition: .2s;
+}
+
+.toggle__input:not(:disabled):not(:checked)+label:hover::before {
+    border-color: $dark50;
+}
+
+.toggle__input:not(:disabled):active+label::before {
+    background-color: $dark5;
+}
+
+.toggle__input:focus:not(:checked)+label::before {
+    border-color: $dark50;
+}
+
+.toggle__input:focus+label::before {
+    border-color: $purple;
+}
+
+.toggle__input:checked + label:before {
+	border-color: $purple;
+}
+
+.toggle__input:checked + label:after {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	left: 26px;
+}
+
+
+

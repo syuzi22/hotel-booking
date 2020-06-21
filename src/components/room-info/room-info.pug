@@ -1,0 +1,9 @@
+mixin roomInfo(options)
+    if !options
+        - options = {}
+    .room-info
+        .room-info__icon
+            span.room-info__micons= options.icon
+        .room-info__descript
+            .room-info__title= options.title
+            .room-info__text= options.text

@@ -1,0 +1,10 @@
+.range-slider__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.range-slider__value {
+    font-weight: normal;
+    color: $dark50;
+}

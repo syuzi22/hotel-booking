@@ -1,0 +1,68 @@
+.button {
+    $button__height: 5.5rem;
+    $empty_btn_border_width: 0.25rem;
+    
+    &__element {
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+
+    &__element:focus {
+        outline: none;
+    }
+
+    &__link_purple &__element{
+        color: $primary;
+    }
+    
+    &__link_dark &__element{
+        color: $dark50;
+    }
+
+    &__filled &__element{
+        height: $button__height;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        background: $primary-gradient;
+        color: $white;
+        border-radius: 2.75rem; 
+    }
+
+    &__filled:hover {
+        opacity: 0.5;
+    }  
+
+    &__empty {
+        display: inline-flex;
+        height: $button__height;
+        background: $primary-gradient;
+        border-radius: 2.75rem;
+        padding: $empty_btn_border_width;    
+        
+        &:hover {
+            background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+        }
+    }
+
+    &__empty &__element{
+        background-color: $white;
+        color: $primary;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        left: $empty_btn_border_width;
+        top: $empty_btn_border_width;
+        width: auto;
+        height: 100%;
+        border-radius: 22px;
+        border: none;
+    }
+}

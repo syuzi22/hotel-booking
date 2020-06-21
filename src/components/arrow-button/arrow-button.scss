@@ -1,0 +1,52 @@
+.arrow-button {
+    $arrow-button__height: 5.5rem;
+    display: flex;
+    width: 100%;
+    height: $arrow-button__height;
+    background: $primary-gradient;
+    border-radius: 2.75rem;
+
+    &__elem {
+        flex: 1 1 auto;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        width: auto;
+        font-family: inherit;
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: $arrow-button__height;
+        padding-left: $arrow-button__height;;
+        text-transform: uppercase;
+        background-color: transparent;
+        color: $white;
+    }
+
+    &__micons {
+        flex: 0 0 $arrow-button__height;
+        font-family: "Material Icons";
+        font-size: 3rem;
+        line-height: $arrow-button__height;
+        width: $arrow-button__height;
+        height: $arrow-button__height;
+        text-align: center;
+        background-color: $white;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: $white
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+

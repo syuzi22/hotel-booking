@@ -1,0 +1,8 @@
+mixin maskedInput(type, placeholder, label, state)
+    div(class="masked-input")
+        div(class="masked-input__info heading3")
+            div(class="masked-input__name")
+                label(for="masked-input__inp")= label
+            div(class="masked-input__state")= state
+        div(class="masked-input__field")
+            input(type=type class="masked-input__inp" placeholder=placeholder spellcheck="false")

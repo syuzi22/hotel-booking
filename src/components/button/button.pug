@@ -1,0 +1,8 @@
+mixin button(options)
+    if !options
+        - options = {}
+    -
+        var classes = ''
+        classes += options.name? 'button__' + options.name : ''
+    .button(class=classes)
+        button.button__element= options.text || 'Click me'
