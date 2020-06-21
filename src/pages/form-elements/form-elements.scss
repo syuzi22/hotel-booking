@@ -54,7 +54,14 @@
 
 .form-elements__info {
     flex: 1 1 38.534482%;
-    background-color: #dbd7d2;
+    // background-color: #dbd7d2;
+}
+
+.line {
+    width: 280px;
+    height: 1px;
+    background: $dark10;
+    margin-bottom: 2.5rem;
 }
 
 .form-elements__reviews {

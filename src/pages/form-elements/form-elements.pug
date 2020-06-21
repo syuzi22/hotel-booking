@@ -113,14 +113,27 @@ html(lang="en")
                         include ../../components/bullet-list/bullet-list.pug
                         +bulletList('Bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
 
-                        
+
+
+
             div(class="form-elements__wrap3")
                 div(class="form-elements__info")
+                    include ../../components/room-info/room-info.pug
+                    +roomInfo({
+                        icon: 'insert_emoticon',
+                        title: 'Комфорт',
+                        text: 'Шумопоглощающие стены'
+                    })
+                    .line
+                    +roomInfo({
+                        icon: 'location_city',
+                        title: 'Удобство',
+                        text: 'Окно в каждой из спален'
+                    })
+                    .line
                 div(class="form-elements__reviews")
-                    .form-elements__rev
-                    include ../../components/review/review.pug
-                    //- +review
-                    +review({
+                include ../../components/review/review.pug
+                +review({
                         url: '/images/review-photo.png',
                         name: 'Мурад Сарафанов',
                         daysAgo: '5 дней назад',
@@ -128,9 +141,3 @@ html(lang="en")
                         А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
                         Выкрикивал комплименты повару — никто не жаловался из соседей.`
                     })
-
-            //- div
-            //-     include ../../components/guest-dropdown/guest-dropdown.pug
-            //- div
-            //-     include ../../components/room-dropdown/room-dropdown.pug
-
