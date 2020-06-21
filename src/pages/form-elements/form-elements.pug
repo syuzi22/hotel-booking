@@ -117,6 +117,17 @@ html(lang="en")
             div(class="form-elements__wrap3")
                 div(class="form-elements__info")
                 div(class="form-elements__reviews")
+                    .form-elements__rev
+                    include ../../components/review/review.pug
+                    //- +review
+                    +review({
+                        url: '/images/review-photo.png',
+                        name: 'Мурад Сарафанов',
+                        daysAgo: '5 дней назад',
+                        text: `Великолепный матрас на кровати в основной спальне! 
+                        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. 
+                        Выкрикивал комплименты повару — никто не жаловался из соседей.`
+                    })
 
             //- div
             //-     include ../../components/guest-dropdown/guest-dropdown.pug

@@ -12,22 +12,20 @@
     display: flex;
 }
 
-.form-elements__first{
+.form-elements__first {
     flex: 1 1 38.534482%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.form-elements__second{
+.form-elements__second {
     flex: 1 1 30.732759%;
 }
 
-.form-elements__third{
+.form-elements__third {
     flex: 1 1 30.732759%;
 }
-
-
 
 .form-elements__wrap2 {
     display: flex;
@@ -49,14 +47,9 @@
     // background-color: gainsboro;
 }
 
-
-
-
-
 .form-elements__wrap3 {
     display: flex;
     height: 200px;
-    
 }
 
 .form-elements__info {
@@ -66,10 +59,8 @@
 
 .form-elements__reviews {
     flex: 1 1 61.465518%;
-    background-color: #bababa;
+    // background-color: #bababa;
 }
-
-
 
 //компоненты
 
@@ -102,14 +93,9 @@
     padding-bottom: 17px;
 }
 
-
-
-
-
 .form-elements__room-dropdown {
     padding-bottom: 17px;
 }
-
 
 .form-elements__expcheckwrap {
     padding-top: 173px;
@@ -142,28 +128,15 @@
     padding-bottom: 39px;
 }
 
-
 .form-elements__rate-button {
-    padding-top: 16px;   
+    padding-top: 16px;
 }
 
 .form-elements__range-slider {
     width: 266px;
 }
 
-
 .form-elements__filled-button {
-    padding-top: 16px;
-}
-
-.form-elements__empty-button {
-    padding-top: 16px;
-    width: 218px;
-    justify-content: space-between;
-    display: flex;
-}
-
-.form-elements__icon-link {
     padding-top: 16px;
 }
 
