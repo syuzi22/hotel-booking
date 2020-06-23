@@ -1,5 +1,7 @@
 .input-text {
-    width: 320px;
+    width: auto;
+    max-width: 320px;
+    min-width: 280px;
 }
 
 .input-text__info {
@@ -16,6 +18,7 @@
     align-self: flex-start;
     font-weight: normal;
     color: $dark50;
+    line-height: 18px;
 }
 
 // default
@@ -46,9 +49,11 @@
 
 .input-text__inp:hover::placeholder{
     color: $dark75;
+    font-size: 13.5px;
 }
 
 .input-text__inp:focus::placeholder,  .input-text__inp_focus::placeholder{
     color: $dark75;
+    font-size: 13.5px;
 }
 

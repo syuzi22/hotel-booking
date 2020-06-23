@@ -1,5 +1,7 @@
 .masked-input {
-    width: 320px;
+    width: auto;
+    max-width: 320px;
+    min-width: 280px;
 }
 
 .masked-input__info {
@@ -10,6 +12,7 @@
 
 .masked-input__name {
     align-self: center;
+    line-height: 22px;
 }
 
 .masked-input__state {

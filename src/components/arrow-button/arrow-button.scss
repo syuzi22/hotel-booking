@@ -1,7 +1,10 @@
 .arrow-button {
     $arrow-button__height: 5.5rem;
     display: flex;
-    width: 100%;
+    // width: 100%;
+    width: auto;
+    max-width: 320px;
+    min-width: 280px;
     height: $arrow-button__height;
     background: $primary-gradient;
     border-radius: 2.75rem;

@@ -1,5 +1,7 @@
 .guest-dropdown {
-    width: 320px;
+    width: auto;
+    max-width: 320px;
+    min-width: 280px;
 }
 .guest-dropdown__info {
     display: flex;
@@ -25,6 +27,7 @@
     align-self: flex-start;
     font-weight: normal;
     color: $dark50;
+    line-height: 21px;
 }
 
 .guest-dropdown__inp::placeholder {
@@ -184,7 +187,7 @@
     justify-content: center;
     align-items: center;
     color: $dark75;
-    width: 40px;
+    width: 42px;
     height: 40px;
 }
 .guest-dropdown__micons::after {

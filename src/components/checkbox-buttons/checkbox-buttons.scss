@@ -1,11 +1,11 @@
 .checkbox-buttons {
-    width: 222px;
     line-height: 18px;
     color: $dark50;
 }
 
 .checkbox-buttons__title {
-    padding-bottom: 16px;
+    padding-top: 3px;
+    padding-bottom: 18px;
 }
 
 /* для элемента input c type="checkbox" */
@@ -21,7 +21,7 @@
     display: inline-flex;
     align-items: flex-start;
     user-select: none;
-    padding-bottom: 10px;
+    padding-bottom: 10px;  
 }
 
 /* создание в label псевдоэлемента before со следующими стилями */

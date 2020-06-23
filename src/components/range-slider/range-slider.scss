@@ -4,6 +4,10 @@
     align-items: baseline;
 }
 
+.range-slider__title {
+    line-height: 2.75rem;
+}
+
 .range-slider__value {
     font-weight: normal;
     color: $dark50;

@@ -1,5 +1,5 @@
 .radio-buttons__title {
-    padding-bottom: 12px;
+    padding-bottom: 13px;
 }
 .radio-buttons__list {
     color: $dark50;
@@ -17,6 +17,7 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
+    margin-right: 18px;
 }
 
 /* создание в label псевдоэлемента  before со следующими стилями */
