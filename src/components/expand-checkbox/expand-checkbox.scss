@@ -1,7 +1,8 @@
 .expand-checkbox {
     width: 266px;
     line-height: 18px;
-    color: $dark50;   
+    color: $dark50;  
+    user-select: none; 
 }
 
 .expand-checkbox__heading {
@@ -96,10 +97,12 @@
     width: inherit;
     background: #FFFFFF;
     z-index: 999;
+    visibility: hidden;
     opacity: 0;
-    transition-duration: 0.3s;
+    transition: visibility 0s, opacity 0.3s linear;
 }
 
 .expand-checkbox__list--open {
+    visibility: visible;
     opacity: 1;
 }

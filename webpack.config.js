@@ -16,6 +16,10 @@ let plugins = [
         template: "./pages/form-elements/form-elements.pug",
         filename: "./pages/form-elements.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/cards/cards.pug",
+        filename: "./pages/cards.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
