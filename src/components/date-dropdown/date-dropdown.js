@@ -1,9 +1,6 @@
 (function ($) {
     const appendButtonHtml = '<span class="date-dropdown__close">Применить</span>';
 
-    // XXX get rid of $start and $end
-    let $end = $(".date-dropdown__end");
-
     $(".date-dropdown__start").each(function () {
         const self = this;
 
@@ -24,7 +21,8 @@
                 $(".date-dropdown").removeClass("date-dropdown--open");
             },
             onSelect: function (fd, date, dp) {
-                dp.$datepicker.val(fd.split("-")[0]);
+                $(self).val(fd.split("-")[0])
+                const $end = $(self).closest('.date-dropdown').find('.date-dropdown__end');
                 $end.val(fd.split("-")[1]);
             },
             classes: "date-dropdown__elem",
@@ -39,9 +37,9 @@
             },
             onRenderCell: function (date, cellType) {
                 if (cellType == "day") {
-                    const dp = $(self).data('datepicker');
+                    const dp = $(self).data('datepicker') || {};
                     let myclasses = "date-dropdown__cell";
-                    let dateArray = dp.selectedDates;
+                    let dateArray = dp.selectedDates || [];
                     let dateFrom = -1;
                     let dateTo = -1;
                     let currentCell = date.getTime();
@@ -91,15 +89,18 @@
             isOpen = !isOpen;
             $(self).data("isOpen", isOpen);
         });
+
+        const $dp = $(self).data('datepicker');
+        $(self).closest('.date-dropdown').find('.date-dropdown__end').each(function () {
+            $(this).click(function () {
+                if ($dp) {
+                    $dp.show();
+                }
+            });
+        });
     });
 
     $('.datepicker-inline .datepicker--buttons')
         .append(appendButtonHtml)
         .click(function (event) {});
-
-    $end.click(function () {
-        // XXX
-        let $myDatepicker = $end.datepicker().data("datepicker");
-        $myDatepicker.show();
-    });
 })($);

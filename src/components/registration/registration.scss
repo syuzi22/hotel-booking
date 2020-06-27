@@ -1,0 +1,49 @@
+.register {
+    width: 380px;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 29px 30px;
+}
+.register__title {
+    font-size: 3.25rem;
+    padding-bottom: 18px;
+}
+.register__name {
+    padding-bottom: 10px;
+}
+
+.register__surname {
+    padding-bottom: 8px;
+}
+
+.register__gender {
+    padding-bottom: 14px;
+}
+
+.register__birth {
+    padding-bottom: 16px;
+}
+
+.register__email {
+    padding-bottom: 11px;
+}
+
+.register__password {
+    padding-bottom: 7px;
+}
+
+.register__toggle {
+    padding-bottom: 10px;
+}
+
+.register__arrow-button {
+    padding-bottom: 29px;
+}
+
+.register__enter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

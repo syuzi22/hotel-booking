@@ -46,7 +46,8 @@
         height: $button__height;
         background: $primary-gradient;
         border-radius: 2.75rem;
-        padding: $empty_btn_border_width;    
+        padding: $empty_btn_border_width; 
+        min-width: 99px;   
         
         &:hover {
             background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
@@ -61,6 +62,7 @@
         left: $empty_btn_border_width;
         top: $empty_btn_border_width;
         width: auto;
+        min-width: 95px;
         height: 100%;
         border-radius: 22px;
         border: none;
