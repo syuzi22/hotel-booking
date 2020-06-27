@@ -249,6 +249,9 @@
 }
 
 @media (max-width: 360px) {
+    html {
+        font-size: 7px;
+    }
     .form-elements__logo {
         width: 23px;
         height: 23px;
@@ -258,4 +261,6 @@
         padding-left: 15px;
         padding-right: 15px;
     }
+
 }
+

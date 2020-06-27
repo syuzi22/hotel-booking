@@ -1,2 +1,16 @@
-.wrap
-    div(class="datepicker-here date-dropdown__start" data-range="true")
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Form Elements
+    body
+        .cards
+            div(class="cards__logo")
+            div(class="cards__wrap")
+                div(class="cards__room-search")
+                    include ../../components/room-search/room-search.pug
+                //- div(class="datepicker-here date-dropdown__start" data-range="true")
+                div
+                            include ../../components/date-dropdown/date-dropdown.pug
+                            +dateDropdown('date dropdown', 'date dropdown')
+

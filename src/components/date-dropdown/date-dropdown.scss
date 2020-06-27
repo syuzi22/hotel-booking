@@ -1,45 +1,45 @@
 .date-dropdown {
-    width: 320px;
+    width: 40rem;
     display: flex;
     justify-content: space-between;
 }
 
 .date-dropdown__info {
-    height: 23px;
-    line-height: 21px;
+    height: 2.875rem;
+    line-height: 2.625rem;
 }
 
 .date-dropdown__inp {
-    width: 150px;
-    height: 44px;
+    width: 18.75rem;
+    height: 5.5rem;
     display: flex;
     border: 1px solid $dark25;
-    border-radius: 4px;
+    border-radius: 0.5rem;
     background: #ffffff;
 }
 
 .date-dropdown__inp input {
     all: initial;
-    width: 100%;
-    padding-left: 14px;
+    width: 12.75rem;
+    padding-left: 1.75rem;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 1.75rem;
+    line-height: 2.25rem;
     color: $dark75;
 }
 .date-dropdown__micons {
     font-family: "Material Icons";
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 45px;
+    font-size: 3rem;
+    line-height: 5.625rem;
     display: inline-block;
     align-items: center;
     color: $dark75;
-    width: 48px;
-    height: 40px;
+    width: 6rem;
+    height: 5rem;
 }
 
 .date-dropdown__micons::after {
@@ -64,8 +64,8 @@
     font-family: Material Icons;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 20px;
+    font-size: 3rem;
+    line-height: 2.5rem;
     display: flex;
     align-items: center;
     text-align: center;
@@ -74,18 +74,18 @@
 
 //////////////////////////////////
 .datepicker-inline .datepicker {
-    box-shadow: 0px 10px 20px $dark5;
+    box-shadow: 0px 1.25rem 2.5rem $dark5;
 }
 
 .date-dropdown__elem {
-    width: 320px;
+    width: 40rem;
     box-sizing: border-box;
 
     .datepicker{
         background: $white;
         border: 1px solid $dark25;
-        box-shadow: 0px 10px 20px $dark5;
-        border-radius: 4px;
+        box-shadow: 0px 1.25rem 2.5rem $dark5;
+        border-radius: 0.5rem;
     }
    
     .datepicker--pointer {
@@ -93,7 +93,7 @@
     }
 
     .datepicker--nav {
-        padding: 18px 19px 10px;
+        padding: 2.25rem 2.375rem 1.25rem;
         border-bottom: none;
     }
 
@@ -106,20 +106,20 @@
         font-family: 'Quicksand', 'Open Sans';
         font-style: normal;
         font-weight: bold;
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 2.5rem;
+        line-height: 3.125rem;
         color: $dark100;
     }
 
     .datepicker--content {
-        padding: 20px 16px 16px 22px;
+        padding: 2.5rem 2rem 2rem 2.75rem;
     }
     .datepicker--cell {
-        height: 40px;
+        height: 5rem;
     }
     .datepicker--buttons {
         display: flex;
-        padding: 0 20px 14px;
+        padding: 0 2.5rem 1.75rem;
         justify-content: space-between;
         border-top: none;
     }
@@ -165,8 +165,8 @@
     .date-dropdown__cell {
         color: $dark50;
         font-family: 'Montserrat';
-        font-size: 12px;
-        border-radius: 22px;
+        font-size: 1.5rem;
+        border-radius: 2.75rem;
         &.-selected-, &.-in-range-, &.-focus- {
             border-radius: unset;
         }
@@ -183,8 +183,8 @@
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 40px;
+        font-size: 1.5rem;
+        line-height: 5rem;
         color: $purple;
         text-transform: capitalize;
     }
@@ -197,11 +197,11 @@
         .date-dropdown__date {
             color: white;
             font-weight: bold;
-            border-radius: 22px;
+            border-radius: 2.75rem;
             background: $purple;
             width: 100%;
             height: 100%;
-            line-height: 40px;
+            line-height: 5rem;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -218,13 +218,13 @@
                 width: 100%;
                 height: 100%;
                 text-align: center;
-                line-height: 40px;
-                border-radius: 22px;
+                line-height: 5rem;
+                border-radius: 2.75rem;
             }
     }
 
     .date-dropdown__cell:hover:not(.date-dropdown__in-range) {
-        border-radius: 22px;
+        border-radius: 2.75rem;
         background: linear-gradient(
             180deg,
             rgba(188, 156, 255, 0.25) 0%,
@@ -233,13 +233,13 @@
     }
 
     .date-dropdown__cell.-focus-:hover:not(.date-dropdown__in-range) {
-        border-radius: 22px;
+        border-radius: 2.75rem;
 
         &.-range-from- {
-            border-radius: 22px 0 0 22px; 
+            border-radius: 2.75rem 0 0 2.75rem; 
         }
         &.-range-to- {
-            border-radius: 0 22px 22px 0; 
+            border-radius: 0 2.75rem 2.75rem 0; 
         }
     }
     .datepicker--cell.-range-from- {
@@ -249,7 +249,7 @@
             rgba(188, 156, 255, 0.25) 0%,
             rgba(139, 164, 249, 0.25) 100%
         );
-        border-radius: 22px 0 0 22px; 
+        border-radius: 2.75rem 0 0 2.75rem; 
     }
       .datepicker--cell.-range-to- {
         border: none;
@@ -258,7 +258,7 @@
             rgba(188, 156, 255, 0.25) 0%,
             rgba(139, 164, 249, 0.25) 100%
         );
-        border-radius: 0 22px 22px 0; 
+        border-radius: 0 2.75rem 2.75rem 0; 
     }
     .datepicker--button {
         color: $dark50;
@@ -277,7 +277,7 @@
         background: transparent;
         font-family: 'Montserrat';
         font-weight: bold;
-        font-size: 12px;
+        font-size: 1.5rem;
         text-transform: uppercase;
         color: $dark50;
     }
@@ -291,12 +291,12 @@
         background: transparent;
         font-family: 'Montserrat';
         font-weight: bold;
-        font-size: 12px;
+        font-size: 1.5rem;
         text-transform: uppercase;
         color: $purple;
     }
     .date-dropdown__cell.-in-range-{
-        $border-radius: 22px;
+        $border-radius: 2.75rem;
         &.date-dropdown__rounded-left {
             border-top-left-radius: $border_radius;
             border-bottom-left-radius: $border-radius;
