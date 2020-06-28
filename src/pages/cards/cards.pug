@@ -13,6 +13,17 @@ html(lang="en")
                     .cards__registration
                         include ../../components/registration/registration.pug
                 .cards__center-column
+                    .cards__booking
+                        include ../../components/booking/booking.pug
+                        +booking({
+                            number: 888,
+                            category: 'люкс',
+                            price: '9 990₽',
+                            sum1: '39 960₽',
+                            sum2: '0₽',
+                            sum3: '300₽',
+                            total: '38 081₽'
+                        })
                 .cards__right-column
                     .cards__datepicker
                         div(class="datepicker-here date-dropdown__start" data-range="true")

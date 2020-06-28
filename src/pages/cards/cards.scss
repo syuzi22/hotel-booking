@@ -22,13 +22,20 @@
     max-width: 1920px; 
     display: flex;
     flex-wrap: nowrap;   
-    justify-content: space-between;
     margin-top: 5.7%; //72px;
     margin-left: 8.7%; //110px;
 }
 
-.cards__left-column, .cards__center-column, .cards__right-column {
-    flex: 1 1 33%;
+.cards__left-column {
+    flex: 1 1 420px;
+}
+
+.cards__center-column {
+    flex: 1 1 420px;
+}
+
+.cards__right-column {
+    flex: 1 1 320px;
 }
 
 .cards__room-search {

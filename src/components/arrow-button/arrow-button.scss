@@ -10,6 +10,7 @@
     border-radius: 2.75rem;
 
     &__elem {
+        cursor: pointer;
         flex: 1 1 auto;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -43,6 +44,9 @@
 
     &:hover {
         opacity: 0.5;
+    }
+    &__elem:focus {
+        outline: none;
     }
 
     &:focus {

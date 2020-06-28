@@ -36,6 +36,7 @@
 /* стили при наведении курсора на радио */
 .radio-buttons__inp:not(:disabled):not(:checked)+label:hover::before {
     border-color: $dark50;
+    cursor: pointer;
 }
 
 /* стили для активной радиокнопки (при нажатии на неё) */
