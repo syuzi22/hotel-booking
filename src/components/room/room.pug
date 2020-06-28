@@ -1,0 +1,20 @@
+mixin room(options)
+    if !options
+        - options = {}
+    .room
+        .room__slider
+            img(src="/images/room888.jpg")
+        .room__wrap
+            .room__info
+                span.room__numsign № 
+                span.room__number= options.number || ''
+                span.room__cat.heading3= options.category || ''
+                span.room__price= options.price || ''
+                    span.room__day в сутки
+            .room__line
+            .room__rate
+                .room__ratebutton
+                    include ../../components/rate-button/rate-button.pug
+                    +rateButton(options.rate)
+                .room__reviewsnum= options.reviews || ''
+                .room__reviews Отзывов
