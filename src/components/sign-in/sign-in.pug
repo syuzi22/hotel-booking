@@ -1,0 +1,14 @@
+.sign-in
+    .sign-in__title.heading1 Войти
+    .sign-in__email
+        include ../../components/input-text/input-text.pug
+        +inputText('text', 'Email')
+    .sign-in__password
+        +inputText('text', 'Пароль')
+    .sign-in__arrow-button
+        include ../../components/arrow-button/arrow-button.pug
+        +arrowButton({name: 'Войти'})
+    .sign-in__register
+        span Нет аккаунта на Toxin?
+        include ../../components/button/button.pug
+        +button({name: 'empty', text: 'Создать'})

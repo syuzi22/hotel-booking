@@ -4,9 +4,9 @@ mixin booking(options)
     .booking
         .booking__roominfo
             span.booking__room-numsign № 
-            span.booking__room-number= options.number
-            span.booking__room-cat.heading3= options.category
-            span.booking__room-price= options.price
+            span.booking__room-number= options.number || ''
+            span.booking__room-cat.heading3= options.category || ''
+            span.booking__room-price= options.price || ''
                 span.booking__perday в сутки
         .booking__date-dropdown
             include ../../components/date-dropdown/date-dropdown.pug
@@ -17,19 +17,19 @@ mixin booking(options)
         .booking__tariff
             .booking__tariff1
                 span.booking__main 9 990₽ х 4 суток 
-                span.booking__sum1= options.sum1
+                span.booking__sum1= options.sum1 || ''
             .booking__tariff2
                 span.booking__services Сбор за услуги: скидка 2 179₽ 
                 span.booking__info-button i
-                span.booking__sum2= options.sum2
+                span.booking__sum2= options.sum2 || ''
             .booking__tariff3
                 span.booking__additional Сбор за дополнительные услуги
                 span.booking__info-button i
-                span.booking__sum3= options.sum3
+                span.booking__sum3= options.sum3 || ''
         .booking__total.heading2 
             span Итого
             div.booking__total-line
-            span= options.total
+            span= options.total || ''
         .booking__arrow-button
             include ../../components/arrow-button/arrow-button.pug
             +arrowButton({name: 'Забронировать'})
