@@ -38,9 +38,7 @@
     padding-left: 3px;
 }
 
-.room__reviews {
-    padding-right: 5px;
-}
+
 
 .room__slider img {
     border-top-left-radius: 4px;
@@ -48,7 +46,7 @@
 }
 
 .room__wrap {
-    padding: 13px 17px 18px 20px;
+    padding: 13px 18px 18px 20px;
 }
 
 .room__info {
@@ -62,20 +60,29 @@
     margin-bottom: 10px;
 }
 
-.room__reviewsnum {
-    color: $dark50;
-    font-weight: bold;
-    padding-left: 21px;
-}
 
-.room__reviews {
-    color: $dark25;
-    padding-left: 3px;
-}
 
 .room__rate {
     display: flex;
+    justify-content: space-between;
 }
+
+.room__reviews {
+    white-space: nowrap;
+}
+
+.room__reviewsnum {
+    color: $dark50;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.room__reviewsword {
+    color: $dark25;
+}
+
+
+
 
 
 //слайдер

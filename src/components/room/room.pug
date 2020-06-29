@@ -3,14 +3,9 @@ mixin room(options)
         - options = {}
     .room
         .room__slider
-            div
-                img(src="/images/room888.jpg")
-            div
-                img(src="/images/room840.jpg")
-            div
-                img(src="/images/room980.jpg")
-            div
-                img(src="/images/room856.jpg")
+            each val in options.images
+                div
+                    img(src= val)
         .room__slider-arrows
             span.room-slider__prev expand_more
             span.room-slider__next expand_more
@@ -26,5 +21,6 @@ mixin room(options)
                 .room__ratebutton
                     include ../../components/rate-button/rate-button.pug
                     +rateButton(options.rate)
-                .room__reviewsnum= options.reviews || ''
-                .room__reviews Отзывов
+                .room__reviews
+                    span.room__reviewsnum= options.reviews || ''
+                    span.room__reviewsword Отзывов

@@ -2,8 +2,8 @@ require.context('', true, /\.(png|svg|jpg)$/);
 
 import '@inputmask'
 
-import '@item-quantity-dropdown/item-quantity-dropdown.min.js';
 import '@item-quantity-dropdown/item-quantity-dropdown.min.css';
+import '@item-quantity-dropdown/item-quantity-dropdown.min.js';
 
 import '../node_modules/air-datepicker/dist/css/datepicker.min.css';
 import '../node_modules/air-datepicker/dist/js/datepicker.min.js';

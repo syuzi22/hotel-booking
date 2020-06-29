@@ -1,10 +1,13 @@
 $(document).ready(function() {
-    $(".room__slider").slick({
-        // dots: true,
+    $(".room").each(function() {
+      const self = this;
+      const slider = $(self).find(".room__slider");
+      $(slider).slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        prevArrow: $('.room-slider__prev'),
-        nextArrow: $('.room-slider__next'),
+        prevArrow: $(self).find('.room-slider__prev'),   
+        nextArrow: $(self).find('.room-slider__next'),  
         dots: true
       });
+    });
 });

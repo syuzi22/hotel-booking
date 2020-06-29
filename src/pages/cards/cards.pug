@@ -29,13 +29,22 @@ html(lang="en")
                 .cards__right-column
                     .cards__datepicker
                         div(class="datepicker-here date-dropdown__start" data-range="true")
-                    .cards__room
+                    .cards__room1
                         include ../../components/room/room.pug
                         +room({
                             number: 888,
                             category: 'люкс',
                             price: '9 990₽',
                             rate: 5,
-                            reviews: 145
+                            reviews: 145,
+                            images: ["/images/room888.jpg", "/images/room840.jpg", "/images/room980.jpg", "/images/room856.jpg"]
+                        })
+                    .cards__room2
+                        +room({
+                            number: 840,
+                            price: '9 900₽',
+                            rate: 4,
+                            reviews: 65,
+                            images: ["/images/room840.jpg", "/images/room980.jpg", "/images/room888.jpg", "/images/room856.jpg"]
                         })
 
