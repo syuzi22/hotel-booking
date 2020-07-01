@@ -1,0 +1,68 @@
+.menu {
+    color: $dark50;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    color: $dark50;
+}
+
+.menu a:hover {
+    color: $purple;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu__top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__top > li {
+    position: relative;
+}
+
+.menu__sub {
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    top: 25px;
+    width: auto;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    background: $white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.menu__sub li {
+    padding: 10px 20px;
+}
+
+.menu__top li:hover .menu__sub {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu__item{
+    cursor: pointer;
+    margin-left: 20px;
+    display: flex;
+}
+
+.menu__item_active {
+    font-weight: bold;
+    color: $dark75;
+}
+
+.menu__micons {
+    font-family: 'Material Icons';
+    font-size: 24px;
+}

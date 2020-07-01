@@ -20,6 +20,10 @@ let plugins = [
         template: "./pages/cards/cards.pug",
         filename: "./pages/cards.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/headers-footers/headers-footers.pug",
+        filename: "./pages/headers-footers.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
