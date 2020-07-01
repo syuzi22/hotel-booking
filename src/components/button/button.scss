@@ -37,6 +37,10 @@
         border-radius: 2.75rem; 
     }
 
+    &__filled_small &__element {
+        height: 34px;
+    }
+
     &__filled:hover {
         opacity: 0.5;
     }  
@@ -47,11 +51,15 @@
         background: $primary-gradient;
         border-radius: 2.75rem;
         padding: $empty_btn_border_width; 
-        min-width: 99px;   
+        min-width: 87px;   
         
         &:hover {
             background: linear-gradient(180deg, rgba(188, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
         }
+    }
+
+    &__empty_small {
+        height: 34px;
     }
 
     &__empty &__element{
@@ -62,7 +70,7 @@
         left: $empty_btn_border_width;
         top: $empty_btn_border_width;
         width: auto;
-        min-width: 95px;
+        min-width: 83px;
         height: 100%;
         border-radius: 22px;
         border: none;

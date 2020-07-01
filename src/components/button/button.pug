@@ -4,5 +4,6 @@ mixin button(options)
     -
         var classes = ''
         classes += options.name? 'button__' + options.name : ''
+        classes += options.isSmall? ' button__' + options.name + '_small' : ''
     .button(class=classes)
         button.button__element= options.text || 'Click me'

@@ -1,0 +1,45 @@
+mixin header(options)
+    if !options
+        - options = {}
+    .header
+        .header__wrap
+            .header__toxin-logo
+                include ../../components/logo/logo.pug
+                +logo('colored', 'toxin')
+            .header__menu
+                include ../../components/menu/menu.pug
+                +topmenu(
+                    {
+                        'items': [
+                            {'name': 'О нас',
+                             'isActive': true
+                            },
+                            {
+                                'name': 'Услуги',
+                                'items': [
+                                    {'name': 'Услуга1'},
+                                    {'name': 'Услуга2'},
+                                    {'name': 'Услуга3'},
+                                ]
+                            },
+                            {'name': 'Вакансии'},
+                            {'name': 'Новости'},
+                            {
+                                'name': 'Соглашения',
+                                'items': [
+                                    {'name': 'Соглашение1'},
+                                    {'name': 'Соглашение2'},
+                                    {'name': 'Соглашение3'},
+                                ]
+                            },
+                        ]
+                    })
+            if options.username
+                .header__line
+                .header__user=  options.username
+            else
+                .header__sign-in
+                    include ../../components/button/button.pug 
+                    +button({name: 'empty', text: 'Войти', isSmall: true})
+                .header__register
+                    +button({name: 'filled', text: 'Зарегистрироваться', isSmall: true})

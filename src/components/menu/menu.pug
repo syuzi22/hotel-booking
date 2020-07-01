@@ -14,4 +14,5 @@ mixin topmenu(options)
                     li.menu__item    
                         a(href="#")= item.name
                         if item.items
+                            span.menu__micons expand_more
                             +submenu(item)
