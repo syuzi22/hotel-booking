@@ -5,6 +5,8 @@ mixin submenu(options)
                 a(href="#")= item.name
 mixin topmenu(options)
     nav.menu
+        div.menu__gamburger
+            i.fas.fa-bars.fa-3x
         ul.menu__top
             each item in options.items
                 if item.isActive
@@ -16,3 +18,4 @@ mixin topmenu(options)
                         if item.items
                             span.menu__micons expand_more
                             +submenu(item)
+

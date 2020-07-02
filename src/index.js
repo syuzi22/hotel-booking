@@ -28,6 +28,7 @@ import './components/like-button/like-button.js'
 import './components/rate-button/rate-button.js'
 import './components/range-slider/range-slider.js'
 import './components/room/room.js'
+import './components/menu/menu.js'
 
 import './pages/form-elements/form-elements.js'
 import './pages/cards/cards.js'

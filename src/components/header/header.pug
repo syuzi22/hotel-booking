@@ -34,12 +34,17 @@ mixin header(options)
                             },
                         ]
                     })
-            if options.username
-                .header__line
-                .header__user=  options.username
-            else
-                .header__sign-in
-                    include ../../components/button/button.pug 
-                    +button({name: 'empty', text: 'Войти', isSmall: true})
-                .header__register
-                    +button({name: 'filled', text: 'Зарегистрироваться', isSmall: true})
+            .header__userinfo
+                if options.username
+                    .header__line
+                    .header__user=  options.username
+                else
+                    .header__sign-in
+                        include ../../components/button/button.pug 
+                        +button({name: 'empty', text: 'Войти', isSmall: true})
+                    .header__register
+                        +button({name: 'filled', text: 'Зарегистрироваться', isSmall: true})
+                    .header__icons
+                        i.fas.fa-sign-in-alt.fa-3x
+
+

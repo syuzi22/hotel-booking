@@ -37,3 +37,18 @@
     -webkit-text-fill-color: transparent;
     color: $purple;
 }
+
+@media(max-width: 768px) {
+    .footer-creative {
+        width: auto;
+    }
+}
+
+@media(max-width: 560px) {
+    .footer-creative__wrap {
+        width: auto;
+    }
+    .footer-creative {
+        padding: 30px;
+    }
+}
