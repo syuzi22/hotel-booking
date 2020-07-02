@@ -15,6 +15,8 @@ import '../node_modules/slick-carousel/slick/slick.min.js';
 import '../node_modules/slick-carousel/slick/slick.css';
 import '../node_modules/slick-carousel/slick/slick-theme.css';
 
+import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
 import './style.scss';
 import './components/guest-dropdown/guest-dropdown.js'
 import './components/room-dropdown/room-dropdown.js'
@@ -26,7 +28,6 @@ import './components/like-button/like-button.js'
 import './components/rate-button/rate-button.js'
 import './components/range-slider/range-slider.js'
 import './components/room/room.js'
-import './components/menu/menu.js'
 
 import './pages/form-elements/form-elements.js'
 import './pages/cards/cards.js'

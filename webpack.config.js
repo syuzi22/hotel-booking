@@ -115,7 +115,7 @@ module.exports = {
                 use: getScssPlugins()
             },
             {
-                test: /(?<!\/fonts\/.*)\.(png|jpg|svg|gif)$/,
+                test: /(?<!\/(fonts|webfonts)\/.*)\.(png|jpg|svg|gif)$/,
                 loader: {
                     loader: "file-loader",
                     options: {
@@ -125,7 +125,8 @@ module.exports = {
                 // use: ['file-loader']
             },
             {
-                test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
+                // test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
+                test: /(?<=\/(fonts|webfonts)\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                 loader: {
                     loader: "file-loader",
                     options: {

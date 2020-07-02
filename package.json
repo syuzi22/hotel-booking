@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.1",
+    "@fortawesome/fontawesome-free": "^5.13.1",
     "air-datepicker": "^2.2.3",
     "inputmask": "^5.0.3",
     "ion-rangeslider": "^2.3.1",

@@ -1,0 +1,58 @@
+.footer
+    .footer__topwrap
+        .footer__top
+            .footer__description
+                .footer__logo
+                    include ../../components/logo/logo.pug
+                    +logo('colored', 'toxin')
+                p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды» 
+            .footer__nav
+                .footer__title.heading3 навигация
+                ul
+                    li
+                        a(href="#") О нас
+                    li
+                        a(href="#") Новости
+                    li
+                        a(href="#") Служба поддержки
+                    li
+                        a(href="#") Услуги
+            .footer__about
+                .footer__title.heading3 о нас
+                ul
+                    li
+                        a(href="#") О сервисе
+                    li
+                        a(href="#") Наша команда
+                    li
+                        a(href="#") Вакансии
+                    li
+                        a(href="#") Инвесторы
+            .footer__support
+                .footer__title.heading3 Служба поддержки 
+                ul
+                    li
+                        a(href="#") Соглашения
+                    li
+                        a(href="#") Сообщества
+                    li
+                        a(href="#") Связь с нами
+            .footer__subscription
+                .footer__title.heading3 Подписка
+                p Получайте специальные предложения и новости сервиса
+                .footer__subscript-form
+                    include ../../components/subscription/subscription.pug
+                    +subscription
+    .footer__bottomwrap
+        .footer__bottom
+            .footer__copyright Copyright © 2018 Toxin отель. Все права зачищены. 
+            .footer__icons
+                .footer__icon
+                    a(href="#")
+                        i.fab.fa-twitter.fa-2x
+                .footer__icon
+                    a(href="#")
+                        i.fab.fa-facebook-square.fa-2x
+                .footer__icon
+                    a(href="#")
+                        i.fab.fa-instagram.fa-2x

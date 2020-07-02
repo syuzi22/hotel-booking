@@ -1,7 +1,6 @@
-
 .headers-footers {
     background: #f4f4f6;
-    height: 100%;
+    height: auto;
 }
 
 .headers-footers__logo {
@@ -15,5 +14,9 @@
 
 .headers-footers__header2 {
     padding-top: 40px;
+    padding-bottom: 40px;
 }
 
+.headers-footers__footer1 {
+    margin-bottom: 40px;
+}

@@ -1,0 +1,103 @@
+.footer {
+    background: $white;
+    color: $dark50;
+}
+
+.footer__topwrap {
+    padding-top: 100px;
+    padding-bottom: 90px;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+}
+
+.footer__top {
+    width: auto;
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__bottomwrap {
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    padding-top: 23px;
+    padding-bottom: 17px;
+}
+
+.footer__bottom {
+    width: auto;
+    max-width: 1160px;
+    margin: 0 auto;       
+}
+
+.footer__description {
+    flex: 1 1 300px;
+    padding-right: 40px;
+}
+
+.footer__title {
+    padding-top: 4px;
+    padding-bottom: 11px;
+}
+
+.footer__nav {
+    flex: 1 1 200px;
+}
+
+.footer__about {
+    flex: 1 1 200px;
+}
+
+.footer__support {
+    flex: 1 1 200px;
+}
+
+.footer__subscription {
+    flex: 1 1 260px;
+}
+
+.footer__top ul {
+    list-style: none;
+    line-height: 38px;
+}
+
+.footer__top a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    color: $dark50;
+}
+
+.footer__top a:hover {
+    color: $purple;
+    font-weight: bold;
+}
+
+.footer__subscription p {
+    padding-top: 7px;
+}
+
+.footer__description p {
+    padding-top: 17px;
+}
+
+.footer__subscript-form {
+    width: 260px;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icons {
+    display: flex;
+}
+
+.footer__icon {
+    margin-left: 18px;
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: $purple;
+}
