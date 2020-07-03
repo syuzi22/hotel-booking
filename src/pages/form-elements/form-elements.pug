@@ -12,15 +12,30 @@ html(lang="en")
             div(class="form-elements__first")
                 div(class="form-elements__inputwrap")
                     include ../../components/input-text/input-text.pug
-                    +inputText('email', 'Email', 'text field', 'default')
+                    +inputText({
+                        type: 'email',
+                        placeholder: 'Email',
+                        label: 'text field',
+                        state: 'default',
+                    })
                 div(class="form-elements__inputwrap2")
-                    +inputText('text', 'This is pretty awesome', 'text field','hover / focus')(class="input-text__inp_focus")
+                    +inputText({
+                        type: 'text',
+                        placeholder: 'This is pretty awesome',
+                        label: 'text field',
+                        state: 'hover / focus',                        
+                    })(class="input-text__inp_focus")
                 div(class="form-elements__guest-dropdownwrap")
                     include ../../components/guest-dropdown/guest-dropdown.pug
                     +guestDropdown('Dropdown', 'Default')
                 div(class="form-elements__masked-input")
                     include ../../components/masked-input/masked-input.pug
-                    +maskedInput('text', 'ДД.ММ.ГГГГ', 'masked text field', 'default')
+                    +maskedInput({
+                        type: 'text', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        label: 'masked text field', 
+                        state: 'default'
+                    })
                 div(class="form-elements__date-dropdownwrap")
                     include ../../components/date-dropdown/date-dropdown.pug
                     +dateDropdown('date dropdown', 'date dropdown')
@@ -70,7 +85,9 @@ html(lang="en")
                         +button({name: 'link_dark'})
                     div(class="form-elements__arrow-button")
                         include ../../components/arrow-button/arrow-button.pug
-                        +arrowButton({name: 'Перейти к оплате'})
+                        +arrowButton({
+                            name: 'Перейти к оплате'
+                        })
                 div.heading3 pagination
                 div(class="form-elements__pagination")               
                         include ../../components/pagination/pagination.pug

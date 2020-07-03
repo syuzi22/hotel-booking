@@ -1,10 +1,8 @@
 .arrow-button {
     $arrow-button__height: 5.5rem;
     display: flex;
-    // width: 100%;
     width: auto;
-    max-width: 320px;
-    min-width: 280px;
+    max-width: 40rem;
     height: $arrow-button__height;
     background: $primary-gradient;
     border-radius: 2.75rem;
@@ -25,6 +23,7 @@
         text-transform: uppercase;
         background-color: transparent;
         color: $white;
+        outline: none;
     }
 
     &__micons {
@@ -45,14 +44,9 @@
     &:hover {
         opacity: 0.5;
     }
-    &__elem:focus {
-        outline: none;
-    }
 
-    &:focus {
-        outline: none;
-    }
 }
+
 
 
 

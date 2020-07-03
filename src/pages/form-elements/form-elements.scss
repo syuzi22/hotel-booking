@@ -145,7 +145,7 @@
 ////////////////////////////////////
 
 .form-elements__2-3 {
-    flex: 1 1 22.22222%;
+    flex: 1 1 320px;
 }
 
 .form-elements__bulletwrap {
@@ -249,18 +249,9 @@
 }
 
 @media (max-width: 360px) {
-    html {
-        font-size: 7px;
-    }
-    .form-elements__logo {
-        width: 23px;
-        height: 23px;
-        background-size: cover;
-    }
     .form-elements {
         padding-left: 15px;
         padding-right: 15px;
     }
-
 }
 

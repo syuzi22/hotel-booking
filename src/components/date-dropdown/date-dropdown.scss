@@ -1,5 +1,7 @@
 .date-dropdown {
-    width: 40rem;
+    width: auto;
+    max-width: 320px;
+    min-width: 260px;
     display: flex;
     justify-content: space-between;
 }
@@ -78,7 +80,7 @@
 }
 
 .date-dropdown__elem {
-    width: 40rem;
+    width: 320px;
     box-sizing: border-box;
 
     .datepicker{
@@ -310,4 +312,16 @@
             border-bottom-left-radius: unset;
         }
     }   
+}
+
+@media (max-width: 380px) {
+    .date-dropdown__elem {
+        width: 300px;
+    }
+}
+
+@media (max-width: 340px) {
+    .date-dropdown__elem {
+        width: 275px;
+    }
 }

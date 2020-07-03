@@ -1,13 +1,14 @@
 @import '~normalize.css';
-@import './fonts.scss';
-@import './variables.scss';
-@import './base.scss';
+@import './theme/fonts.scss';
+@import './theme/variables.scss';
+@import './theme/base.scss';
 
-@import './components/logo/logo.scss';
+@import './components/logo/logo.scss'; //this
+@import './components/color-demo/color-demo.scss'; //this
+@import './components/type-demo/type-demo.scss'; //this
+@import './pages/colors-type/colors-type.scss'; //this
 
-@import './components/color-demo/color-demo.scss';
-@import './components/type-demo/type-demo.scss';
-@import './pages/colors-type/colors-type.scss';
+
 @import './components/guest-dropdown/guest-dropdown.scss';
 @import './components/room-dropdown/room-dropdown.scss';
 @import './components/date-dropdown/date-dropdown.scss';
@@ -38,14 +39,11 @@
 @import './components/header/header.scss';
 @import './components/footer/footer.scss';
 @import './components/footer-creative/footer-creative.scss';
-
-
+@import './components/input-text/input-text.scss';
 
 
 
 @import './pages/form-elements/form-elements.scss';
-@import './components/input-text/input-text.scss';
-
 @import './pages/cards/cards.scss';
 @import './pages/headers-footers/headers-footers.scss';
 

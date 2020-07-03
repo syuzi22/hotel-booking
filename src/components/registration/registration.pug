@@ -2,27 +2,50 @@
     .register__title.heading1 Регистрация аккаунта
     .register__name
         include ../../components/input-text/input-text.pug
-        +inputText('text', 'Имя')
+        +inputText({
+            type: 'text',
+            placeholder: 'Имя',            
+        })
     .register__surname
-        +inputText('text', 'Фамилия')
+        +inputText({
+            type: 'text',
+            placeholder: 'Фамилия',             
+        })
     .register__gender
         include ../../components/radio-buttons/radio-buttons.pug
         +radioButtons('Мужчина', 'Женщина')
     .register__birth
         include ../../components/masked-input/masked-input.pug
-        +maskedInput('text', 'ДД.ММ.ГГГГ', 'дата рождения')
+        +maskedInput({
+            type: 'text', 
+            placeholder: 'ДД.ММ.ГГГГ', 
+            label: 'дата рождения', 
+        })
     .register__email
-        +inputText('text', 'Email', 'Данные для входа в сервис')
+        +inputText({
+            type: 'text',
+            placeholder: 'Email',
+            label: 'Данные для входа в сервис',            
+        })
     .register__password
-        +inputText('text', 'Пароль')
+        +inputText({
+            type: 'text',
+            placeholder: 'Пароль',
+        })
     .register__toggle
         include ../../components/toggle/toggle.pug
         +toggle('Получать спецпредложения')
     .register__arrow-button
         include ../../components/arrow-button/arrow-button.pug
-        +arrowButton({name: 'Перейти к оплате'})
+        +arrowButton({
+            name: 'Перейти к оплате'
+        })
     .register__sign-in
         span Уже есть аккаунт на Toxin
         include ../../components/button/button.pug
-        +button({name: 'empty', text: 'Войти'})
+        +button({
+            name: 'empty', 
+            text: 'Войти'
+        })
+
 

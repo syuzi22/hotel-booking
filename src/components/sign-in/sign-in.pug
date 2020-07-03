@@ -2,9 +2,15 @@
     .sign-in__title.heading1 Войти
     .sign-in__email
         include ../../components/input-text/input-text.pug
-        +inputText('text', 'Email')
+        +inputText({
+            type: 'text',
+            placeholder: 'Email',
+        })
     .sign-in__password
-        +inputText('text', 'Пароль')
+        +inputText({
+            type: 'text',
+            placeholder: 'Пароль',   
+        })
     .sign-in__arrow-button
         include ../../components/arrow-button/arrow-button.pug
         +arrowButton({name: 'Войти'})

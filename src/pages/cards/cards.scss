@@ -1,23 +1,20 @@
 .cards {
-    width: 100%;
-    // height: 100%;
     background-color: #F4F4F6;
-    padding-top: 2.08333%; //30px;
-    padding-left: 2.08333%; //30px;
-    padding-right: 9.72222%; //140px;
-    padding-bottom: 9.72222%; //140px;
+    height: auto;
+}
+
+.cards__logo {
+    padding-top: 30px;
+    padding-left: 30px;
 }
 
 .cards__wrap {
-    width: auto;
-    // height: auto;
-    min-width: 320px;
-    max-width: 1920px; 
+    padding: 72px 140px;
     display: flex;
-    flex-wrap: nowrap;   
-    margin-top: 5.7%; //72px;
-    margin-left: 8.7%; //110px;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
+
 
 .cards__left-column {
     flex: 1 1 420px;
@@ -45,4 +42,100 @@
 
 .cards__room1 {
     padding-bottom: 40px;
+}
+
+@media (max-width: 1439px) {
+    .cards__wrap {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 1255px) {
+    // .cards__wrap {
+    //     padding: 20px;
+    // }
+
+    .cards__left-column {
+        flex: 1 1 50%;
+    }
+
+    .cards__center-column {
+        flex: 1 1 50%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .cards__booking {
+        padding-bottom: 0px;
+    }
+
+    .cards__right-column {
+        flex: 1 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .cards__datepicker {
+        flex: 1 1 50%;
+        order: 2;
+    }
+    .cards__room1 {
+        flex: 1 1 50%;
+        order: 1;
+        align-self: flex-end;
+    }
+    .cards__room2 {
+        flex: 1 1 100%;
+        order: 3;
+    }
+}
+
+@media (max-width: 900px) {
+    .cards__left-column {
+        flex: 1 1 100%;
+    }
+
+    .cards__center-column {
+        flex: 1 1 100%;
+    }
+
+    .cards__right-column {
+        flex: 1 1 100%;
+        padding-top: 40px;
+    }
+
+    .cards__datepicker {
+        flex: 1 1 100%;
+        order: 1;
+    }
+    .cards__room1 {
+        flex: 1 1 100%;
+    }
+    .cards__registration {
+        padding-bottom: 40px;
+    }
+    .cards__sign-in {
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cards__wrap {
+        padding: 10px;
+    }
+    .cards__logo {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 340px) {
+    .cards__wrap {
+        padding: 5px;
+    }
 }

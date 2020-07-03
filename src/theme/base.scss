@@ -20,6 +20,8 @@ body {
     font-size: 1.75rem; //14px
     line-height: 3rem;  //24px
     color: $dark75;
+    margin: 0; 
+    padding: 0;
 }
 
 h1, .heading1 {
@@ -29,6 +31,8 @@ h1, .heading1 {
     font-size: 3rem; //24px
     line-height: 3.75rem; //30px
     color: $dark100;
+    margin: 0; 
+    padding: 0;
 }
 
 h2, .heading2 {
@@ -38,6 +42,8 @@ h2, .heading2 {
     font-size: 2.375rem; //19px
     line-height: 3rem;   //24px
     color: $dark100;
+    margin: 0; 
+    padding: 0;
 }
 
 h3, .heading3 {
@@ -48,8 +54,15 @@ h3, .heading3 {
     line-height: 1.875rem;  //15px
     text-transform: uppercase;
     color: $dark100;
+    margin: 0; 
+    padding: 0;
 }
 
+@media (max-width: 350px) {
+    html {
+        font-size: 7.3px;
+    }
+}
 
 
 

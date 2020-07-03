@@ -1,8 +1,10 @@
-mixin inputText(type, placeholder, label, state)
-    div(class="input-text")
-        div(class="input-text__info heading3")
-            div(class="input-text__name")
-                label(for="input-text__inp")= label
-            div(class="input-text__state")= state
-        div(class="input-text__field")
-            input(type=type placeholder=placeholder class!=`input-text__inp ${attributes.class}`)
+mixin inputText(options)
+    if !options
+        - options = {}
+    .input-text
+        .input-text__info.heading3
+            .input-text__name
+                label(for="input-text__inp")= options.label
+            .input-text__state= options.state
+        .input-text__field
+            input(type = options.type placeholder = options.placeholder class!=`input-text__inp ${attributes.class}`)
