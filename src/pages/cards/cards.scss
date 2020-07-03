@@ -1,3 +1,27 @@
+@import '../../theme/variables.scss';
+@import '../../theme/fonts.scss';
+@import '../../theme/base.scss';
+@import '../../components/logo/logo.scss'; 
+
+@import '../../components/input-text/input-text.scss';
+@import '../../components/guest-dropdown/guest-dropdown.scss';
+@import '../../components/room-dropdown/room-dropdown.scss';
+@import '../../components/date-dropdown/date-dropdown.scss';
+@import '../../components/filterdate-dropdown/filterdate-dropdown.scss';
+@import '../../components/masked-input/masked-input.scss';
+@import '../../components/radio-buttons/radio-buttons.scss';
+@import '../../components/toggle/toggle.scss';
+@import '../../components/rate-button/rate-button.scss';
+@import '../../components/range-slider/range-slider_hotel.scss';
+@import '../../components/button/button.scss';
+@import '../../components/arrow-button/arrow-button.scss';
+@import '../../components/room-search/room-search.scss';
+@import '../../components/registration/registration.scss';
+@import '../../components/booking/booking.scss';
+@import '../../components/sign-in/sign-in.scss';
+@import '../../components/room/room.scss';
+
+
 .cards {
     background-color: #F4F4F6;
     height: auto;

@@ -7,22 +7,36 @@ const autoprefixer = require("autoprefixer")({});
 
 const isDev = process.env.NODE_ENV === "development";
 
+const colorsTypeChunk = 'colorsTypeChunk';
+const formElementsChunk = 'formElementsChunk';
+const cardsChunk = 'cardsChunk';
+const headersFootersChunk = 'headersFootersChunk';
+
+const colorsTypeEntry = 'colors';
+const formElementsEntry = 'form-elements';
+const cardsEntry = 'cards';
+const headersFootersEntry = 'headers-footers';
+
 let plugins = [
     new HTMLWebpackPlugin({
         template: "./pages/colors-type/colors-type.pug",
         filename: "./pages/colors-type.html",
+        chunks: [colorsTypeEntry]
     }),
     new HTMLWebpackPlugin({
         template: "./pages/form-elements/form-elements.pug",
         filename: "./pages/form-elements.html",
+        chunks: [formElementsEntry]
     }),
     new HTMLWebpackPlugin({
         template: "./pages/cards/cards.pug",
         filename: "./pages/cards.html",
+        chunks: [cardsEntry]
     }),
     new HTMLWebpackPlugin({
         template: "./pages/headers-footers/headers-footers.pug",
         filename: "./pages/headers-footers.html",
+        chunks: [headersFootersEntry]
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
@@ -63,29 +77,82 @@ function getCssPlugins() {
 }
 
 function getScssPlugins() {
+
     let entries = getCssPlugins();
 
     entries.push({
-        loader: "sass-loader",
-        options: { sourceMap: isDev },
+        loader: 'resolve-url-loader',
     });
 
+    entries.push({
+        loader: "sass-loader",
+        options: {
+            sourceMap: true,
+        },
+    });
+
+    return entries;
+}
+
+function recursiveIssuer(m) {
+    if (m.issuer) {
+      return recursiveIssuer(m.issuer);
+    } else if (m.name) {
+      return m.name;
+    } else {
+      return false;
+    }
+}
+
+function getEntries() {
+    let entries = {};
+    entries[colorsTypeEntry] = ["@babel/polyfill", "./pages/colors-type/colors-type.js"];
+    entries[formElementsEntry] = ["@babel/polyfill", "./pages/form-elements/form-elements.js"];
+    entries[cardsEntry] = ["@babel/polyfill", "./pages/cards/cards.js"];
+    entries[headersFootersEntry] = ["@babel/polyfill", "./pages/headers-footers/headers-footers.js"];
     return entries;
 }
 
 module.exports = {
     context: path.resolve(__dirname, "./src"),
     mode: isDev ? "development" : "production",
-    entry: {
-        index: ["@babel/polyfill", "./index.js"],
-    },
+    entry: getEntries(),
     output: {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "dist"),
     },
     optimization: {
         splitChunks: {
-            chunks: "all",
+            cacheGroups: {
+              colorsType: {
+                name: colorsTypeChunk,
+                test: (m, c, entry = colorsTypeEntry) =>
+                  m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                chunks: 'all',
+                enforce: true,
+              },
+              formElements: {
+                name: formElementsChunk,
+                test: (m, c, entry = formElementsEntry) =>
+                  m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                chunks: 'all',
+                enforce: true,
+              },
+              cards: {
+                name: cardsChunk,
+                test: (m, c, entry = cardsEntry) =>
+                  m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                chunks: 'all',
+                enforce: true,
+              },
+              headersFooters: {
+                name: headersFootersChunk,
+                test: (m, c, entry = headersFootersEntry) =>
+                  m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                chunks: 'all',
+                enforce: true,
+              },
+            },
         },
     },
     devServer: {
@@ -110,6 +177,7 @@ module.exports = {
                 test: /\.css$/,
                 use: getCssPlugins()
             },
+
             {
                 test: /\.s[ac]ss$/,
                 use: getScssPlugins()
@@ -122,10 +190,8 @@ module.exports = {
                         name: "images/[name].[ext]",
                     },
                 },
-                // use: ['file-loader']
             },
             {
-                // test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                 test: /(?<=\/(fonts|webfonts)\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                 loader: {
                     loader: "file-loader",
@@ -133,7 +199,6 @@ module.exports = {
                         name: "[path][name].[ext]",
                     },
                 },
-                // use: ['file-loader']
             },
             {
                 test: /\.js$/,

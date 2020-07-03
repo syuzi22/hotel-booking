@@ -8,41 +8,41 @@
     border-radius: 2.75rem;
 
     &__elem {
-        cursor: pointer;
-        flex: 1 1 auto;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        width: auto;
-        font-family: inherit;
-        font-weight: bold;
-        font-size: 1.5rem;
-        line-height: $arrow-button__height;
-        padding-left: $arrow-button__height;;
-        text-transform: uppercase;
-        background-color: transparent;
-        color: $white;
-        outline: none;
+      cursor: pointer;
+      flex: 1 1 auto;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      width: auto;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 1.5rem;
+      line-height: $arrow-button__height;
+      padding-left: $arrow-button__height;
+      text-transform: uppercase;
+      background-color: transparent;
+      color: $white;
+      outline: none;
     }
 
     &__micons {
-        flex: 0 0 $arrow-button__height;
-        font-family: "Material Icons";
-        font-size: 3rem;
-        line-height: $arrow-button__height;
-        width: $arrow-button__height;
-        height: $arrow-button__height;
-        text-align: center;
-        background-color: $white;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        color: $white
+      flex: 0 0 $arrow-button__height;
+      font-family: 'Material Icons';
+      font-size: 3rem;
+      line-height: $arrow-button__height;
+      width: $arrow-button__height;
+      height: $arrow-button__height;
+      text-align: center;
+      background-color: $white;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: $white
     }
 
     &:hover {
-        opacity: 0.5;
+      opacity: 0.5;
     }
 
 }

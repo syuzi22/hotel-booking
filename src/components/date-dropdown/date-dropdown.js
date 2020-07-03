@@ -21,8 +21,8 @@
                 $(".date-dropdown").removeClass("date-dropdown--open");
             },
             onSelect: function (fd, date, dp) {
-                $(self).val(fd.split("-")[0])
-                const $end = $(self).closest('.date-dropdown').find('.date-dropdown__end');
+                $(self).val(fd.split("-")[0]);
+                const $end = $(self).closest(".date-dropdown").find(".date-dropdown__end");
                 $end.val(fd.split("-")[1]);
             },
             classes: "date-dropdown__elem",
@@ -37,7 +37,7 @@
             },
             onRenderCell: function (date, cellType) {
                 if (cellType == "day") {
-                    const dp = $(self).data('datepicker') || {};
+                    const dp = $(self).data("datepicker") || {};
                     let myclasses = "date-dropdown__cell";
                     let dateArray = dp.selectedDates || [];
                     let dateFrom = -1;
@@ -63,10 +63,7 @@
                         myclasses += " date-dropdown__rounded-left";
                     }
 
-                    if (
-                        (currentCell === dateFrom && dayOfWeek === 0) ||
-                        (currentCell === dateTo && dayOfWeek === 1)
-                    ) {
+                    if ((currentCell === dateFrom && dayOfWeek === 0) || (currentCell === dateTo && dayOfWeek === 1)) {
                         myclasses += " date-dropdown__not-rounded ";
                     }
 
@@ -78,29 +75,34 @@
             },
         });
 
-        $(self).find(".date-dropdown__micons").click(function () {
-            const dp = $(self).data('datepicker');
-            let isOpen = $(self).data("isOpen");
-            if (isOpen) {
-                dp.hide();
-            } else {
-                dp.show();
-            }
-            isOpen = !isOpen;
-            $(self).data("isOpen", isOpen);
-        });
-
-        const $dp = $(self).data('datepicker');
-        $(self).closest('.date-dropdown').find('.date-dropdown__end').each(function () {
-            $(this).click(function () {
-                if ($dp) {
-                    $dp.show();
+        $(self)
+            .find(".date-dropdown__micons")
+            .click(function () {
+                const dp = $(self).data("datepicker");
+                let isOpen = $(self).data("isOpen");
+                if (isOpen) {
+                    dp.hide();
+                } else {
+                    dp.show();
                 }
+                isOpen = !isOpen;
+                $(self).data("isOpen", isOpen);
             });
-        });
+
+        const $dp = $(self).data("datepicker");
+        $(self)
+            .closest(".date-dropdown")
+            .find(".date-dropdown__end")
+            .each(function () {
+                $(this).click(function () {
+                    if ($dp) {
+                        $dp.show();
+                    }
+                });
+            });
     });
 
-    $('.datepicker-inline .datepicker--buttons')
+    $(".datepicker-inline .datepicker--buttons")
         .append(appendButtonHtml)
         .click(function (event) {});
 })($);
