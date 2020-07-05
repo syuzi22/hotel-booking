@@ -1,44 +1,44 @@
 .type-demo {
-    display: grid;
-    grid-template-columns: 37px 336px;
-    grid-column-gap: 30px;
-    grid-row-gap: 48px;
-    height: 321px; 
-    color: $dark25;
+  display: grid;
+  grid-template-columns: 37px 336px;
+  grid-column-gap: 30px;
+  grid-row-gap: 48px;
+  height: 321px;
+  color: $dark25;
 }
 
 .type-demo__name {
-    width: 37px;
-    text-align: right;
+  width: 37px;
+  text-align: right;
 }
 
 .type-demo__h1 {
-    font-size: 24px;
-    line-height: 29px;
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .type-demo__h2 {
-    font-size: 19px;
-    line-height: 23px;
+  font-size: 19px;
+  line-height: 23px;
 }
 
 .type-demo__h3 {
-    font-size: 12px;
-    line-height: 15px;
-    text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
 }
 
 .type-demo__bodystyle {
-    width: 301px;
-    color: $dark75;
+  width: 301px;
+  color: $dark75;
 }
 
 @media (max-width: 1000px) {
-    .type-demo {
-        grid-template-columns: 37px 1fr;
-        grid-row-gap: 20px;
-    }
-    .type-demo__bodystyle {
-        width: auto;
-    }
+  .type-demo {
+    grid-template-columns: 37px 1fr;
+    grid-row-gap: 20px;
+  }
+  .type-demo__bodystyle {
+    width: auto;
+  }
 }

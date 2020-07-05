@@ -1,35 +1,32 @@
 .pagination {
-    $pagination-list_height: 5rem;
-    &__list {
-        display: flex;
-        user-select: none;
-    }
-    &__item {
-        cursor: pointer;
-        width: $pagination-list_height;
-        height: $pagination-list_height;
-        border-radius: 2.75rem;
-        font-size: 1.5rem;
-        line-height: $pagination-list_height;
-        text-align: center;
-        color: $dark50;
-    }
-    &__selected {
-        background: $primary-gradient;
-        color: $white;
-        font-weight: bold;
-    }
-    &__micons {
-        background: $secondary-gradient;
-        font-family: 'Material Icons';
-        font-size: 3rem;
-        color: $white;
-    }
-    &__descript {
-        padding-top: 1rem;
-        padding-left: 0.75rem;
-    }
+  $pagination-list_height: 5rem;
+  &__list {
+    display: flex;
+    user-select: none;
+  }
+  &__item {
+    cursor: pointer;
+    width: $pagination-list_height;
+    height: $pagination-list_height;
+    border-radius: 2.75rem;
+    font-size: 1.5rem;
+    line-height: $pagination-list_height;
+    text-align: center;
+    color: $dark50;
+  }
+  &__selected {
+    background: $primary-gradient;
+    color: $background-color;
+    font-weight: bold;
+  }
+  &__micons {
+    background: $secondary-gradient;
+    font-family: "Material Icons";
+    font-size: 3rem;
+    color: $background-color;
+  }
+  &__descript {
+    padding-top: 1rem;
+    padding-left: 0.75rem;
+  }
 }
-
-
-

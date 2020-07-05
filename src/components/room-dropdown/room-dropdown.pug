@@ -1,19 +1,25 @@
-mixin roomDropdown(label, state, className, bedroom='0', bed='0', bathroom='0')
-    div(class="room-dropdown")
-        div(class="room-dropdown__info")
-            div(class="room-dropdown__name")
-                label(for="room-dropdown__inp")= label 
-            div(class="room-dropdown__state")= state 
-        div(class=`room-dropdown__message iqdropdown ${className}`)
-            p(class="iqdropdown-selection")
-            span(class="room-dropdown__micons") 
-            div(class="iqdropdown-menu")
-                div(class="iqdropdown-menu-option" data-id="bedroom" data-defaultcount=`${bedroom}`)
+mixin roomDropdown(options)
+    if !options
+     - options = {}
+    - var bedroom = options.bedroom || 0
+    - var bed = options.bed || 0
+    - var bathroom = options.bathroom || 0
+
+    .room-dropdown
+        .room-dropdown__info
+            .room-dropdown__name
+                label(for='room-dropdown__inp')= options.label || ''
+            .room-dropdown__state= options.state || ''
+        div(class=`room-dropdown__message iqdropdown ${options.className}`)
+            p.iqdropdown-selection
+            span.room-dropdown__micons
+            .iqdropdown-menu
+                div(class='iqdropdown-menu-option' data-id='bedroom' data-defaultcount=`${bedroom}`)
                     div
-                        p(class="iqdropdown-item") Спальни
-                div(class="iqdropdown-menu-option" data-id="bed" data-defaultcount=`${bed}`)
+                        p(class='iqdropdown-item') Спальни
+                div(class='iqdropdown-menu-option' data-id='bed' data-defaultcount=`${bed}`)
                     div
-                        p(class="iqdropdown-item") Кровати
-                div(class="iqdropdown-menu-option" data-id="bathroom" data-defaultcount=`${bathroom}`)
+                        p(class='iqdropdown-item') Кровати
+                div(class='iqdropdown-menu-option' data-id='bathroom' data-defaultcount=`${bathroom}`)
                     div
-                        p(class="iqdropdown-item") Ванные комнаты
+                        p(class='iqdropdown-item') Ванные комнаты

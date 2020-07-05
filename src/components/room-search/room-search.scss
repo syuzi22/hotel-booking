@@ -1,29 +1,27 @@
 .room-search {
-    width: auto;
-    max-width: 380px;
-    min-width: 300px;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    padding: 5rem 3.625rem 3.75rem;
+  width: auto;
+  max-width: 380px;
+  min-width: 300px;
+  background: $background-color;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 5rem 3.625rem 3.75rem;
 }
 .room-search__title {
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .room-search__date-dropdown {
-    padding-bottom: 2.0625rem;
+  padding-bottom: 2.0625rem;
 }
 
 .room-search__guest-dropdown {
-    padding-bottom: 4rem;
+  padding-bottom: 4rem;
 }
 
-
 @media (max-width: 380px) {
-    .room-search {
-        padding: 15px;
-    }
+  .room-search {
+    padding: 15px;
+  }
 }

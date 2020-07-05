@@ -6,8 +6,8 @@ mixin review(options)
             .review__photo
                 img(src=options.url)
             .review__likebutton
-                include ../../components/like-button/like-button.pug
-                +likeButton("like-button_clicked")
+                include /components/like-button/like-button.pug
+                +likeButton('like-button_clicked')
         .review__info
             .review__username= options.name
             .review__daysago= options.daysAgo

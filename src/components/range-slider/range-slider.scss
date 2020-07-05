@@ -1,14 +1,14 @@
 .range-slider__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .range-slider__title {
-    line-height: 2.75rem;
+  line-height: 2.75rem;
 }
 
 .range-slider__value {
-    font-weight: normal;
-    color: $dark50;
+  font-weight: normal;
+  color: $dark50;
 }

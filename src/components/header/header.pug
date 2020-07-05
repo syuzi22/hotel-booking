@@ -4,10 +4,10 @@ mixin header(options)
     .header
         .header__wrap
             .header__toxin-logo
-                include ../../components/logo/logo.pug
+                include /components/logo/logo.pug
                 +logo('colored', 'toxin')
             .header__menu
-                include ../../components/menu/menu.pug
+                include /components/menu/menu.pug
                 +topmenu(
                     {
                         'items': [
@@ -40,7 +40,7 @@ mixin header(options)
                     .header__user=  options.username
                 else
                     .header__sign-in
-                        include ../../components/button/button.pug 
+                        include /components/button/button.pug
                         +button({name: 'empty', text: 'Войти', isSmall: true})
                     .header__register
                         +button({name: 'filled', text: 'Зарегистрироваться', isSmall: true})

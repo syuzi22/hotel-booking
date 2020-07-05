@@ -77,13 +77,11 @@ function getCssPlugins() {
 }
 
 function getScssPlugins() {
-
     let entries = getCssPlugins();
 
     entries.push({
         loader: 'resolve-url-loader',
     });
-
     entries.push({
         loader: "sass-loader",
         options: {
@@ -97,14 +95,14 @@ function getScssPlugins() {
 function recursiveIssuer(m) {
     if (m.issuer) {
       return recursiveIssuer(m.issuer);
-    } else if (m.name) {
-      return m.name;
-    } else {
-      return false;
     }
+    if (m.name) {
+      return m.name;
+    }
+    return false;
 }
 
-function getEntries() {
+function getEntryPoints() {
     let entries = {};
     entries[colorsTypeEntry] = ["@babel/polyfill", "./pages/colors-type/colors-type.js"];
     entries[formElementsEntry] = ["@babel/polyfill", "./pages/form-elements/form-elements.js"];
@@ -114,9 +112,9 @@ function getEntries() {
 }
 
 module.exports = {
-    context: path.resolve(__dirname, "./src"),
+    context: path.resolve(__dirname, "src"),
     mode: isDev ? "development" : "production",
-    entry: getEntries(),
+    entry: getEntryPoints(),
     output: {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "dist"),
@@ -163,15 +161,27 @@ module.exports = {
     plugins: plugins,
     resolve: {
         alias: {
+            '@components': path.join(__dirname, 'src/components'),
+            '@theme': path.join(__dirname, 'src/theme'),
             '@item-quantity-dropdown': path.join(__dirname, 'node_modules', 'item-quantity-dropdown', 'lib'),
             '@inputmask': path.join(__dirname, 'node_modules', 'inputmask', 'dist', 'jquery.inputmask.min.js'),
+            '@air-datepicker': path.join(__dirname, 'node_modules', 'air-datepicker', 'dist'),
+            '@slick-carousel': path.join(__dirname, 'node_modules', 'slick-carousel', 'slick'),
+            '@ion-rangeslider': path.join(__dirname, 'node_modules', 'ion-rangeslider'),
+            '@fontawesome': path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free')
         }
     },
     module: {
         rules: [
             {
                 test: /\.pug$/,
-                use: ["pug-loader?pretty=true"],
+                loader: {
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true,
+                        root: path.join(__dirname, 'src')
+                    }
+                }
             },
             {
                 test: /\.css$/,

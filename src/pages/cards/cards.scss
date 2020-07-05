@@ -1,165 +1,143 @@
-@import '../../theme/variables.scss';
-@import '../../theme/fonts.scss';
-@import '../../theme/base.scss';
-@import '../../components/logo/logo.scss'; 
-
-@import '../../components/input-text/input-text.scss';
-@import '../../components/guest-dropdown/guest-dropdown.scss';
-@import '../../components/room-dropdown/room-dropdown.scss';
-@import '../../components/date-dropdown/date-dropdown.scss';
-@import '../../components/filterdate-dropdown/filterdate-dropdown.scss';
-@import '../../components/masked-input/masked-input.scss';
-@import '../../components/radio-buttons/radio-buttons.scss';
-@import '../../components/toggle/toggle.scss';
-@import '../../components/rate-button/rate-button.scss';
-@import '../../components/range-slider/range-slider_hotel.scss';
-@import '../../components/button/button.scss';
-@import '../../components/arrow-button/arrow-button.scss';
-@import '../../components/room-search/room-search.scss';
-@import '../../components/registration/registration.scss';
-@import '../../components/booking/booking.scss';
-@import '../../components/sign-in/sign-in.scss';
-@import '../../components/room/room.scss';
-
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+@import '~@components/logo/logo.scss';
+@import '~@components/input-text/input-text.scss';
+@import '~@components/guest-dropdown/guest-dropdown.scss';
+@import '~@components/room-dropdown/room-dropdown.scss';
+@import '~@components/date-dropdown/date-dropdown.scss';
+@import '~@components/filterdate-dropdown/filterdate-dropdown.scss';
+@import '~@components/masked-input/masked-input.scss';
+@import '~@components/radio-buttons/radio-buttons.scss';
+@import '~@components/toggle/toggle.scss';
+@import '~@components/rate-button/rate-button.scss';
+@import '~@components/range-slider/range-slider_hotel.scss';
+@import '~@components/button/button.scss';
+@import '~@components/arrow-button/arrow-button.scss';
+@import '~@components/room-search/room-search.scss';
+@import '~@components/registration/registration.scss';
+@import '~@components/booking/booking.scss';
+@import '~@components/sign-in/sign-in.scss';
+@import '~@components/room/room.scss';
 
 .cards {
-    background-color: #F4F4F6;
-    height: auto;
+  background-color: #F4F4F6;
+  height: auto;
 }
-
 .cards__logo {
-    padding-top: 30px;
-    padding-left: 30px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
-
 .cards__wrap {
-    padding: 72px 140px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+  padding: 72px 140px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
-
-
 .cards__left-column {
-    flex: 1 1 420px;
+  flex: 1 1 420px;
 }
-
 .cards__center-column {
-    flex: 1 1 420px;
+  flex: 1 1 420px;
 }
-
 .cards__right-column {
-    flex: 1 1 320px;
+  flex: 1 1 320px;
 }
-
 .cards__room-search {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
-
 .cards__booking {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
-
 .cards__datepicker {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
-
 .cards__room1 {
-    padding-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 1439px) {
-    .cards__wrap {
-        padding: 50px;
-    }
+  .cards__wrap {
+    padding: 50px;
+  }
 }
 
 @media (max-width: 1255px) {
-    // .cards__wrap {
-    //     padding: 20px;
-    // }
-
-    .cards__left-column {
-        flex: 1 1 50%;
-    }
-
-    .cards__center-column {
-        flex: 1 1 50%;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-    }
-
-    .cards__booking {
-        padding-bottom: 0px;
-    }
-
-    .cards__right-column {
-        flex: 1 1 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding-top: 50px;
-    }
+  .cards__left-column {
+    flex: 1 1 50%;
+  }
+  .cards__center-column {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .cards__booking {
+    padding-bottom: 0px;
+  }
+  .cards__right-column {
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 1000px) {
-    .cards__datepicker {
-        flex: 1 1 50%;
-        order: 2;
-    }
-    .cards__room1 {
-        flex: 1 1 50%;
-        order: 1;
-        align-self: flex-end;
-    }
-    .cards__room2 {
-        flex: 1 1 100%;
-        order: 3;
-    }
+  .cards__datepicker {
+    flex: 1 1 50%;
+    order: 2;
+  }
+  .cards__room1 {
+    flex: 1 1 50%;
+    order: 1;
+    align-self: flex-end;
+  }
+  .cards__room2 {
+    flex: 1 1 100%;
+    order: 3;
+  }
 }
 
 @media (max-width: 900px) {
-    .cards__left-column {
-        flex: 1 1 100%;
-    }
-
-    .cards__center-column {
-        flex: 1 1 100%;
-    }
-
-    .cards__right-column {
-        flex: 1 1 100%;
-        padding-top: 40px;
-    }
-
-    .cards__datepicker {
-        flex: 1 1 100%;
-        order: 1;
-    }
-    .cards__room1 {
-        flex: 1 1 100%;
-    }
-    .cards__registration {
-        padding-bottom: 40px;
-    }
-    .cards__sign-in {
-        padding-bottom: 40px;
-    }
+  .cards__left-column {
+    flex: 1 1 100%;
+  }
+  .cards__center-column {
+    flex: 1 1 100%;
+  }
+  .cards__right-column {
+    flex: 1 1 100%;
+    padding-top: 40px;
+  }
+  .cards__datepicker {
+    flex: 1 1 100%;
+    order: 1;
+  }
+  .cards__room1 {
+    flex: 1 1 100%;
+  }
+  .cards__registration {
+    padding-bottom: 40px;
+  }
+  .cards__sign-in {
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 420px) {
-    .cards__wrap {
-        padding: 10px;
-    }
-    .cards__logo {
-        padding-top: 10px;
-        padding-left: 10px;
-    }
+  .cards__wrap {
+    padding: 10px;
+  }
+  .cards__logo {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
 }
 
 @media (max-width: 340px) {
-    .cards__wrap {
-        padding: 5px;
-    }
+  .cards__wrap {
+    padding: 5px;
+  }
 }
