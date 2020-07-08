@@ -1,3 +1,5 @@
+import './rate-button.scss';
+
 (function () {
     let rateButtons = document.querySelectorAll(".rate-button");
     rateButtons.forEach((button) => {

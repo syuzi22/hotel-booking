@@ -1,0 +1,17 @@
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title Landing
+    body
+        .landing
+            .landing__header
+                include /components/header/header.pug
+                +header
+            .landing__header-bg
+                .landing__header-wrap
+                    .landing__header-note Лучшие номера для вашей работы, отдыха и просто вдохновения
+                    .landing__room-search
+                        include /components/room-search/room-search.pug
+            .landing__footer
+                include /components/footer/footer.pug

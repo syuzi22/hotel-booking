@@ -1,3 +1,5 @@
+import './expand-checkbox.scss';
+
 (function () {
     document.querySelectorAll(".expand-checkbox").forEach((value) => {
         let expHeading = value.querySelector(".expand-checkbox__heading");

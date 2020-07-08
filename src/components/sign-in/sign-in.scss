@@ -1,3 +1,11 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+@import '~@components/input-text/input-text.scss';
+@import '~@components/button/button.scss';
+@import '~@components/arrow-button/arrow-button.scss';
+
 .sign-in {
   width: auto;
   max-width: 380px;

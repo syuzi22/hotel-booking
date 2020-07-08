@@ -1,3 +1,14 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+@import '~@components/input-text/input-text.scss';
+@import '~@components/radio-buttons/radio-buttons.scss';
+@import '~@components/toggle/toggle.scss';
+@import '~@components/arrow-button/arrow-button.scss';
+@import '~@components/button/button.scss';
+
+
 .register {
   width: auto;
   max-width: 380px;

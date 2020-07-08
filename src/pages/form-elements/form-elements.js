@@ -1,11 +1,4 @@
 require.context('../../', true, /\.(png|svg|jpg)$/);
-import '@inputmask'
-import '@item-quantity-dropdown/item-quantity-dropdown.min.css';
-import '@item-quantity-dropdown/item-quantity-dropdown.min.js';
-import '@air-datepicker/css/datepicker.min.css';
-import '@air-datepicker/js/datepicker.min.js';
-import '@ion-rangeslider/js/ion.rangeSlider.min.js';
-import '@ion-rangeslider/css/ion.rangeSlider.min.css';
 import '@components/guest-dropdown/guest-dropdown.js'
 import '@components/room-dropdown/room-dropdown.js'
 import '@components/date-dropdown/date-dropdown.js'
@@ -16,6 +9,7 @@ import '@components/like-button/like-button.js'
 import '@components/rate-button/rate-button.js'
 import '@components/range-slider/range-slider.js'
 import './form-elements.scss';
+
 
 document.addEventListener('click', function(event) {
     let target = event.target;

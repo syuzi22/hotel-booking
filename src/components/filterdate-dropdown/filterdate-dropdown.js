@@ -1,3 +1,8 @@
+import '@air-datepicker/css/datepicker.min.css';
+import '@air-datepicker/js/datepicker.min.js';
+import './filterdate-dropdown.scss';
+
+
 let $filterdateDrop = $('.filterdate-dropdown__input');
 let $myFilterDatepicker = $('.filterdate-dropdown__input').datepicker().data('datepicker');
 
@@ -70,9 +75,9 @@ $filterdateDrop.datepicker({
 $('.filterdate-dropdown__micons').click(function() {
     let isOpen =  $filterdateDrop.data('isOpen');
     if(isOpen) {
-        $myFilterDatepicker.hide();  
+        $myFilterDatepicker.hide();
     }else {
-        $myFilterDatepicker.show();  
+        $myFilterDatepicker.show();
     }
     isOpen = !isOpen;
     $filterdateDrop.data('isOpen', isOpen);

@@ -1,3 +1,8 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+
 .arrow-button {
   $arrow-button__height: 5.5rem;
   display: flex;

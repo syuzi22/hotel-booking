@@ -1,3 +1,5 @@
+import './menu.scss';
+
 (function () {
     let menu = document.querySelectorAll(".menu");
     menu.forEach((value) => {

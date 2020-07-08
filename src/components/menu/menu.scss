@@ -1,3 +1,7 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
 .menu {
   color: $dark50;
   & a {

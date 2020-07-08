@@ -1,3 +1,8 @@
+import '@ion-rangeslider/js/ion.rangeSlider.min.js';
+import '@ion-rangeslider/css/ion.rangeSlider.min.css';
+import './range-slider.scss';
+import './range-slider_hotel.scss';
+
 let $rangeInput = $('.range-slider__input')
 let $rangeFrom = $('.range-slider__from');
 let $rangeTo = $('.range-slider__to');
@@ -13,16 +18,16 @@ $rangeInput.ionRangeSlider({
     hide_from_to: true,
     skin: "hotel",
     onStart: function(data) {
-        let $formatFrom = new Intl.NumberFormat('ru-RU', { 
-            style: 'currency', 
-            currency: 'RUB', 
+        let $formatFrom = new Intl.NumberFormat('ru-RU', {
+            style: 'currency',
+            currency: 'RUB',
             currencyDisplay: 'symbol',
             minimumFractionDigits: 0
         }).format(data.from);
 
-        let $formatTo = new Intl.NumberFormat('ru-RU', { 
-            style: 'currency', 
-            currency: 'RUB', 
+        let $formatTo = new Intl.NumberFormat('ru-RU', {
+            style: 'currency',
+            currency: 'RUB',
             currencyDisplay: 'symbol',
             minimumFractionDigits: 0
         }).format(data.to);
@@ -31,16 +36,16 @@ $rangeInput.ionRangeSlider({
         $rangeTo.text($formatTo)
     },
     onChange: function(data) {
-        let $formatFrom = new Intl.NumberFormat('ru-RU', { 
-            style: 'currency', 
-            currency: 'RUB', 
+        let $formatFrom = new Intl.NumberFormat('ru-RU', {
+            style: 'currency',
+            currency: 'RUB',
             currencyDisplay: 'symbol',
             minimumFractionDigits: 0
         }).format(data.from);
 
-        let $formatTo = new Intl.NumberFormat('ru-RU', { 
-            style: 'currency', 
-            currency: 'RUB', 
+        let $formatTo = new Intl.NumberFormat('ru-RU', {
+            style: 'currency',
+            currency: 'RUB',
             currencyDisplay: 'symbol',
             minimumFractionDigits: 0
         }).format(data.to);

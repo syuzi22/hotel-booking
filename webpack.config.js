@@ -11,11 +11,13 @@ const colorsTypeChunk = 'colorsTypeChunk';
 const formElementsChunk = 'formElementsChunk';
 const cardsChunk = 'cardsChunk';
 const headersFootersChunk = 'headersFootersChunk';
+const landingChunk = 'landingChunk';
 
 const colorsTypeEntry = 'colors';
 const formElementsEntry = 'form-elements';
 const cardsEntry = 'cards';
 const headersFootersEntry = 'headers-footers';
+const landingEntry = 'landing';
 
 let plugins = [
     new HTMLWebpackPlugin({
@@ -38,6 +40,11 @@ let plugins = [
         filename: "./pages/headers-footers.html",
         chunks: [headersFootersEntry]
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/landing/landing.pug",
+        filename: "./pages/landing.html",
+        chunks: [landingEntry]
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
@@ -59,7 +66,9 @@ function getCssPlugins() {
     return [
         {
             loader: MiniCssExtractPlugin.loader,
-            options: {},
+            options: {
+                ignoreOrder: true,
+            },
         },
         {
             loader: "css-loader",
@@ -108,6 +117,7 @@ function getEntryPoints() {
     entries[formElementsEntry] = ["@babel/polyfill", "./pages/form-elements/form-elements.js"];
     entries[cardsEntry] = ["@babel/polyfill", "./pages/cards/cards.js"];
     entries[headersFootersEntry] = ["@babel/polyfill", "./pages/headers-footers/headers-footers.js"];
+    entries[landingEntry] = ["@babel/polyfill", "./pages/landing/landing.js"];
     return entries;
 }
 
@@ -150,12 +160,19 @@ module.exports = {
                 chunks: 'all',
                 enforce: true,
               },
+              landingPage: {
+                name: landingChunk,
+                test: (m, c, entry = landingEntry) =>
+                  m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                chunks: 'all',
+                enforce: true,
+              },
             },
         },
     },
     devServer: {
         port: 4200,
-        index: "./pages/form-elements.html",
+        index: "./pages/landing.html",
     },
     devtool: false, // use webpack.SourceMapDevToolPlugin,
     plugins: plugins,

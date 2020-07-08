@@ -1,3 +1,5 @@
+import './like-button.scss';
+
 let likeButtons = document.querySelectorAll('.like-button');
 likeButtons.forEach(node => {
     node.addEventListener('click', function(){

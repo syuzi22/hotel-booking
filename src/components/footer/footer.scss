@@ -1,3 +1,10 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+@import '~@components/logo/logo.scss';
+@import '~@components/subscription/subscription.scss';
+
 .footer {
   background: $background-color;
   color: $dark50;

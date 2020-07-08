@@ -1,3 +1,7 @@
+import '@item-quantity-dropdown/item-quantity-dropdown.min.css';
+import '@item-quantity-dropdown/item-quantity-dropdown.min.js';
+import './guest-dropdown.scss';
+
 $(document).ready(function () {
 
     function getNoun(number, one, two, five) {

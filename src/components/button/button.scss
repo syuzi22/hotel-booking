@@ -1,3 +1,8 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+
 .button {
   $button__height: 5.5rem;
   $empty_btn_border_width: 0.25rem;

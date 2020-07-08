@@ -1,3 +1,9 @@
+@import '~@theme/variables.scss';
+@import '~@theme/fonts.scss';
+@import '~@theme/base.scss';
+
+@import '~@components/arrow-button/arrow-button.scss';
+
 .room-search {
   width: auto;
   max-width: 380px;

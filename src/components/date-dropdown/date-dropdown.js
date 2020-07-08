@@ -1,3 +1,7 @@
+import '@air-datepicker/css/datepicker.min.css';
+import '@air-datepicker/js/datepicker.min.js';
+import './date-dropdown.scss';
+
 (function ($) {
     const appendButtonHtml = '<span class="date-dropdown__close">Применить</span>';
 
