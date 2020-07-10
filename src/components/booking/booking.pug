@@ -10,10 +10,17 @@ mixin booking(options)
                 span.booking__perday в сутки
         .booking__date-dropdown
             include /components/date-dropdown/date-dropdown.pug
-            +dateDropdown('прибытие', 'выезд')
+            +dateDropdown({
+                arrivalDate: 'прибытие',
+                departureDate: 'выезд'
+            })
         .booking__guest-dropdown
             include /components/guest-dropdown/guest-dropdown.pug
-            +guestDropdown('Гости',' ', ' ', 2, 1)
+            +guestDropdown({
+                label: 'Гости',
+                adult: 2,
+                minor: 1
+            })
         .booking__tariff
             .booking__tariff1
                 span.booking__main 9 990₽ х 4 суток
@@ -33,4 +40,3 @@ mixin booking(options)
         .booking__arrow-button
             include /components/arrow-button/arrow-button.pug
             +arrowButton({name: 'Забронировать'})
-

@@ -1,16 +1,16 @@
-html(lang="en")
+
+html(lang='en')
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Form Elements
     body
         .form-elements__logo
             include /components/logo/logo.pug
             +logo('dark')
-        div(class="form-elements")
-
-            div(class="form-elements__first")
-                div(class="form-elements__inputwrap")
+        .form-elements
+            .form-elements__col1
+                .form-elements__input
                     include /components/input-text/input-text.pug
                     +inputText({
                         type: 'email',
@@ -18,17 +18,20 @@ html(lang="en")
                         label: 'text field',
                         state: 'default',
                     })
-                div(class="form-elements__inputwrap2")
+                .form-elements__input2
                     +inputText({
                         type: 'text',
                         placeholder: 'This is pretty awesome',
                         label: 'text field',
                         state: 'hover / focus',
-                    })(class="input-text__inp_focus")
-                div(class="form-elements__guest-dropdownwrap")
+                    })(class='input-text__inp_focus')
+                .form-elements__guest-dropdown
                     include /components/guest-dropdown/guest-dropdown.pug
-                    +guestDropdown('Dropdown', 'Default')
-                div(class="form-elements__masked-input")
+                    +guestDropdown({
+                        label: 'Dropdown',
+                        state: 'Default'
+                    })
+                .form-elements__masked-input
                     include /components/masked-input/masked-input.pug
                     +maskedInput({
                         type: 'text',
@@ -36,94 +39,196 @@ html(lang="en")
                         label: 'masked text field',
                         state: 'default'
                     })
-                div(class="form-elements__date-dropdownwrap")
+                .form-elements__date-dropdown
                     include /components/date-dropdown/date-dropdown.pug
-                    +dateDropdown('date dropdown', 'date dropdown')
-                div(class="form-elements__filterwrap")
+                    +dateDropdown({
+                        arrivalDate: 'date dropdown',
+                        departureDate: 'date dropdown'
+                    })
+                .form-elements__filter
                     include /components/filterdate-dropdown/filterdate-dropdown.pug
-                    +filterDateDropdown('filter date dropdown')
-                div(class="form-elements__subscription")
+                    +filterDateDropdown({
+                        title: 'filter date dropdown'
+                    })
+                .form-elements__subscription
                     include /components/subscription/subscription.pug
                     +subscription('subscription text field')
-
-            div(class="form-elements__second")
-                div(class="form-elements__checkbutwrap")
+            .form-elements__col2
+                .form-elements__checkbut
                     include /components/checkbox-buttons/checkbox-buttons.pug
-                    +checkboxButtons('Checkbox Buttons', 'Можно курить', 'Можно с питомцами', ' Можно пригласить гостей (до 10 человек)')
-                div.heading3 radio buttons
-                div(class="form-elements__radiowrap")
+                    +checkboxButtons({
+                        title: 'Checkbox Buttons',
+                        label1: 'Можно курить',
+                        label2: 'Можно с питомцами',
+                        label3: 'Можно пригласить гостей (до 10 человек)'
+                    })
+                .heading3 radio buttons
+                .form-elements__radiobuttons
                     include /components/radio-buttons/radio-buttons.pug
                     +radioButtons('Мужчина', 'Женщина')
-                div.heading3 toggle
-                div(class="form-elements__toggle")
+                .heading3 toggle
+                .form-elements__toggle
                     include /components/toggle/toggle.pug
                     +toggle('Получать спецпредложения')
-                div.heading3 like button
-                div(class="form-elements__like-button")
+                .heading3 like button
+                .form-elements__like-button
                     include /components/like-button/like-button.pug
                     +likeButton
-                    +likeButton("like-button_clicked")
-                div.heading3 rate button
-                div(class="form-elements__rate-button")
+                    +likeButton('like-button_clicked')
+                .heading3 rate button
+                .form-elements__rate-button
                     include /components/rate-button/rate-button.pug
                     +rateButton(3.5)
                     +rateButton(5)
-
-            div(class="form-elements__third")
-                div(class="form-elements__range-slider")
+            .form-elements__col3
+                .form-elements__range-slider
                     include /components/range-slider/range-slider.pug
                     +rangeSlider('range slider')
-                div.heading3 buttons
-                div(class="form-elements__buttons")
+                .heading3 buttons
+                .form-elements__buttons
                     include /components/button/button.pug
-                    div(class="form-elements__filled-button")
+                    .form-elements__filled-button
                         +button({name: 'filled'})
-                    div(class="form-elements__empty-button")
+                    .form-elements__empty-button
                         +button({name: 'empty'})
-                    div(class="form-elements__link-buttons")
+                    .form-elements__link-buttons
                         +button({name: 'link_purple'})
                         +button({name: 'link_dark'})
-                    div(class="form-elements__arrow-button")
+                .form-elements__arrow-button
                         include /components/arrow-button/arrow-button.pug
                         +arrowButton({
                             name: 'Перейти к оплате'
                         })
-                div.heading3 pagination
-                div(class="form-elements__pagination")
+                .heading3 pagination
+                .form-elements__pagination
                         include /components/pagination/pagination.pug
-                        +pagination(15, 1)
-
-            div(class="form-elements__2-1")
-                div(class="form-elements__room-dropdown")
+                        +pagination
+            .form-elements__col4
+                .form-elements__room-dropdown
                     include /components/room-dropdown/room-dropdown.pug
-                    +roomDropdown('Dropdown', 'Default', ' ', 2, 2)
+                    +roomDropdown({
+                        label: 'Dropdown',
+                        state: 'Default',
+                        bedroom: 2,
+                        bed: 2
+                    })
                 div
                     include /components/room-dropdown/room-dropdown.pug
-                    +roomDropdown('Dropdown', 'Expanded', 'menu-open', 2, 2)
-                div(class="form-elements__expcheckwrap")
+                    +roomDropdown({
+                        label: 'Dropdown',
+                        state: 'Default',
+                        className: 'menu-open',
+                        bedroom: 2,
+                        bed: 2
+                    })
+                .form-elements__expcheck
                     include /components/expand-checkbox/expand-checkbox.pug
-                    +expandCheckbox('expandable checkbox list', 1, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
-                div(class="form-elements__expcheckwrap2")
+                    +expandCheckbox({
+                        title: 'expandable checkbox list',
+                        n: 1,
+                        items: [
+                            {
+                                label: 'Завтрак',
+                                value: 'breakfast'
+                            },
+                            {
+                                label: 'Письменный стол',
+                                value: 'desk'
+                            },
+                            {
+                                label: 'Стул для кормления',
+                                value: 'highchair'
+                            },
+                            {
+                                label: 'Кроватка',
+                                value: 'baby-bed'
+                            },
+                            {
+                                label: 'Телевизор',
+                                value: 'tv'
+                            },
+                            {
+                                label: 'Шампунь',
+                                value: 'shampoo'
+                            }
+                        ]
+                    })
+                .form-elements__expcheck2
                     include /components/expand-checkbox/expand-checkbox.pug
-                    +expandCheckbox('expandable checkbox list', 2, 'Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор','Шампунь')
-
-            div(class="form-elements__2-2")
+                    +expandCheckbox({
+                        title: 'expandable checkbox list',
+                        n: 2,
+                        items: [
+                            {
+                                label: 'Завтрак',
+                                value: 'breakfast'
+                            },
+                            {
+                                label: 'Письменный стол',
+                                value: 'desk'
+                            },
+                            {
+                                label: 'Стул для кормления',
+                                value: 'highchair'
+                            },
+                            {
+                                label: 'Кроватка',
+                                value: 'baby-bed'
+                            },
+                            {
+                                label: 'Телевизор',
+                                value: 'tv'
+                            },
+                            {
+                                label: 'Шампунь',
+                                value: 'shampoo'
+                            }
+                        ]
+                    })
+            .form-elements__col5
                 div
                     include /components/guest-dropdown/guest-dropdown.pug
-                    +guestDropdown('Dropdown', ' ', 'menu-open')
-                div(class="form-elements__richcheckwrap")
+                    +guestDropdown({
+                        label: 'Dropdown',
+                        className: 'menu-open'
+                    })
+                .form-elements__richcheck
                     include /components/rich-checkbox/rich-checkbox.pug
-                    +richCheckbox('Rich Checkbox Buttons', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист и проводит до номера.')
-
-            div(class="form-elements__2-3")
+                    +richCheckbox({
+                        title: 'Rich Checkbox Buttons',
+                        items: [
+                            {
+                                label: 'Широкий коридор',
+                                description: 'Ширина коридоров в номере не менее 91 см.',
+                                value: 'wide-corridor'
+                            },
+                            {
+                                label: 'Помощник для инвалидов',
+                                description: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                                value: 'assistent'
+                            }
+                        ]
+                    })
+            .form-elements__col6
                 div
                     include /components/guest-dropdown/guest-dropdown.pug
-                    +guestDropdown('Dropdown', ' ', 'menu-open', 2, 1)
-                div(class="form-elements__bulletwrap")
+                    +guestDropdown({
+                        label: 'Dropdown',
+                        className: 'menu-open',
+                        adult: 2,
+                        minor: 1
+                    })
+                .form-elements__bullet
                     include /components/bullet-list/bullet-list.pug
-                    +bulletList('Bullet list', 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00')
-
-            div(class="form-elements__info")
+                    +bulletList({
+                        title: 'Bullet list',
+                        list: [
+                            'Нельзя с питомцами',
+                            'Без вечеринок и мероприятий',
+                            'Время прибытия — после 13:00, а выезд до 12:00'
+                        ]
+                    })
+            .form-elements__info
                 include /components/room-info/room-info.pug
                 +roomInfo({
                     icon: 'insert_emoticon',
@@ -137,8 +242,7 @@ html(lang="en")
                     text: 'Окно в каждой из спален'
                 })
                 .form-elements__line
-
-            div(class="form-elements__reviews")
+            .form-elements__reviews
                 include /components/review/review.pug
                 +review({
                     url: '/images/review-photo.png',

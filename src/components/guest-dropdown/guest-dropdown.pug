@@ -1,110 +1,28 @@
-mixin guestDropdown(label, state, className, adult='0', minor='0', infant='0')
-    div(class="guest-dropdown")
-        div(class="guest-dropdown__info heading3")
-            div(class="guest-dropdown__name")
-                label(for="guest-dropdown__inp")= label 
-            div(class="guest-dropdown__state")= state 
-        div(class=`guest-dropdown__message iqdropdown ${className}`)
-            p(class="iqdropdown-selection")
-            span(class="guest-dropdown__micons") 
-            div(class="iqdropdown-menu")
-                div(class="iqdropdown-menu-option" data-id="adult" data-defaultcount=`${adult}`)
+mixin guestDropdown(options)
+    if !options
+     - options = {}
+    - var adult = options.adult || 0
+    - var minor = options.minor || 0
+    - var infant = options.infant || 0
+
+    .guest-dropdown
+        .guest-dropdown__info.heading3
+            .guest-dropdown__name
+                label(for='guest-dropdown__inp')= options.label || ''
+            .guest-dropdown__state= options.state || ''
+        div(class=`guest-dropdown__message iqdropdown ${options.className}`)
+            p.iqdropdown-selection
+            span.guest-dropdown__micons
+            .iqdropdown-menu
+                div(class='iqdropdown-menu-option' data-id='adult' data-defaultcount=`${adult}`)
                     div
-                        p(class="iqdropdown-item") Взрослые
-                div(class="iqdropdown-menu-option" data-id="minor" data-defaultcount=`${minor}`)
+                        p(class='iqdropdown-item') Взрослые
+                div(class='iqdropdown-menu-option' data-id='minor' data-defaultcount=`${minor}`)
                     div
-                        p(class="iqdropdown-item") Дети
-                div(class="iqdropdown-menu-option" data-id="infant" data-defaultcount=`${infant}`)
+                        p(class='iqdropdown-item') Дети
+                div(class='iqdropdown-menu-option' data-id='infant' data-defaultcount=`${infant}`)
                     div
-                        p(class="iqdropdown-item") Младенцы
-                div(class="guest-dropdown__buttons")
-                    button(class="iqdropdown-reset heading3") Очистить
-                    button(class="iqdropdown-menu-close") Применить
-
-
-
-
-
-
-
-//- No config options
-
-//- div(class="no-config iqdropdown")
-//-     p(class="iqdropdown-selection")
-//-     div(class="iqdropdown-menu")
-//-         div(class="iqdropdown-menu-option" data-id="item1")
-//-             div
-//-                 p(class="iqdropdown-item") Item 1
-//-                 p(class="iqdropdown-description") A short description
-//-         div(class="iqdropdown-menu-option" data-id="item2")
-//-             div
-//-                 p(class="iqdropdown-item") Item 2
-//-                 p(class="iqdropdown-description") A short description
-//-         div(class="iqdropdown-menu-option" data-id="item3")
-//-             div
-//-                 p(class="iqdropdown-item") Item 3
-//-                 p(class="iqdropdown-description") A short description
-//-         div(class="iqdropdown-menu-option" data-id="item4")
-//-             div
-//-                 p(class="iqdropdown-item") Item 4
-//-                 p(class="iqdropdown-description") A short description
-//-         div(class="iqdropdown-menu-option" data-id="item5")
-//-             div
-//-                 p(class="iqdropdown-item") Item 5
-//-                 p(class="iqdropdown-description") A short description
-
-
-
-//- No config options with custom selection message
-
-//- div(class="no-config iqdropdown")
-//-     p(class="iqdropdown-selection" data-selection-text="passenger" data-text-plural="passengers")
-//-     div(class="iqdropdown-menu")
-//-         div(class="iqdropdown-menu-option" data-id="adult" data-defaultcount="1" data-mincount="1")
-//-             div
-//-                 p(class="iqdropdown-item") Adults
-//-                 p(class="iqdropdown-description") 12+ years
-//-         div(class="iqdropdown-menu-option" data-id="minor" data-defaultcount="0" data-mincount="0")
-//-             div
-//-                 p(class="iqdropdown-item") Children
-//-                 p(class="iqdropdown-description") 2 - 11 years
-//-         div(class="iqdropdown-menu-option" data-id="infant")
-//-             div
-//-                 p(class="iqdropdown-item") Infants
-//-                 p(class="iqdropdown-description") 2 years
-
-
-//- Custom config
-
-//- div(class="custom iqdropdown")
-//-     p(class="iqdropdown-selection")
-//-     div(class="iqdropdown-menu")
-//-         div(class="iqdropdown-menu-option" data-id="adult" data-defaultcount="1" data-mincount="1")
-//-             div
-//-                 p(class="iqdropdown-item") Adults
-//-                 p(class="iqdropdown-description") 12+ years
-//-         div(class="iqdropdown-menu-option" data-id="minor" data-defaultcount="0" data-mincount="0")
-//-             div
-//-                 p(class="iqdropdown-item") Children
-//-                 p(class="iqdropdown-description") 2 - 11 years
-//-         div(class="iqdropdown-menu-option" data-id="infant")
-//-             div
-//-                 p(class="iqdropdown-item") Infants
-//-                 p(class="iqdropdown-description") 2 years
-//-         button(class="iqdropdown-menu-close") Cerrar
-
-//- Custom config (2nd instance) не поняла чем отличается от предыдущего варианта, пока пропустила
-
-
-//- Custom message
-
-//- div(class="custom-message iqdropdown")
-//-     p(class="iqdropdown-selection")
-//-     div(class="iqdropdown-menu")
-//-         div(class="iqdropdown-menu-option" data-id="item-a" data-defaultcount="0" data-mincount="0" data-maxcount="5")
-//-             div
-//-                 p(class="iqdropdown-item") Item A
-//-         div(class="iqdropdown-menu-option" data-id="item-b" data-defaultcount="0" data-mincount="0" data-maxcount="5")
-//-             div
-//-                 p(class="iqdropdown-item") Item B
-//-         button(class="iqdropdown-menu-close") Cerrar
+                        p(class='iqdropdown-item') Младенцы
+                .guest-dropdown__buttons
+                    button.iqdropdown-reset.heading3 Очистить
+                    button.iqdropdown-menu-close Применить

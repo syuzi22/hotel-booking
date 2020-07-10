@@ -1,71 +1,70 @@
 .radio-buttons__list {
     color: $dark50;
-}
+  }
 
- /* для элемента input c type="radio" */
-.radio-buttons__inp {
+  /* для элемента input c type='radio' */
+  .radio-buttons__inp {
     position: absolute;
     z-index: -1;
     opacity: 0;
-}
+  }
 
- /* для элемента label связанного с .radio-buttons__inp */
-.radio-buttons__inp + label {
+  /* для элемента label связанного с .radio-buttons__inp */
+  .radio-buttons__inp + label {
     display: inline-flex;
     align-items: center;
     user-select: none;
     margin-right: 18px;
-}
+  }
 
-/* создание в label псевдоэлемента  before со следующими стилями */
-.radio-buttons__inp + label::before {
-        content: '';
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 1px solid $dark25;
-        box-sizing: border-box;
-        border-radius: 10px;
-        margin-right: 9px;
-        background-repeat: no-repeat;
-        background-position: center center;
-}
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .radio-buttons__inp + label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $dark25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 9px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-/* стили при наведении курсора на радио */
-.radio-buttons__inp:not(:disabled):not(:checked)+label:hover::before {
+  /* стили при наведении курсора на радио */
+  .radio-buttons__inp:not(:disabled):not(:checked) + label:hover::before {
     border-color: $dark50;
     cursor: pointer;
-}
+  }
 
-/* стили для активной радиокнопки (при нажатии на неё) */
-.radio-buttons__inp:not(:disabled):active+label::before {
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .radio-buttons__inp:not(:disabled):active + label::before {
     background-color: $dark5;
     border-color: $dark5;
-}
+  }
 
-/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.radio-buttons__inp:focus:not(:checked)+label::before {
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .radio-buttons__inp:focus:not(:checked) + label::before {
     border-color: $dark50;
-}
+  }
 
-/* стили для радиокнопки, находящейся в фокусе */
-.radio-buttons__inp:focus+label::before {
-    border-color: $purple;
-}
+  /* стили для радиокнопки, находящейся в фокусе */
+  .radio-buttons__inp:focus + label::before {
+    border-color: $primary-color;
+  }
 
-/* стили для радиокнопки, находящейся в состоянии checked */
-.radio-buttons__inp:checked+label::before {
-    background-image: url("/images/radio-buttons.svg");
-}
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .radio-buttons__inp:checked + label::before {
+    background-image: url('/images/radio-buttons.svg');
+  }
 
-.radio-buttons__inp:checked+label {
+  .radio-buttons__inp:checked + label {
     color: $dark75;
-}
+  }
 
-/* стили для радиокнопки, находящейся в состоянии disabled */
-.radio-buttons__inp:disabled+label::before {
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .radio-buttons__inp:disabled + label::before {
     background-color: $dark5;
-}
-
+  }

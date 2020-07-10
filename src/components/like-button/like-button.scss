@@ -4,18 +4,17 @@
     cursor: pointer;
     width: 40px;
     height: 20px;
-    background: $white;
+    background: $background-color;
     border: 1px solid $dark25;
     border-radius: 10px;
-}
+  }
 
-.like-button_clicked {
-    border-color: $purple;
-}
+  .like-button_clicked {
+    border-color: $primary-color;
+  }
 
-
-.like-button__micons {
-    font-family: Material Icons;
+  .like-button__micons {
+    font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -24,29 +23,28 @@
     height: 20px;
     display: flex;
     color: $dark25;
-}   
+  }
 
-.like-button__micons::after {
-    content: 'favorite_border';
+  .like-button__micons::after {
+    content: "favorite_border";
     margin: auto;
-}
+  }
 
-.like-button_clicked .like-button__micons::after {
-    content: 'favorite';
-    color: $purple;
+  .like-button_clicked .like-button__micons::after {
+    content: "favorite";
+    color: $primary-color;
     margin: auto;
-}
+  }
 
-
-.like-button__counter {
+  .like-button__counter {
     font-size: 10px;
     line-height: 20px;
     color: $dark25;
     width: 20px;
     height: 20px;
     padding-left: 2px;
-}
+  }
 
-.like-button_clicked .like-button__counter {
-    color: $purple;
-}
+  .like-button_clicked .like-button__counter {
+    color: $primary-color;
+  }

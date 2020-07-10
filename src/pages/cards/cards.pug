@@ -1,7 +1,7 @@
-html(lang="en")
+html(lang='en')
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Cards
     body
         .cards
@@ -30,7 +30,7 @@ html(lang="en")
                         include /components/sign-in/sign-in.pug
                 .cards__right-column
                     .cards__datepicker
-                        div(class="datepicker-here date-dropdown__start" data-range="true")
+                        div(class='datepicker-here date-dropdown__start' data-range='true')
                     .cards__room1
                         include /components/room/room.pug
                         +room({
@@ -39,7 +39,7 @@ html(lang="en")
                             price: '9 990₽',
                             rate: 5,
                             reviews: 145,
-                            images: ["/images/room888.jpg", "/images/room840.jpg", "/images/room980.jpg", "/images/room856.jpg"]
+                            images: ['/images/room888.jpg', '/images/room840.jpg', '/images/room980.jpg', '/images/room856.jpg']
                         })
                     .cards__room2
                         +room({
@@ -47,6 +47,5 @@ html(lang="en")
                             price: '9 900₽',
                             rate: 4,
                             reviews: 65,
-                            images: ["/images/room840.jpg", "/images/room980.jpg", "/images/room888.jpg", "/images/room856.jpg"]
+                            images: ['/images/room840.jpg', '/images/room980.jpg', '/images/room888.jpg', '/images/room856.jpg']
                         })
-

@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-}
+  }
 
-.range-slider__title {
+  .range-slider__title {
     line-height: 2.75rem;
-}
+  }
 
-.range-slider__value {
+  .range-slider__value {
     font-weight: normal;
     color: $dark50;
-}
+  }

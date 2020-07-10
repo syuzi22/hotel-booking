@@ -1,14 +1,14 @@
-mixin dateDropdown(name1, name2)
-    div(class="date-dropdown")
-        div(class="date-dropdown__col")
-            div(class="date-dropdown__info heading3")= name1
-            div(class="date-dropdown__inp")
-                input(type="text" placeholder="ДД.ММ.ГГГГ" class="datepicker-here date-dropdown__start" data-range="true" data-multiple-dates-separator=" - " readonly)
-                span(class="date-dropdown__micons") 
-        div(class="date-dropdown__col")
-            div(class="date-dropdown__info heading3")= name2
-            div(class="date-dropdown__inp")
-                input(type="text" placeholder="ДД.ММ.ГГГГ" class="date-dropdown__end" readonly)
-                span(class="date-dropdown__micons") 
-                
-
+mixin dateDropdown(options)
+    if !options
+        - options = {}
+    .date-dropdown
+        .date-dropdown__col
+            .date-dropdown__info.heading3= options.arrivalDate || ''
+            .date-dropdown__inp
+                input(type='text' placeholder='ДД.ММ.ГГГГ' class='datepicker-here date-dropdown__start' data-range='true' data-multiple-dates-separator=' - ' readonly)
+                span.date-dropdown__micons
+        .date-dropdown__col
+            .date-dropdown__info.heading3= options.departureDate || ''
+            .date-dropdown__inp
+                input(type='text' placeholder='ДД.ММ.ГГГГ' class='date-dropdown__end' readonly)
+                span.date-dropdown__micons

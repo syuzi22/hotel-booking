@@ -1,6 +1,8 @@
-mixin bulletList(title, ...items)
+mixin bulletList(options)
+    if !options
+        - options = {}
     .bullet-list
-        h3= title
+        h3= options.title || ''
         ul.bullet-list__ul
-            each item in items
+            each item in options.list
                 li.bullet-list__item= item

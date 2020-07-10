@@ -2,10 +2,15 @@
     .room-search__title.heading1 Найдём номера под ваши пожелания
     .room-search__date-dropdown
         include /components/date-dropdown/date-dropdown.pug
-        +dateDropdown('прибытие', 'выезд')
+        +dateDropdown({
+            arrivalDate: 'прибытие',
+            departureDate: 'выезд'
+        })
     .room-search__guest-dropdown
         include /components/guest-dropdown/guest-dropdown.pug
-        +guestDropdown('гости')
+        +guestDropdown({
+            label: 'Гости'
+        })
     .room-search__arrow-button
         include /components/arrow-button/arrow-button.pug
         +arrowButton({name: 'Подобрать номер'})

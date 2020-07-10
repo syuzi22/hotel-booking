@@ -4,7 +4,7 @@ mixin inputText(options)
     .input-text
         .input-text__info.heading3
             .input-text__name
-                label(for="input-text__inp")= options.label
+                label(for='input-text__inp')= options.label
             .input-text__state= options.state
         .input-text__field
             input(type = options.type placeholder = options.placeholder class!=`input-text__inp ${attributes.class}`)

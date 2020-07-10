@@ -1,27 +1,17 @@
-mixin expandCheckbox(title, n, label1, label2, label3, label4, label5, label6)
-    div(class="expand-checkbox")
-        div(class="expand-checkbox__heading")
-            div(class="expand-checkbox__title heading3")= title
-            span(class="expand-checkbox__micons") 
-        div(class="expand-checkbox__list")
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-1` name="expand-checkbox1" value="breakfast")
-                label(for=`expand-checkbox${n}-1`)= label1
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-2` name="expand-checkbox2" value="desk")
-                label(for=`expand-checkbox${n}-2`)= label2
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-3` name="expand-checkbox3" value="highchair")
-                label(for=`expand-checkbox${n}-3`)= label3
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-4` name="expand-checkbox4" value="baby-bed")
-                label(for=`expand-checkbox${n}-4`)= label4
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-5` name="expand-checkbox5" value="tv")
-                label(for=`expand-checkbox${n}-5`)= label5
-            div(class="expand-checkbox__item")
-                input(class="expand-checkbox__input" type="checkbox" id=`expand-checkbox${n}-6` name="expand-checkbox6" value="shampoo")
-                label(for=`expand-checkbox${n}-6`)= label6
-
-                
-                
+mixin expandCheckbox(options)
+    //- options.n - unique identificator
+    if !options
+        - options = {}
+    if !options.items
+        - options.items = []
+    - var items = options.items
+    - var n = options.n
+    .expand-checkbox
+        .expand-checkbox__heading
+            .expand-checkbox__title.heading3= options.title || ''
+            span.expand-checkbox__micons
+        .expand-checkbox__list
+            - for (var x = 0; x < items.length; x++)
+                    .expand-checkbox__item
+                        input(class='expand-checkbox__input' type='checkbox' id=`expand-checkbox${n}${x}` name=`expand-checkbox${n}${x}` value=items[x].value)
+                        label(for=`expand-checkbox${n}${x}`)= items[x].label

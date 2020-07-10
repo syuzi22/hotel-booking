@@ -11,7 +11,7 @@ mixin room(options)
             span.room-slider__next expand_more
         .room__wrap
             .room__info
-                span.room__numsign № 
+                span.room__numsign №
                 span.room__number= options.number || ''
                 span.room__cat.heading3= options.category || ''
                 span.room__price= options.price || ''
@@ -19,7 +19,7 @@ mixin room(options)
             .room__line
             .room__rate
                 .room__ratebutton
-                    include ../../components/rate-button/rate-button.pug
+                    include /components/rate-button/rate-button.pug
                     +rateButton(options.rate)
                 .room__reviews
                     span.room__reviewsnum= options.reviews || ''

@@ -1,22 +1,22 @@
 .expand-checkbox {
     width: 266px;
     line-height: 18px;
-    color: $dark50;  
-    user-select: none; 
-}
+    color: $dark50;
+    user-select: none;
+  }
 
-.expand-checkbox__heading {
+  .expand-checkbox__heading {
     display: flex;
     justify-content: space-between;
-    height: 44px;
+    height: $input-height;
     cursor: pointer;
-}
+  }
 
-.expand-checkbox__title {
+  .expand-checkbox__title {
     line-height: 40px;
-}
+  }
 
-.expand-checkbox__micons {
+  .expand-checkbox__micons {
     font-family: "Material Icons";
     font-style: normal;
     font-weight: normal;
@@ -28,81 +28,81 @@
     color: $dark50;
     width: 45px;
     height: 40px;
-}
+  }
 
-.expand-checkbox__micons::after {
-    content: 'expand_more';
-}
+  .expand-checkbox__micons::after {
+    content: "expand_more";
+  }
 
-.expand-checkbox__heading--open .expand-checkbox__micons::after {
-    content: 'expand_less';
-}
+  .expand-checkbox__heading--open .expand-checkbox__micons::after {
+    content: "expand_less";
+  }
 
-.expand-checkbox__input {
+  .expand-checkbox__input {
     position: absolute;
     z-index: -1;
     opacity: 0;
-}
+  }
 
-.expand-checkbox__input + label {
+  .expand-checkbox__input + label {
     display: inline-flex;
     align-items: flex-start;
     user-select: none;
     padding-bottom: 10px;
-}
+  }
 
-.expand-checkbox__input + label::before {
+  .expand-checkbox__input + label::before {
     content: "";
     display: inline-block;
     width: 20px;
     height: 20px;
     flex-shrink: 0;
     flex-grow: 0;
-    background: #ffffff;
+    background: $background-color;
     border: 1px solid $dark25;
     box-sizing: border-box;
     border-radius: 4px;
     margin-right: 10px;
     background-repeat: no-repeat;
     background-position: center center;
-}
+  }
 
-.expand-checkbox__input:not(:disabled):not(:checked)+label:hover::before {
+  .expand-checkbox__input:not(:disabled):not(:checked) + label:hover::before {
     border-color: $dark50;
-}
+  }
 
-.expand-checkbox___input:not(:disabled):active+label::before {
+  .expand-checkbox___input:not(:disabled):active + label::before {
     background-color: $dark5;
     border-color: $dark5;
-}
+  }
 
-.expand-checkbox___input:focus:not(:checked)+label::before {
+  .expand-checkbox___input:focus:not(:checked) + label::before {
     border-color: $dark50;
-}
+  }
 
-.expand-checkbox___input:focus+label::before {
-    border-color: $purple;
-}
+  .expand-checkbox___input:focus + label::before {
+    border-color: $primary-color;
+  }
 
-.expand-checkbox__input:checked + label::before {
+  .expand-checkbox__input:checked + label::before {
     background-image: url("/images/checkbox.svg");
-}
+  }
 
-.expand-checkbox__input:disabled+label::before {
+  .expand-checkbox__input:disabled + label::before {
     background-color: $dark5;
-}
+  }
 
-.expand-checkbox__list {
+  .expand-checkbox__list {
     position: absolute;
     width: inherit;
-    background: #FFFFFF;
+    background: $background-color;
     z-index: 999;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s linear;
-}
+  }
 
-.expand-checkbox__list--open {
+  .expand-checkbox__list--open {
     visibility: visible;
     opacity: 1;
-}
+  }

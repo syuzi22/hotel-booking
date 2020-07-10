@@ -1,14 +1,14 @@
-html(lang="en")
+html(lang='en')
     head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
         title Colors and Type
     body
         .colors-type__logo
             include /components/logo/logo.pug
             +logo('dark')
-        div(class="colors-type")
-            div(class="colors-type__leftwrap")
+        .colors-type
+            .colors-type__leftwrap
                 include /components/color-demo/color-demo.pug
-            div(class="colors-type__rightwrap")
+            .colors-type__rightwrap
                 include /components/type-demo/type-demo.pug
