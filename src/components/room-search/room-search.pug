@@ -1,11 +1,11 @@
 .room-search
     .room-search__title.heading1 Найдём номера под ваши пожелания
     .room-search__date-dropdown
-        include ../../components/date-dropdown/date-dropdown.pug
+        include /components/date-dropdown/date-dropdown.pug
         +dateDropdown('прибытие', 'выезд')
     .room-search__guest-dropdown
-        include ../../components/guest-dropdown/guest-dropdown.pug
+        include /components/guest-dropdown/guest-dropdown.pug
         +guestDropdown('гости')
     .room-search__arrow-button
-        include ../../components/arrow-button/arrow-button.pug
+        include /components/arrow-button/arrow-button.pug
         +arrowButton({name: 'Подобрать номер'})

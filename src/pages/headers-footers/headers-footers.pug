@@ -6,16 +6,16 @@ html(lang="en")
     body
         .headers-footers
             .headers-footers__logo
-                include ../../components/logo/logo.pug
+                include /components/logo/logo.pug
                 +logo('dark')
             .headers-footers__header1
-                include ../../components/header/header.pug
+                include /components/header/header.pug
                 +header
             .headers-footers__header2
                 +header({
                     username: 'Юлий Цезарь'
                 })
             .headers-footers__footer1
-                include ../../components/footer/footer.pug
+                include /components/footer/footer.pug
             .headers-footers__footer2
-                include ../../components/footer-creative/footer-creative.pug
+                include /components/footer-creative/footer-creative.pug

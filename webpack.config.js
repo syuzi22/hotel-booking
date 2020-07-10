@@ -24,6 +24,10 @@ let plugins = [
         template: "./pages/headers-footers/headers-footers.pug",
         filename: "./pages/headers-footers.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/landing/landing.pug",
+        filename: "./pages/landing.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
@@ -96,15 +100,28 @@ module.exports = {
     plugins: plugins,
     resolve: {
         alias: {
+            '@components': path.join(__dirname, 'src/components'),
+            '@pages': path.join(__dirname, 'src/pages'),
+            '@theme': path.join(__dirname, 'src/theme'),
             '@item-quantity-dropdown': path.join(__dirname, 'node_modules', 'item-quantity-dropdown', 'lib'),
             '@inputmask': path.join(__dirname, 'node_modules', 'inputmask', 'dist', 'jquery.inputmask.min.js'),
+            '@air-datepicker': path.join(__dirname, 'node_modules', 'air-datepicker', 'dist'),
+            '@slick-carousel': path.join(__dirname, 'node_modules', 'slick-carousel', 'slick'),
+            '@ion-rangeslider': path.join(__dirname, 'node_modules', 'ion-rangeslider'),
+            '@fontawesome': path.join(__dirname, 'node_modules', '@fortawesome', 'fontawesome-free')
         }
     },
     module: {
         rules: [
             {
                 test: /\.pug$/,
-                use: ["pug-loader?pretty=true"],
+                loader: {
+                    loader: 'pug-loader',
+                    options: {
+                        pretty: true,
+                        root: path.join(__dirname, 'src')
+                    }
+                }
             },
             {
                 test: /\.css$/,

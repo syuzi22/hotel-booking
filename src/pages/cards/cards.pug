@@ -6,17 +6,17 @@ html(lang="en")
     body
         .cards
             .cards__logo
-                include ../../components/logo/logo.pug
+                include /components/logo/logo.pug
                 +logo('dark')
             .cards__wrap
                 .cards__left-column
                     .cards__room-search
-                        include ../../components/room-search/room-search.pug
+                        include /components/room-search/room-search.pug
                     .cards__registration
-                        include ../../components/registration/registration.pug
+                        include /components/registration/registration.pug
                 .cards__center-column
                     .cards__booking
-                        include ../../components/booking/booking.pug
+                        include /components/booking/booking.pug
                         +booking({
                             number: 888,
                             category: 'люкс',
@@ -27,12 +27,12 @@ html(lang="en")
                             total: '38 081₽'
                         })
                     .cards__sign-in
-                        include ../../components/sign-in/sign-in.pug
+                        include /components/sign-in/sign-in.pug
                 .cards__right-column
                     .cards__datepicker
                         div(class="datepicker-here date-dropdown__start" data-range="true")
                     .cards__room1
-                        include ../../components/room/room.pug
+                        include /components/room/room.pug
                         +room({
                             number: 888,
                             category: 'люкс',
