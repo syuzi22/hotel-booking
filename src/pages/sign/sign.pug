@@ -1,0 +1,16 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Sign in
+    body
+        .sign
+            .sign__header
+                include /components/header/header.pug
+                +header
+            .sign__header-bg
+                .sign__form
+                    include /components/sign-in/sign-in.pug
+            .sign__footer
+                include /components/footer/footer.pug
+

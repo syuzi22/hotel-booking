@@ -36,6 +36,10 @@ let plugins = [
         template: "./pages/registration/registration.pug",
         filename: "./pages/registration.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/sign/sign.pug",
+        filename: "./pages/sign.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",
