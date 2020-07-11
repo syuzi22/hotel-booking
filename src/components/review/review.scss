@@ -1,26 +1,26 @@
 .review {
-    display: flex;
-    &__photo {
-      margin-bottom: 0.625rem;
-      & img {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 4rem;
-        border: 0.25rem solid $background-color;
-        box-shadow: 0rem 1.25rem 2.5rem $dark10;
-        background-size: cover;
-      }
-    }
-    &__username {
-      font-weight: bold;
-    }
-    &__likebutton {
-      padding-left: 0.5rem;
-    }
-    &__info {
-      padding-left: 1.25rem;
-    }
-    .review__text {
-      padding-top: 1.25rem;
+  display: flex;
+  &__photo {
+    margin-bottom: 0.625rem;
+    & img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 4rem;
+      border: 0.25rem solid $background-color;
+      box-shadow: 0rem 1.25rem 2.5rem $dark10;
+      background-size: cover;
     }
   }
+  &__username {
+    font-weight: bold;
+  }
+  &__likebutton {
+    padding-left: 0.5rem;
+  }
+  &__info {
+    padding-left: 1.25rem;
+  }
+  .review__text {
+    padding-top: 1.25rem;
+  }
+}

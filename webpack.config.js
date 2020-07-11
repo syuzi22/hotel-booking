@@ -28,6 +28,10 @@ let plugins = [
         template: "./pages/landing/landing.pug",
         filename: "./pages/landing.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/search-room/search-room.pug",
+        filename: "./pages/search-room.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",

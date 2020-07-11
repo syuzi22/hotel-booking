@@ -1,147 +1,147 @@
 .room {
-    position: relative;
-    width: 270px;
-    background: $background-color;
-    box-shadow: 0px 10px 20px $dark5;
-    border-radius: 4px;
+  position: relative;
+  width: 270px;
+  background: $background-color;
+  box-shadow: 0px 10px 20px $dark5;
+  border-radius: 4px;
+}
+
+.room__numsign {
+  font-family: Quicksand;
+  font-weight: bold;
+  color: $dark100;
+}
+
+.room__number {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 19px;
+  color: $dark100;
+}
+
+.room__cat {
+  color: $primary-color;
+  margin-left: 5px;
+}
+
+.room__price {
+  padding-top: 4px;
+  float: right;
+  font-weight: bold;
+  color: $dark50;
+  line-height: 18px;
+}
+
+.room__day {
+  font-size: 12.3px;
+  font-weight: normal;
+  padding-left: 3px;
+}
+
+.room__slider img {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.room__wrap {
+  padding: 13px 18px 18px 20px;
+}
+
+.room__info {
+  padding-bottom: 6px;
+}
+
+.room__line {
+  width: 230px;
+  height: 1px;
+  background: $dark10;
+  margin-bottom: 10px;
+}
+
+.room__rate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room__reviews {
+  white-space: nowrap;
+}
+
+.room__reviewsnum {
+  color: $dark50;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.room__reviewsword {
+  color: $dark25;
+}
+
+//слайдер
+
+.room__slider {
+  width: 270px;
+}
+
+.room__slider-arrows {
+  width: 270px;
+  position: absolute;
+  top: 54px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Material Icons";
+  font-size: 24px;
+}
+
+.room-slider__prev {
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  transform: rotate(90deg);
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: $background-color;
+}
+.room-slider__next {
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: $background-color;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 7px;
+}
+
+.slick-dots {
+  bottom: 4px;
+  text-align: right;
+  padding-right: 6px;
+  li {
+    margin: 0 -4.2px;
   }
-
-  .room__numsign {
-    font-family: Quicksand;
-    font-weight: bold;
-    color: $dark100;
+  li button:before,
+  li.slick-active button:before {
+    color: transparent;
+    opacity: 1;
   }
-
-  .room__number {
-    font-family: Quicksand;
-    font-weight: bold;
-    font-size: 19px;
-    color: $dark100;
-  }
-
-  .room__cat {
-    color: $primary-color;
-    margin-left: 5px;
-  }
-
-  .room__price {
-    padding-top: 4px;
-    float: right;
-    font-weight: bold;
-    color: $dark50;
-    line-height: 18px;
-  }
-
-  .room__day {
-    font-size: 12.3px;
-    font-weight: normal;
-    padding-left: 3px;
-  }
-
-  .room__slider img {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
-
-  .room__wrap {
-    padding: 13px 18px 18px 20px;
-  }
-
-  .room__info {
-    padding-bottom: 6px;
-  }
-
-  .room__line {
-    width: 230px;
-    height: 1px;
-    background: $dark10;
-    margin-bottom: 10px;
-  }
-
-  .room__rate {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .room__reviews {
-    white-space: nowrap;
-  }
-
-  .room__reviewsnum {
-    color: $dark50;
-    font-weight: bold;
-    padding-right: 5px;
-  }
-
-  .room__reviewsword {
-    color: $dark25;
-  }
-
-  //слайдер
-
-  .room__slider {
-    width: 270px;
-  }
-
-  .room__slider-arrows {
-    width: 270px;
-    position: absolute;
-    top: 54px;
-    display: flex;
-    justify-content: space-between;
-    font-family: "Material Icons";
-    font-size: 24px;
-  }
-
-  .room-slider__prev {
-    user-select: none;
+  li button:before {
+    background-color: transparent;
+    border: 1px solid $background-color;
+    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+    border-radius: 50%;
     display: inline-block;
-    cursor: pointer;
-    transform: rotate(90deg);
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    line-height: 44px;
-    color: $background-color;
+    height: 7.5px;
+    width: 7.5px;
   }
-  .room-slider__next {
-    user-select: none;
-    display: inline-block;
-    cursor: pointer;
-    transform: rotate(-90deg);
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    line-height: 44px;
-    color: $background-color;
+  li.slick-active button:before {
+    background-color: $background-color;
   }
-
-  .slick-dotted.slick-slider {
-    margin-bottom: 7px;
-  }
-
-  .slick-dots {
-    bottom: 4px;
-    text-align: right;
-    padding-right: 6px;
-    li {
-      margin: 0 -4.2px;
-    }
-    li button:before,
-    li.slick-active button:before {
-      color: transparent;
-      opacity: 1;
-    }
-    li button:before {
-      background-color: transparent;
-      border: 1px solid $background-color;
-      box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-      border-radius: 50%;
-      display: inline-block;
-      height: 7.5px;
-      width: 7.5px;
-    }
-    li.slick-active button:before {
-      background-color: $background-color;
-    }
-  }
+}

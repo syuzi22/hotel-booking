@@ -1,0 +1,198 @@
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Search room
+    body
+        .search-room
+            .search-room__header
+                include /components/header/header.pug
+                +header
+            .search-room__main
+                .search-room__left-col
+                    .search-room__leftwrap
+                        .search-room__filterdate
+                            include /components/filterdate-dropdown/filterdate-dropdown.pug
+                            +filterDateDropdown({
+                                title: 'даты пребывания в отеле'
+                            })
+                        .search-room__guestdrop
+                            include /components/guest-dropdown/guest-dropdown.pug
+                            +guestDropdown({
+                                label: 'Гости',
+                                adult: 3,
+                                infant: 1
+                            })
+                        .search-room__rangeslider
+                            include /components/range-slider/range-slider.pug
+                            +rangeSlider('диапазон цены')
+                        .search-room__checkbut
+                            include /components/checkbox-buttons/checkbox-buttons.pug
+                            +checkboxButtons({
+                                title: 'Checkbox Buttons',
+                                label1: 'Можно курить',
+                                label2: 'Можно с питомцами',
+                                label3: 'Можно пригласить гостей (до 10 человек)'
+                            })
+                        .search-room__richcheck
+                            include /components/rich-checkbox/rich-checkbox.pug
+                            +richCheckbox({
+                                title: 'Доступность',
+                                items: [
+                                    {
+                                        label: 'Широкий коридор',
+                                        description: 'Ширина коридоров в номере не менее 91 см.',
+                                        value: 'wide-corridor'
+                                    },
+                                    {
+                                        label: 'Помощник для инвалидов',
+                                        description: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                                        value: 'assistent'
+                                    }
+                                ]
+                            })
+                        .search-room__room-dropdown
+                            include /components/room-dropdown/room-dropdown.pug
+                            +roomDropdown({
+                                label: 'Удобства номера',
+                                bedroom: 2,
+                                bed: 2
+                            })
+                        .search-room__expcheck
+                            include /components/expand-checkbox/expand-checkbox.pug
+                            +expandCheckbox({
+                                title: 'дополнительные удобства',
+                                n: 1,
+                                items: [
+                                    {
+                                        label: 'Завтрак',
+                                        value: 'breakfast'
+                                    },
+                                    {
+                                        label: 'Письменный стол',
+                                        value: 'desk'
+                                    },
+                                    {
+                                        label: 'Стул для кормления',
+                                        value: 'highchair'
+                                    },
+                                    {
+                                        label: 'Кроватка',
+                                        value: 'baby-bed'
+                                    },
+                                    {
+                                        label: 'Телевизор',
+                                        value: 'tv'
+                                    },
+                                    {
+                                        label: 'Шампунь',
+                                        value: 'shampoo'
+                                    }
+                                ]
+                            })
+                .search-room__right-col
+                    h1 Номера, которые мы для вас подобрали
+                    .search-room__rightwrap
+                        .search-room__room1
+                            include /components/room/room.pug
+                            +room({
+                                number: 888,
+                                category: 'люкс',
+                                price: '9 990₽',
+                                rate: 5,
+                                reviews: 145,
+                                images: ['/images/room888.jpg', '/images/room840.jpg', '/images/room980.jpg', '/images/room856.jpg']
+                            })
+                        .search-room__room2
+                            +room({
+                                number: 840,
+                                price: '9 900₽',
+                                rate: 4,
+                                reviews: 65,
+                                images: ['/images/room840.jpg', '/images/room980.jpg', '/images/room888.jpg', '/images/room856.jpg']
+                            })
+                        .search-room__room3
+                            +room({
+                                number: 980,
+                                price: '8 500₽',
+                                rate: 3,
+                                reviews: 35,
+                                images: ['/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg', '/images/room856.jpg']
+                            })
+                        .search-room__room4
+                            +room({
+                                number: 856,
+                                price: '7 300₽',
+                                rate: 5,
+                                reviews: 19,
+                                images: ['/images/room856.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room5
+                            +room({
+                                number: 740,
+                                price: '6 000₽',
+                                rate: 4,
+                                reviews: 44,
+                                images: ['/images/room740.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room6
+                            +room({
+                                number: 982,
+                                price: '5 800₽',
+                                rate: 3,
+                                reviews: 56,
+                                images: ['/images/room982.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room7
+                            +room({
+                                number: 678,
+                                price: '5 500₽',
+                                rate: 5,
+                                reviews: 45,
+                                images: ['/images/room678.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room8
+                            +room({
+                                number: 450,
+                                price: '5 300₽',
+                                rate: 4,
+                                reviews: 39,
+                                images: ['/images/room450.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room9
+                            +room({
+                                number: 350,
+                                price: '5 000₽',
+                                rate: 3,
+                                reviews: 77,
+                                images: ['/images/room350.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room10
+                            +room({
+                                number: 666,
+                                price: '5 000₽',
+                                rate: 5,
+                                reviews: 25,
+                                images: ['/images/room666.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room11
+                            +room({
+                                number: 444,
+                                price: '5 000₽',
+                                rate: 3,
+                                reviews: 15,
+                                images: ['/images/room444.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                        .search-room__room12
+                            +room({
+                                number: 352,
+                                price: '5 000₽',
+                                rate: 3,
+                                reviews: 55,
+                                images: ['/images/room352.jpg', '/images/room980.jpg', '/images/room840.jpg', '/images/room888.jpg']
+                            })
+                    .search-room__pagination
+                        include /components/pagination/pagination.pug
+                        +pagination
+            .search-room__footer
+                include /components/footer/footer.pug

@@ -1,99 +1,99 @@
 .header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    color: $dark50;
-    background: $background-color;
-    box-shadow: 0px 10px 20px $dark5;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $dark50;
+  background: $background-color;
+  box-shadow: 0px 10px 20px $dark5;
+}
+
+.header__wrap {
+  width: auto;
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__toxin-logo {
+  margin-right: auto;
+}
+
+.header__sign-in {
+  margin-left: 20px;
+}
+
+.header__register {
+  margin-left: 20px;
+}
+
+.header__line {
+  width: 1px;
+  height: 30px;
+  background: $dark10;
+  margin-left: 20px;
+}
+
+.header__userinfo {
+  display: flex;
+}
+.header__user {
+  margin-left: 20px;
+}
+.header__icons {
+  display: none;
+}
+
+@media (max-width: 1210px) {
+  .header__wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header__wrap {
+    justify-content: space-between;
   }
 
-  .header__wrap {
-    width: auto;
-    max-width: 1160px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
+  .header__menu {
+    order: 1;
   }
 
   .header__toxin-logo {
-    margin-right: auto;
+    order: 2;
   }
-
-  .header__sign-in {
-    margin-left: 20px;
-  }
-
-  .header__register {
-    margin-left: 20px;
-  }
-
-  .header__line {
-    width: 1px;
-    height: 30px;
-    background: $dark10;
-    margin-left: 20px;
-  }
-
   .header__userinfo {
-    display: flex;
+    order: 3;
   }
-  .header__user {
-    margin-left: 20px;
+  .header__toxin-logo {
+    margin: 0;
   }
-  .header__icons {
+}
+
+@media (max-width: 650px) {
+  .header__sign-in {
     display: none;
   }
 
-  @media (max-width: 1210px) {
-    .header__wrap {
-      padding-left: 30px;
-      padding-right: 30px;
-    }
+  .header__register {
+    display: none;
   }
 
-  @media (max-width: 980px) {
-    .header__wrap {
-      justify-content: space-between;
-    }
+  .header__icons {
+    color: $dark25;
+    display: block;
+    cursor: pointer;
+  }
+}
 
-    .header__menu {
-      order: 1;
-    }
-
-    .header__toxin-logo {
-      order: 2;
-    }
-    .header__userinfo {
-      order: 3;
-    }
-    .header__toxin-logo {
-      margin: 0;
-    }
+@media (max-width: 460px) {
+  .header__toxin-logo .logo__toxin {
+    display: none;
   }
 
-  @media (max-width: 650px) {
-    .header__sign-in {
-      display: none;
-    }
-
-    .header__register {
-      display: none;
-    }
-
-    .header__icons {
-      color: $dark25;
-      display: block;
-      cursor: pointer;
-    }
+  .header__line {
+    margin-left: 0;
   }
-
-  @media (max-width: 460px) {
-    .header__toxin-logo .logo__toxin {
-      display: none;
-    }
-
-    .header__line {
-      margin-left: 0;
-    }
-  }
+}

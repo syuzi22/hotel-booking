@@ -1,0 +1,67 @@
+.search-room__main {
+  display: flex;
+  width: auto;
+  max-width: 1161px;
+  margin: 0 auto;
+}
+
+.search-room__left-col {
+  flex: 1 1 330px;
+  padding-top: 27px;
+}
+
+.search-room__right-col {
+  flex: 1 1 845px;
+  padding-top: 30px;
+}
+
+.search-room__leftwrap {
+  width: 266px;
+}
+
+.search-room__filterdate {
+  padding-bottom: 16px;
+}
+
+.search-room__guestdrop {
+  padding-bottom: 28px;
+}
+
+.search-room__rangeslider {
+  padding-bottom: 45px;
+}
+
+.search-room__checkbut {
+  padding-bottom: 21px;
+}
+
+.search-room__richcheck {
+  padding-bottom: 17px;
+}
+
+.search-room__room-dropdown {
+  padding-bottom: 18px;
+}
+
+.search-room__rightwrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.search-room__rightwrap > div:nth-last-child(n+3){
+  margin-bottom: 21px;
+}
+
+.search-room__pagination {
+  padding-top: 20px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-room__footer {
+  margin-top: 73px;
+  border-top: 1px solid $dark25;
+}

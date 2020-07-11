@@ -1,21 +1,21 @@
 .logo {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    &__dark {
-      width: 48px;
-      height: 48px;
-      background-image: url("/images/logo-dark.svg");
-    }
-    &__colored {
-      width: 40px;
-      height: 40px;
-      background-image: url("/images/logo-colored.svg");
-    }
-    &__toxin {
-      width: 53.19px;
-      height: 12.95px;
-      background-image: url("/images/toxin.svg");
-      margin-left: 12.5px;
-    }
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  &__dark {
+    width: 48px;
+    height: 48px;
+    background-image: url("/images/logo-dark.svg");
   }
+  &__colored {
+    width: 40px;
+    height: 40px;
+    background-image: url("/images/logo-colored.svg");
+  }
+  &__toxin {
+    width: 53.19px;
+    height: 12.95px;
+    background-image: url("/images/toxin.svg");
+    margin-left: 12.5px;
+  }
+}

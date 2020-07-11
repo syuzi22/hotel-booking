@@ -1,44 +1,46 @@
 .masked-input {
-    width: auto;
-    max-width: 320px;
-    min-width: 260px;
-    &__info {
-      display: flex;
-      justify-content: space-between;
-      height: 2.875rem;
+  width: auto;
+  max-width: 320px;
+  min-width: 260px;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    height: 2.875rem;
+  }
+  &__name {
+    align-self: center;
+    line-height: 2.75rem;
+  }
+  &__state {
+    align-self: flex-start;
+    font-weight: normal;
+    color: $dark50;
+  }
+  &__inp {
+    display: block;
+    width: 100%;
+    height: $input-height;
+    border: 1px solid $dark25;
+    border-radius: 0.5rem;
+    background: $background-color;
+    padding-left: 1.875rem;
+    &::placeholder {
+      color: $dark25;
     }
-    &__name {
-      align-self: center;
-      line-height: 2.75rem;
+    &:hover {
+      border-color: $dark50;
     }
-    &__state {
-      align-self: flex-start;
-      font-weight: normal;
-      color: $dark50;
+    &:focus,
+    &_focus {
+      border-color: $dark50;
+      outline: none;
     }
-    &__inp {
-      display: block;
-      width: 100%;
-      height: $input-height;
-      border: 1px solid $dark25;
-      border-radius: 0.5rem;
-      background: $background-color;
-      padding-left: 1.875rem;
-      &::placeholder {
-        color: $dark25;
-      }
-      &:hover {
-        border-color: $dark50;
-      }
-      &:focus, &_focus {
-        border-color: $dark50;
-        outline: none;
-      }
-      &:hover::placeholder {
-        color: $dark75;
-      }
-      &:focus::placeholder, &_focus::placeholder{
-        color: $dark75;
-      }
+    &:hover::placeholder {
+      color: $dark75;
+    }
+    &:focus::placeholder,
+    &_focus::placeholder {
+      color: $dark75;
     }
   }
+}
