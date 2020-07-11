@@ -32,6 +32,10 @@ let plugins = [
         template: "./pages/search-room/search-room.pug",
         filename: "./pages/search-room.html",
     }),
+    new HTMLWebpackPlugin({
+        template: "./pages/registration/registration.pug",
+        filename: "./pages/registration.html",
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
         filename: "[name].[contenthash].css",

@@ -1,0 +1,16 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Registration
+    body
+        .registration
+            .registration__header
+                include /components/header/header.pug
+                +header
+            .registration__header-bg
+                .registration__form
+                    include /components/registration/registration.pug
+            .registration__footer
+                include /components/footer/footer.pug
+
