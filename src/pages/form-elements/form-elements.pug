@@ -73,7 +73,10 @@ html(lang='en')
                 .form-elements__like-button
                     include /components/like-button/like-button.pug
                     +likeButton
-                    +likeButton('like-button_clicked')
+                    +likeButton({
+                        className: 'like-button_clicked',
+                        numberOfLikes: 12
+                    })
                 .heading3 rate button
                 .form-elements__rate-button
                     include /components/rate-button/rate-button.pug
@@ -249,5 +252,6 @@ html(lang='en')
                     daysAgo: '5 дней назад',
                     text: `Великолепный матрас на кровати в основной спальне!
                     А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
-                    Выкрикивал комплименты повару — никто не жаловался из соседей.`
+                    Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+                    numberOfLikes: 12
                 })

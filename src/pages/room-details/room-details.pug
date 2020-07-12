@@ -1,0 +1,91 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Room details
+    body
+        .room-details
+            .room-details__header
+                include /components/header/header.pug
+                +header
+            .room-details__header-bg
+                .room-details__bg1
+                .room-details__bg2
+                .room-details__bg3
+            .room-details__main
+                .room-details__mainwrap
+                    .room-details__infowrap
+                        .room-details__info
+                            h2 Сведения о номере
+                            include /components/room-info/room-info.pug
+                            +roomInfo({
+                                icon: 'insert_emoticon',
+                                title: 'Комфорт',
+                                text: 'Шумопоглощающие стены'
+                            })
+                            .room-details__line
+                            +roomInfo({
+                                icon: 'location_city',
+                                title: 'Удобство',
+                                text: 'Окно в каждой из спален'
+                            })
+                            .room-details__line
+                            +roomInfo({
+                                icon: 'whatshot',
+                                title: 'Уют',
+                                text: 'Номер оснащён камином'
+                            })
+                        .room-details__experience
+                            h2 Впечатления от номера
+
+                    .room-details__reviews
+                        .room-details__rev-title
+                            h2 Отзывы посетителей номера
+                            span 2 отзыва
+                        include /components/review/review.pug
+                        +review({
+                            url: '/images/review-photo.png',
+                            name: 'Мурад Сарафанов',
+                            daysAgo: '5 дней назад',
+                            text: `Великолепный матрас на кровати в основной спальне!
+                            А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                            Выкрикивал комплименты повару — никто не жаловался из соседей.`,
+                            numberOfLikes: 12,
+                            className: 'like-button_clicked'
+                        })
+                        +review({
+                            url: '/images/review-photo2.png',
+                            name: 'Патрисия Стёклышкова',
+                            daysAgo: 'неделю назад',
+                            text: `Обслуживание на высоте! Всё аккуратно, чисто.
+                            Завтраки в номер советую заказать, каждый день новое блюдо и десерт
+                            как комплимент.`,
+                            numberOfLikes: 2
+                        })
+                    .room-details__ruleswrap
+                        .room-details__rules
+                            h2 Правила
+                            include /components/bullet-list/bullet-list.pug
+                            +bulletList({
+                                list: [
+                                    'Нельзя с питомцами',
+                                    'Без вечеринок и мероприятий',
+                                    'Время прибытия — после 13:00, а выезд до 12:00'
+                                ]
+                            })
+                        .room-details__cancel
+                            h2 Отмена
+                            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                .room-details__booking
+                    include /components/booking/booking.pug
+                    +booking({
+                        number: 888,
+                        category: 'люкс',
+                        price: '9 990₽',
+                        sum1: '39 960₽',
+                        sum2: '0₽',
+                        sum3: '300₽',
+                        total: '38 081₽'
+                    })
+            .room-details__footer
+                include /components/footer/footer.pug

@@ -1,4 +1,6 @@
-mixin likeButton(className)
-    div(class=`like-button ${className}`)
+mixin likeButton(options)
+    if !options
+        - options = {}
+    div(class=`like-button ${options.className}`)
         span.like-button__micons
-        span.like-button__counter 12
+        span.like-button__counter= options.numberOfLikes
