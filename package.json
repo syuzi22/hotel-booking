@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "./node_modules/.bin/webpack --mode ${NODE_ENV:=development}",
     "build": "./node_modules/.bin/webpack --mode ${NODE_ENV:=production}",
+    "build-prod": "./node_modules/.bin/webpack --mode production",
     "start": "webpack-dev-server --mode ${NODE_ENV:=development} --open"
   },
   "browserslist": "> 0.25%, not dead",
