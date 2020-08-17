@@ -1,6 +1,7 @@
 {
   "name": "hotel-booking",
   "version": "1.0.0",
+  "homepage": "https://syuzi22.github.io/hotel-booking/",
   "description": "UI kit and website pages of hotel",
   "private": true,
   "scripts": {
