@@ -9,40 +9,47 @@ const publicPath = '/hotel-booking/';
 
 const isDev = process.env.NODE_ENV === "development";
 
+class MyHtmlWebpackPlugin extends HTMLWebpackPlugin {
+    constructor(settings) {
+       settings.templateParameters = {publicPath: publicPath};
+        super(settings);
+    }
+}
+
 let plugins = [
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/colors-type/colors-type.pug",
         filename: "./pages/colors-type.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/form-elements/form-elements.pug",
         filename: "./pages/form-elements.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/cards/cards.pug",
         filename: "./pages/cards.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/headers-footers/headers-footers.pug",
         filename: "./pages/headers-footers.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/landing/landing.pug",
         filename: "./pages/landing.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/search-room/search-room.pug",
         filename: "./pages/search-room.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/registration/registration.pug",
         filename: "./pages/registration.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/sign/sign.pug",
         filename: "./pages/sign.html",
     }),
-    new HTMLWebpackPlugin({
+    new MyHtmlWebpackPlugin({
         template: "./pages/room-details/room-details.pug",
         filename: "./pages/room-details.html",
     }),
