@@ -5,6 +5,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer")({});
 
+const publicPath = '/hotel-booking/';
+
 const isDev = process.env.NODE_ENV === "development";
 
 let plugins = [
@@ -87,7 +89,10 @@ function getScssPlugins() {
 
     entries.push({
         loader: "sass-loader",
-        options: { sourceMap: isDev },
+        options: {
+            sourceMap: isDev,
+            prependData: `$publicPath: "${publicPath}";`
+        },
     });
 
     return entries;
@@ -102,7 +107,7 @@ module.exports = {
     output: {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "docs"),
-        publicPath : "/hotel-booking/"
+        publicPath: publicPath
     },
     optimization: {
         splitChunks: {
