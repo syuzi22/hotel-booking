@@ -30,6 +30,7 @@ import '@components/rate-button/rate-button.js'
 import '@components/range-slider/range-slider.js'
 import '@components/room/room.js'
 import '@components/menu/menu.js'
+import '@components/chart/chart.js'
 
 import '@pages/form-elements/form-elements.js'
 import '@pages/cards/cards.js'

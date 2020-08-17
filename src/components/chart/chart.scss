@@ -1,0 +1,75 @@
+.chart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+}
+
+.chart__pie {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.chart__num {
+  font-family: Quicksand;
+  font-weight: bold;
+  font-size: 24px;
+  color: $primary-color;
+}
+
+.chart__label {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.chart__list {
+    margin: 0;
+    padding-top: 26px;
+    padding-right: 37px;
+    padding-left: 30px;
+    list-style: none;
+}
+
+.chart__list-item {
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.chart__list-item::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.chart__list-item:nth-child(1)::before {
+    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+
+.chart__list-item:nth-child(2)::before {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.chart__list-item:nth-child(3)::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.chart__list-item:nth-child(4)::before {
+    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}

@@ -37,6 +37,13 @@ html(lang="en")
                             })
                         .room-details__experience
                             h2 Впечатления от номера
+                            include /components/chart/chart.pug
+                            +chart({
+                                great: 130,
+                                good: 65,
+                                satisfactory: 65,
+                                bad: 0
+                            })
 
                     .room-details__reviews
                         .room-details__rev-title
