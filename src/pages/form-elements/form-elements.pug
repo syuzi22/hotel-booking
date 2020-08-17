@@ -72,7 +72,9 @@ html(lang='en')
                 .heading3 like button
                 .form-elements__like-button
                     include /components/like-button/like-button.pug
-                    +likeButton
+                    +likeButton({
+                        numberOfLikes: 2
+                    })
                     +likeButton({
                         className: 'like-button_clicked',
                         numberOfLikes: 12
