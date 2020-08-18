@@ -31,8 +31,10 @@
 
 ## Сборка
 
+```
 git clone git@github.com:syuzi22/hotel-booking.git
 cd hotel-booking
 npm install
 npm run build-prod
+```
 
