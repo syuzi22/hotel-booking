@@ -1,58 +1,58 @@
 mixin chart(options)
-  if !options
-    - options = {}
-  -
-    var all = options.great + options.good + options.satisfactory + options.bad
-    var great = options.great / all * 100
-    var good = options.good / all * 100
-    var satisfactory = options.satisfactory / all * 100
-    var bad = options.bad / all * 100
-    var dasharrayGreat1 = 0
-    var dasharrayGood1 = 0
-    var dasharraySatisfactory1 = 0
-    var dasharrayBad1 = 0
+    if !options
+        - options = {}
+    -
+        var all = options.great + options.good + options.satisfactory + options.bad
+        var great = options.great / all * 100
+        var good = options.good / all * 100
+        var satisfactory = options.satisfactory / all * 100
+        var bad = options.bad / all * 100
+        var dasharrayGreat1 = 0
+        var dasharrayGood1 = 0
+        var dasharraySatisfactory1 = 0
+        var dasharrayBad1 = 0
 
-    if (great !== 0) dasharrayGreat1 = great - 1
-    var dasharrayGreat2 = 100 - dasharrayGreat1
+        if (great !== 0) dasharrayGreat1 = great - 1
+        var dasharrayGreat2 = 100 - dasharrayGreat1
 
-    if (good !== 0) dasharrayGood1 = good - 1
-    var dasharrayGood2 = 100 - dasharrayGood1
+        if (good !== 0) dasharrayGood1 = good - 1
+        var dasharrayGood2 = 100 - dasharrayGood1
 
-    if (satisfactory !== 0) dasharraySatisfactory1 = satisfactory - 1
-    var dasharraySatisfactory2 = 100 - dasharraySatisfactory1
+        if (satisfactory !== 0) dasharraySatisfactory1 = satisfactory - 1
+        var dasharraySatisfactory2 = 100 - dasharraySatisfactory1
 
-    if (bad !== 0) dasharrayBad1 = bad - 1
-    var dasharrayBad2 = 100 - dasharrayBad1
+        if (bad !== 0) dasharrayBad1 = bad - 1
+        var dasharrayBad2 = 100 - dasharrayBad1
 
-    var dashoffsetSatisfactory = satisfactory
-    var dashoffsetGreat = dashoffsetSatisfactory + great
-    var dashoffsetBad = dashoffsetGreat + bad
+        var dashoffsetSatisfactory = satisfactory
+        var dashoffsetGreat = dashoffsetSatisfactory + great
+        var dashoffsetBad = dashoffsetGreat + bad
 
-  div(class="chart")
-    div(class="chart__wrap")
-      svg(width="120px" height="120px" viewBox="0 0 33 33" class="chart__pie")
-        defs
-          lineargradient(id="GradientGreat" x1="0" x2="0" y1="0" y2="1")
-            stop(offset="0%" stop-color="#FFE39C")
-            stop(offset="100%" stop-color="#FFBA9C")
-          lineargradient(id="GradientGood" x1="0" x2="0" y1="0" y2="1")
-            stop(offset="0%" stop-color="#6FCF97")
-            stop(offset="100%" stop-color="#66D2EA")
-          lineargradient(id="GradientSatisfactory" x1="0" x2="0" y1="0" y2="1")
-            stop(offset="0%" stop-color="#BC9CFF")
-            stop(offset="100%" stop-color="#8BA4F9")
-          lineargradient(id="GradientBad" x1="0" x2="0" y1="0" y2="1")
-            stop(offset="0%" stop-color="#919191")
-            stop(offset="100%" stop-color="#3D4975")
-        circle(cx="50%" cy="50%" r="15.9" stroke="white" stroke-width="1" fill="none")
-        circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientGood)" stroke-width="1" fill="none" stroke-dasharray=`${dasharrayGood1} ${dasharrayGood2}`)
-        circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientSatisfactory)" stroke-width="1" fill="none" stroke-dasharray=`${dasharraySatisfactory1} ${dasharraySatisfactory2}` stroke-dashoffset=`${dashoffsetSatisfactory}`)
-        circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientGreat)" stroke-width="1" fill="none" stroke-dasharray= `${dasharrayGreat1} ${dasharrayGreat2}` stroke-dashoffset=`${dashoffsetGreat}`)
-        circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientBad)" stroke-width="1" fill="none" stroke-dasharray= `${dasharrayBad1} ${dasharrayBad2}` stroke-dashoffset=`${dashoffsetBad}`)
-      div(class="chart__num")= all
-      div(class="chart__label")
-    ul(class="chart__list")
-      li(class="chart__list-item") Великолепно
-      li(class="chart__list-item") Хорошо
-      li(class="chart__list-item") Удовлетворительно
-      li(class="chart__list-item") Разочарован
+    div(class="chart")
+        div(class="chart__wrap")
+            svg(width="120px" height="120px" viewBox="0 0 33 33" class="chart__pie")
+                defs
+                    lineargradient(id="GradientGreat" x1="0" x2="0" y1="0" y2="1")
+                        stop(offset="0%" stop-color="#FFE39C")
+                        stop(offset="100%" stop-color="#FFBA9C")
+                    lineargradient(id="GradientGood" x1="0" x2="0" y1="0" y2="1")
+                        stop(offset="0%" stop-color="#6FCF97")
+                        stop(offset="100%" stop-color="#66D2EA")
+                    lineargradient(id="GradientSatisfactory" x1="0" x2="0" y1="0" y2="1")
+                        stop(offset="0%" stop-color="#BC9CFF")
+                        stop(offset="100%" stop-color="#8BA4F9")
+                    lineargradient(id="GradientBad" x1="0" x2="0" y1="0" y2="1")
+                        stop(offset="0%" stop-color="#919191")
+                        stop(offset="100%" stop-color="#3D4975")
+                circle(cx="50%" cy="50%" r="15.9" stroke="white" stroke-width="1" fill="none")
+                circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientGood)" stroke-width="1" fill="none" stroke-dasharray=`${dasharrayGood1} ${dasharrayGood2}`)
+                circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientSatisfactory)" stroke-width="1" fill="none" stroke-dasharray=`${dasharraySatisfactory1} ${dasharraySatisfactory2}` stroke-dashoffset=`${dashoffsetSatisfactory}`)
+                circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientGreat)" stroke-width="1" fill="none" stroke-dasharray= `${dasharrayGreat1} ${dasharrayGreat2}` stroke-dashoffset=`${dashoffsetGreat}`)
+                circle(cx="50%" cy="50%" r="15.9" stroke="url(#GradientBad)" stroke-width="1" fill="none" stroke-dasharray= `${dasharrayBad1} ${dasharrayBad2}` stroke-dashoffset=`${dashoffsetBad}`)
+            div(class="chart__num")= all
+            div(class="chart__label")
+        ul(class="chart__list")
+            li(class="chart__list-item") Великолепно
+            li(class="chart__list-item") Хорошо
+            li(class="chart__list-item") Удовлетворительно
+            li(class="chart__list-item") Разочарован
