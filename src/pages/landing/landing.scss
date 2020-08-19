@@ -5,19 +5,40 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  animation-duration: 3s;
+  animation-duration: 9s;
   animation-name: slidein;
+  animation-iteration-count: infinite;
 }
 
 @keyframes slidein {
-  from {
+  0% {
     background-image: url("#{$publicPath}/images/header-bg1.png");
+    opacity: 1;
   }
-
-  to {
+  32%{
+    opacity: 0;
+  }
+  33% {
     background-image: url("#{$publicPath}/images/header-bg2.png");
   }
+  34% {
+    opacity: 1;
+  }
+  59% {
+    opacity: 0;
+  }
+  66% {
+    background-image: url("#{$publicPath}/images/header-bg3.png");
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
+
+
 
 .landing__header-wrap {
   width: auto;
