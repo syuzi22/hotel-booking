@@ -1,9 +1,22 @@
 .landing__header-bg {
-  background-image: url("#{$publicPath}/images/header-bg.png");
+  // background-image: url("#{$publicPath}/images/header-bg1.png");
   height: 830px;
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
+
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    background-image: url("#{$publicPath}/images/header-bg1.png");
+  }
+
+  to {
+    background-image: url("#{$publicPath}/images/header-bg2.png");
+  }
 }
 
 .landing__header-wrap {
