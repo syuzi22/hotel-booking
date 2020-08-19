@@ -57,7 +57,7 @@
 
 /* стили для радиокнопки, находящейся в состоянии checked */
 .radio-buttons__inp:checked + label::before {
-  background-image: url("#{$publicPath}/images/radio-buttons.svg");
+  background-image: url("#{$publicPath}images/radio-buttons.svg");
 }
 
 .radio-buttons__inp:checked + label {

@@ -5,9 +5,11 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const autoprefixer = require("autoprefixer")({});
 
-const publicPath = '/hotel-booking/';
 
 const isDev = process.env.NODE_ENV === "development";
+
+const publicPath = isDev ? '/' : '/hotel-booking/';
+
 
 class MyHtmlWebpackPlugin extends HTMLWebpackPlugin {
     constructor(settings) {

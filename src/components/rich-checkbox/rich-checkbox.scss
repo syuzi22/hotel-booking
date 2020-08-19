@@ -74,7 +74,7 @@
 
 /* стили для чекбокса, находящегося в состоянии checked */
 .rich-checkbox__input:checked + label::before {
-  background-image: url("#{$publicPath}/images/checkbox.svg");
+  background-image: url("#{$publicPath}images/checkbox.svg");
 }
 
 /* стили для чекбокса, находящегося в состоянии disabled */

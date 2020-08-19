@@ -1,5 +1,5 @@
 .landing__header-bg {
-  // background-image: url("#{$publicPath}/images/header-bg1.png");
+  // background-image: url("#{$publicPath}images/header-bg1.png");
   height: 830px;
   width: auto;
   background-repeat: no-repeat;
@@ -12,16 +12,16 @@
 
 @keyframes slidein {
   from {
-    background-image: url("#{$publicPath}/images/header-bg1.png");
+    background-image: url("#{$publicPath}images/header-bg1.png");
   }
   33% {
-    background-image: url("#{$publicPath}/images/header-bg2.png");
+    background-image: url("#{$publicPath}images/header-bg2.png");
   }
   66% {
-    background-image: url("#{$publicPath}/images/header-bg3.png");
+    background-image: url("#{$publicPath}images/header-bg3.png");
   }
   to {
-    background-image: url("#{$publicPath}/images/header-bg1.png")
+    background-image: url("#{$publicPath}images/header-bg1.png")
   }
 }
 

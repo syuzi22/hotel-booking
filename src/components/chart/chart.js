@@ -14,6 +14,10 @@ function getNoun(number, one, two, five) {
     return five;
 }
 
-let chartNum = + document.querySelector('.chart__num').textContent;
-let chart__label = document.querySelector('.chart__label');
-chart__label.innerHTML = getNoun(chartNum, 'голос', 'голоса', 'голосов');
+let chartNumNode = document.querySelector('.chart__num');
+if (chartNumNode) {
+    let chartNum = + chartNumNode.textContent;
+    let chart__label = document.querySelector('.chart__label');
+    chart__label.innerHTML = getNoun(chartNum, 'голос', 'голоса', 'голосов');
+}
+

@@ -10,19 +10,19 @@
 
 .room-details__bg1 {
   grid-row-start: span 2;
-  background-image: url("#{$publicPath}/images/room-bg1.png");
+  background-image: url("#{$publicPath}images/room-bg1.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .room-details__bg2 {
-  background-image: url("#{$publicPath}/images/room-bg2.png");
+  background-image: url("#{$publicPath}images/room-bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .room-details__bg3 {
-  background-image: url("#{$publicPath}/images/room-bg3.png");
+  background-image: url("#{$publicPath}images/room-bg3.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
