@@ -1,4 +1,4 @@
-# Сайт по поиску номеров в отеле
+# Toxin. Сайт по поиску номеров в отеле.
 
 Задание FSD в рамках обучения на позицию Frontend Developer.
 
@@ -36,5 +36,15 @@ git clone git@github.com:syuzi22/hotel-booking.git
 cd hotel-booking
 npm install
 npm run build-prod
+
 ```
+##  Запуск на локальном сервере
+
+```
+npm run start
+
+```
+## Примечание
+
+папка docs содержит готовый build. Сделано для github pages.
 
