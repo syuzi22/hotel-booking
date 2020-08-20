@@ -1,14 +1,21 @@
 .registration__header-bg {
-    background-image: url("#{$publicPath}images/header-bg.png");
-    height: 684px;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url("#{$publicPath}images/header-bg.png");
+  height: 684px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .registration__form {
-    width: 380px;
+  width: 380px;
+}
+
+@media (max-width: 420px) {
+  .registration__header-bg {
+    background-image: none;
+    height: auto;
+  }
 }
