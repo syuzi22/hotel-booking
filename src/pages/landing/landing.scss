@@ -4,10 +4,10 @@
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
-
   animation-duration: 15s;
   animation-name: slidein;
   animation-iteration-count: infinite;
+  // transition: background-image 3s linear;
 }
 
 @keyframes slidein {
@@ -24,8 +24,6 @@
     background-image: url("#{$publicPath}images/header-bg1.png")
   }
 }
-
-
 
 .landing__header-wrap {
   width: auto;
