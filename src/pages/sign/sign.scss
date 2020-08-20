@@ -1,5 +1,5 @@
 .sign__header-bg {
-    background-image: url("#{$publicPath}images/header-bg2.png");
+    background-image: url("#{$publicPath}images/header-bg.png");
     height: 684px;
     width: auto;
     background-repeat: no-repeat;
@@ -11,4 +11,11 @@
 
 .sign__ssform {
     width: 380px;
+}
+
+@media (max-width: 500px) {
+    .sign__header-bg {
+        background-image: none;
+        height: auto;
+    }
 }
