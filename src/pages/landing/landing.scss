@@ -47,3 +47,68 @@
   top: 70px;
   padding-left: 6px;
 }
+
+@media (max-width: 1210px) {
+  .landing__header-wrap {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .landing__header-bg {
+    height: 500px;
+  }
+  .landing__header-note {
+    bottom: 390px;
+    right: 30px;
+  }
+  @keyframes slidein {
+    from {
+      background-image: url("#{$publicPath}images/header-bg1mini.png");
+    }
+    33% {
+      background-image: url("#{$publicPath}images/header-bg2mini.png");
+    }
+    66% {
+      background-image: url("#{$publicPath}images/header-bg3mini.png");
+    }
+    to {
+      background-image: url("#{$publicPath}images/header-bg1mini.png")
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .landing__header-note {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .landing__header-bg {
+    background-image: none;
+    animation: none;
+    height: 450px;
+  }
+  .landing__room-search {
+    top: 40px;
+  }
+  .landing__header-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  .landing__header-bg {
+    height: 370px;
+  }
+  .landing__room-search {
+    padding-left: 0px;
+  }
+  .landing__header-wrap {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
