@@ -50,7 +50,7 @@
   padding-top: 20px;
 }
 
-.search-room__rightwrap > div:nth-last-child(n+3){
+.search-room__rightwrap > div:nth-last-child(n + 3) {
   margin-bottom: 21px;
 }
 
@@ -64,4 +64,61 @@
 .search-room__footer {
   margin-top: 73px;
   border-top: 1px solid $dark25;
+}
+
+@media (max-width: 1200px) {
+  .search-room__room1,
+  .search-room__room2,
+  .search-room__room3,
+  .search-room__room4,
+  .search-room__room5,
+  .search-room__room6,
+  .search-room__room7,
+  .search-room__room8,
+  .search-room__room9,
+  .search-room__room10,
+  .search-room__room11,
+  .search-room__room12 {
+    flex: 1 1 50%;
+  }
+  .search-room__left-col {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 870px) {
+  .search-room__rightwrap {
+    justify-content: space-around;
+  }
+  .search-room__room1,
+  .search-room__room2,
+  .search-room__room3,
+  .search-room__room4,
+  .search-room__room5,
+  .search-room__room6,
+  .search-room__room7,
+  .search-room__room8,
+  .search-room__room9,
+  .search-room__room10,
+  .search-room__room11,
+  .search-room__room12 {
+    flex: 0 0 290px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-room__main {
+    flex-wrap: wrap;
+  }
+  .search-room__right-col h1 {
+    width: 320px;
+    margin: 0 auto;
+    padding-left: 10px;
+  }
+  .search-room__left-col {
+    width: 266px;
+    flex: 0 0 320px;
+    margin: 0 auto;
+  }
 }
