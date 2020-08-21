@@ -8,6 +8,21 @@
   // 243px 242px;
 }
 
+@media (max-width: 900px) {
+  .room-details__header-bg {
+    display: block;
+    background-image: url("#{$publicPath}images/room-bg1.png");
+    background-repeat: no-repeat;
+   background-size: cover;
+  }
+}
+@media (max-width: 600px) {
+  .room-details__header-bg {
+    height: 270px;
+    background-image: url("#{$publicPath}images/room-bg1mini.png");
+  }
+}
+
 .room-details__bg1 {
   grid-row-start: span 2;
   background-image: url("#{$publicPath}images/room-bg1.png");
@@ -32,24 +47,43 @@
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   padding-top: 70px;
+}
+
+@media (max-width:700px) {
+  .room-details__main{
+    padding-top: 30px;
+  }
+}
+
+@media (max-width:1200px) {
+  .room-details__main{
+    padding-right: 20px;
+  }
 }
 
 .room-details__mainwrap {
   flex: 1 1 780px;
   padding-right: 70px;
 }
-.room-details__booking {
-  flex: 1 1 380px;
+
+@media (max-width:1200px) {
+  .room-details__mainwrap{
+    padding-right: 0;
+    padding-left: 20px;
+  }
 }
 
 .room-details__infowrap {
   display: flex;
+  flex-wrap: wrap;
   padding-bottom: 15px;
 }
 
 .room-details__ruleswrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .room-details__line {
@@ -72,6 +106,18 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .room-details__rev-title {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .room-details__rev-title {
+    padding-top: 30px;
+  }
+}
+
 .room-details__info {
   flex: 1 1 50.9%;
   & h2 {
@@ -79,8 +125,20 @@
   }
 }
 
+@media (max-width: 700px) {
+  .room-details__info {
+    flex: 1 1 100%;
+  }
+}
+
 .room-details__experience {
   flex: 1 1 49.1%;
+}
+
+@media (max-width: 700px) {
+  .room-details__experience {
+    flex: 1 1 100%;
+  }
 }
 
 .room-details__experience h2 {
@@ -96,6 +154,15 @@
   }
 }
 
+@media (max-width: 500px) {
+  .room-details__rules{
+    flex: 1 1 100%;
+    & h2{
+      padding-left: 0;
+    }
+  }
+}
+
 .room-details__cancel {
   flex: 1 1 49.1%;
   padding-right: 5px;
@@ -105,7 +172,27 @@
   }
 }
 
+
+@media (max-width: 500px) {
+  .room-details__cancel{
+    flex: 1 1 100%;
+  }
+}
+
 .room-details__footer {
   margin-top: 63px;
   border-top: 1px solid $dark25;
+}
+
+@media (max-width: 1200px) {
+  .room-details__booking{
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 340px) {
+  .room-details__booking{
+    padding-left: 10px;
+  }
 }

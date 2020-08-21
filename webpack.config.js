@@ -17,6 +17,10 @@ const getConfig = (isDev) => {
 
     let plugins = [
         new MyHtmlWebpackPlugin({
+            template: "./index.pug",
+            filename: "./index.html",
+        }),
+        new MyHtmlWebpackPlugin({
             template: "./pages/colors-type/colors-type.pug",
             filename: "./pages/colors-type.html",
         }),
@@ -121,7 +125,7 @@ const getConfig = (isDev) => {
         },
         devServer: {
             port: 4200,
-            index: "./pages/form-elements.html",
+            index: "./index.html",
         },
         devtool: false, // use webpack.SourceMapDevToolPlugin,
         plugins: plugins,

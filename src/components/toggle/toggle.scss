@@ -1,57 +1,57 @@
 .toggle {
-	$toggle-radius: 1.25rem;
-	padding-bottom: 1.625rem;
-	&__input {
-	  position: absolute;
-	  z-index: -1;
-	  opacity: 0;
-	  margin: $toggle-radius 0 0 2.5rem;
-	  & + label {
-		position: relative;
-		padding: 0 0 0 6.25rem;
-		cursor: pointer;
-	  }
-	  & + label:before {
-		content: "";
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 5rem;
-		height: 2.5rem;
-		border: 1px solid $dark25;
-		border-radius: $toggle-radius;
-		background: $background-color;
-		transition: 0.2s;
-	  }
-	  & + label:after {
-		content: "";
-		position: absolute;
-		top: 0.5rem;
-		left: 0.25rem;
-		width: 1.5rem;
-		height: 1.5rem;
-		background-color: $dark25;
-		border-radius: $toggle-radius;
-		transition: 0.2s;
-	  }
-	  &:not(:disabled):not(:checked) + label:hover::before {
-		border-color: $dark50;
-	  }
-	  &:not(:disabled):active + label::before {
-		background-color: $dark5;
-	  }
-	  &:focus:not(:checked) + label::before {
-		border-color: $dark50;
-	  }
-	  &:focus + label::before {
-		border-color: $primary-color;
-	  }
-	  &:checked + label:before {
-		border-color: $primary-color;
-	  }
-	  &:checked + label:after {
-		background: $primary-gradient;
-		left: 3.25rem;
-	  }
-	}
+  $toggle-radius: 1.25rem;
+  padding-bottom: 1.625rem;
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: $toggle-radius 0 0 2.5rem;
+    & + label {
+      position: relative;
+      padding: 0 0 0 6.25rem;
+      cursor: pointer;
+    }
+    & + label:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 5rem;
+      height: 2.5rem;
+      border: 1px solid $dark25;
+      border-radius: $toggle-radius;
+      background: $background-color;
+      transition: 0.2s;
+    }
+    & + label:after {
+      content: "";
+      position: absolute;
+      top: 0.5rem;
+      left: 0.25rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $dark25;
+      border-radius: $toggle-radius;
+      transition: 0.2s;
+    }
+    &:not(:disabled):not(:checked) + label:hover::before {
+      border-color: $dark50;
+    }
+    &:not(:disabled):active + label::before {
+      background-color: $dark5;
+    }
+    &:focus:not(:checked) + label::before {
+      border-color: $dark50;
+    }
+    &:focus + label::before {
+      border-color: $primary-color;
+    }
+    &:checked + label:before {
+      border-color: $primary-color;
+    }
+    &:checked + label:after {
+      background: $primary-gradient;
+      left: 3.25rem;
+    }
   }
+}

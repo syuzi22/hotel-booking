@@ -107,6 +107,12 @@
   }
 }
 
+@media (max-width: 440px) {
+  .booking__total-line {
+    width: 10rem;
+  }
+}
+
 @media (max-width: 380px) {
   .booking {
     padding: 15px;

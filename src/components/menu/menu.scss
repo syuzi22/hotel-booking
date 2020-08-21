@@ -72,6 +72,7 @@
   .menu__top_show {
     display: block;
     position: absolute;
+    z-index: 1;
     left: 0;
     background-color: $background-color;
     width: 180px;

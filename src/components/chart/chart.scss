@@ -1,5 +1,6 @@
 .chart {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -35,12 +36,15 @@
 }
 
 .chart__list {
+  flex: 1 1 170px;
   margin: 0;
   padding-top: 26px;
   padding-right: 37px;
   padding-left: 30px;
   list-style: none;
 }
+
+
 
 .chart__list-item {
   position: relative;
