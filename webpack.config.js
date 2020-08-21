@@ -163,7 +163,7 @@ const getConfig = (isDev) => {
                     use: getScssPlugins(),
                 },
                 {
-                    test: /(?<!\/(fonts|webfonts)\/.*)\.(png|jpg|svg|gif)$/,
+                    test: /(?<!\/(fonts|webfonts|favicons)\/.*)\.(png|jpg|svg|gif)$/,
                     loader: {
                         loader: "file-loader",
                         options: {
@@ -175,6 +175,16 @@ const getConfig = (isDev) => {
                 {
                     // test: /(?<=\/fonts\/.*)\.(ttf|woff|woff2|eot|svg)$/,
                     test: /(?<=\/(fonts|webfonts)\/.*)\.(ttf|woff|woff2|eot|svg)$/,
+                    loader: {
+                        loader: "file-loader",
+                        options: {
+                            name: "[path][name].[ext]",
+                        },
+                    },
+                    // use: ['file-loader']
+                },
+                {
+                    test: /(?<=\/(favicons)\/.*)\.(svg|png|ico|webmanifest|xml)$/,
                     loader: {
                         loader: "file-loader",
                         options: {
