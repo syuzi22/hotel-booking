@@ -1,18 +1,17 @@
-# Toxin. Сайт по поиску номеров в отеле.
+# Toxin. Hotel Room Search Website
+Test Task (FSD) for the Frontend Developer Position
 
-Задание FSD на позицию Frontend Developer.
+## Objective: Learn to
 
-## Цель - научиться:
-
-- Настраивать систему сборку Webpack
-- Работать с макетами в Figma
-- Верстать большие макеты с большим количеством повторяющихся элементов
-- Получить базовые знания БЭМ и использовать компонентный подход
-- Работать с препроцессорами(Pug, SCSS)
-- Правильно подключать шрифты
-- Искать, подключать и настраивать JavaScript-библиотеки и jQuery-плагины  
-
-## Демо
+- Configure Webpack build systems
+- Work with Figma design mockups
+- Code large layouts with many repeating elements
+- Gain basic knowledge of BEM methodology and implement a component-based approach
+- Work with preprocessors (Pug, SCSS)
+- Correctly connect and configure fonts
+- Find, connect, and configure JavaScript libraries and jQuery plugins
+- 
+## Demo
 
 ### UI Kit
 
@@ -29,7 +28,8 @@
 - [Sign in](https://syuzi22.github.io/hotel-booking/pages/sign.html)
 - [Registration](https://syuzi22.github.io/hotel-booking/pages/registration.html)
 
-## Сборка
+## Setup
+Build Project:
 
 ```
 git clone git@github.com:syuzi22/hotel-booking.git
@@ -38,13 +38,13 @@ npm install
 npm run build-prod
 
 ```
-##  Запуск на локальном сервере
+##  Run on Local Server:
 
 ```
 npm run start
 
 ```
-## Примечание
+## Note
 
-папка docs содержит готовый build. Сделано для github pages.
+The docs folder contains the ready build for deployment on GitHub Pages.
 
